@@ -18,7 +18,7 @@ public class ForLoop : ControlStatements {
 
     public override void RunThis()
     {
-        for(int i = 0; i < limit; i++)
+        for(int i = 0; i < limit-1; i++)
         {
             RunQueue.Next().RunThis();
         }

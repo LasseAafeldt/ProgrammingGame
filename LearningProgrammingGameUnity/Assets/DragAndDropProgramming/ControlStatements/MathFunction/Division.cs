@@ -25,6 +25,6 @@ public class Division : ControlStatements
 
     public override void RunThis()
     {
-        print(result);
+        Debug.Log(result);
     }
 }

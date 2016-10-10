@@ -23,6 +23,6 @@ public class Addition : ControlStatements
     }
     public override void RunThis()
     {
-        print(result);
+        Debug.Log(result);
     }
 }

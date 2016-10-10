@@ -2,26 +2,41 @@
 using UnityEngine;
 using System.Collections;
 
-public class RunQueue : MonoBehaviour {
-    private static ArrayList theRunQueue = new ArrayList();
-    private static int i = 0;
+public class RunQueue {
+    private static ArrayList runQueue = new ArrayList();
+    private static int iterator = 0;
     public void AddToQueue(ControlStatements statement)
     {
-        theRunQueue.Add(statement);
+        runQueue.Add(statement);
     }
     public void RemoveFromQueue(ControlStatements statement)
     {
-        theRunQueue.Remove(statement);
+        runQueue.Remove(statement);
+    }
+
+    public static ControlStatements GetAt(int i)
+    {
+        return (ControlStatements)runQueue[i];
+    }
+
+    public static void run()
+    {
+        for (iterator = 0; iterator < runQueue.Count;iterator++)
+        {
+            GetAt(iterator).RunThis();
+        }
     }
 
     public static ControlStatements Next()
     {
 
-        if (theRunQueue.Count <= 0)
+        if (runQueue.Count <= 0)
             return null;
         else
         {
-            return (ControlStatements)theRunQueue[i+1];
+            return (ControlStatements)runQueue[iterator+1];
         }
     }
+
+    public static void IncrementIterator() { iterator++; }
 }

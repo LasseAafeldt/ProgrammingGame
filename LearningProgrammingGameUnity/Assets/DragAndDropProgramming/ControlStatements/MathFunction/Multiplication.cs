@@ -23,6 +23,6 @@ public class Multiplication : ControlStatements
     }
     public override void RunThis()
     {
-        print(result);
+        Debug.Log(result);
     }
 }

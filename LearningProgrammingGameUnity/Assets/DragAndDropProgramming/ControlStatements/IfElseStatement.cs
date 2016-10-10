@@ -4,6 +4,29 @@ using System;
 
 public class IfElseStatement : ControlStatements
 {
+    private float leftSide;
+    private float rightSide;
+    private string condition;
+    private bool result;
+    public IfElseStatement(float left, string condition, float right)
+    {
+        leftSide = left;
+        rightSide = right;
+        if (condition.Equals("<") && leftSide < rightSide)
+            result = true;
+        else if (condition.Equals(">") && leftSide > rightSide)
+            result = true;
+        else if (condition.Equals(">=") && leftSide >= rightSide)
+            result = true;
+        else if (condition.Equals("<=") && leftSide <= rightSide)
+            result = true;
+        else if (condition.Equals("==") && leftSide == rightSide)
+            result = true;
+        else if (condition.Equals("!=") && leftSide != rightSide)
+            result = true;
+        else
+            result = false;
+    }
     public override string GetType()
     {
         return "IfElseStatement";
@@ -11,6 +34,15 @@ public class IfElseStatement : ControlStatements
 
     public override void RunThis()
     {
-        throw new NotImplementedException();
+        if (result == true)
+        {
+            RunQueue.Next().RunThis();
+            RunQueue.IncrementIterator();
+            RunQueue.IncrementIterator();
+        }
+        else
+        {
+            RunQueue.IncrementIterator();
+        }
     }
 }

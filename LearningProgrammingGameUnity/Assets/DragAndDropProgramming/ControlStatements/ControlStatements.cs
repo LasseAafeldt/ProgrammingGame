@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class ControlStatements : MonoBehaviour {
-    public void AddToQueue(ControlStatements statement)
+public abstract class ControlStatements {
+    public void AddToQueue()
     {
         RunQueue queueRunning = new RunQueue();
-        queueRunning.AddToQueue(statement);
+        queueRunning.AddToQueue(this);
     }
-    public void RemoveFromQueue(ControlStatements statement)
+    public void RemoveFromQueue()
     {
         RunQueue queueRunning = new RunQueue();
-        queueRunning.RemoveFromQueue(statement);
+        queueRunning.RemoveFromQueue(this);
     }
     public abstract string GetType();
     public abstract void RunThis();

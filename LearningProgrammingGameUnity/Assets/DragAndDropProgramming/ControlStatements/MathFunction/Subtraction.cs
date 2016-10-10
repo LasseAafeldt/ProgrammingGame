@@ -18,12 +18,13 @@ public class Subtraction : ControlStatements
         return "Subtraction";
     }
 
-    public override void RunThis()
-    {
-        print(result);
-    }
     public float GetResult()
     {
         return result;
+    }
+
+    public override void RunThis()
+    {
+        Debug.Log(result);
     }
 }
