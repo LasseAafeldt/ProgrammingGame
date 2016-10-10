@@ -12,5 +12,6 @@ public abstract class ControlStatements : MonoBehaviour {
         RunQueue queueRunning = new RunQueue();
         queueRunning.RemoveFromQueue(statement);
     }
+    public abstract string GetType();
     public abstract void RunThis();
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class ForLoop : ControlStatements {
    
@@ -9,7 +10,12 @@ public class ForLoop : ControlStatements {
     {
         this.limit = limit;
     }
-    
+
+    public override string GetType()
+    {
+        return "ForLoop";
+    }
+
     public override void RunThis()
     {
         for(int i = 0; i < limit; i++)
