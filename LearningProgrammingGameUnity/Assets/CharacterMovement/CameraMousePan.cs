@@ -20,7 +20,8 @@ public class CameraMousePan : MonoBehaviour {
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         mouseLook += smoothV;
-
+        print("character isnull: " + (character == null));
+        print("mouselook isnull: " + (mouseLook == null));
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
     }
