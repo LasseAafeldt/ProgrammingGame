@@ -7,6 +7,7 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     public static GameObject itemBeingDragged;
     private Vector3 startPosition;
     private Transform startParent;
+    public static int index = 0; 
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -14,6 +15,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         startPosition = transform.position;
         startParent = transform.parent;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
+        index = transform.parent.GetSiblingIndex();
+        //Debug.Log("item index in parent = " + index);
     }
 
     public void OnDrag(PointerEventData eventData)

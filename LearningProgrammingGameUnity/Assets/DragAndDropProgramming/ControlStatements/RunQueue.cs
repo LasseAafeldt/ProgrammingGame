@@ -9,9 +9,21 @@ public class RunQueue {
     {
         runQueue.Add(statement);
     }*/
+    public static int GetSize()
+    {
+        return runQueue.Count;
+    }
+    public static void InitializeQueue()
+    {
+        for (int i = 0; i < GameObject.Find("DropPanel").transform.childCount; i++)
+        {
+            runQueue.Add(null);
+        }
+    }
     public static void AddToQueue(ControlStatements statement, int position)
     {
         //runQueue.Add(statement, position);
+        runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
     }
     /*public static void RemoveFromQueue(ControlStatements statement)
@@ -20,7 +32,9 @@ public class RunQueue {
     }*/
     public static void RemoveFromQueue(int position)
     {
-        runQueue.RemoveAt(position);
+        runQueue[position] = null;
+        /*runQueue.RemoveAt(position);
+        runQueue.Insert(position,null);*/
     }
 
     public static ControlStatements GetAt(int i)
@@ -32,7 +46,8 @@ public class RunQueue {
     {
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
-            GetAt(iterator).RunThis();
+            if(GetAt(iterator) != null)
+                GetAt(iterator).RunThis();
         }
     }
 
