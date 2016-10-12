@@ -13,7 +13,7 @@ public class Addition : ControlStatements
         this.num2 = num2;
         result = num1 + num2;
     }
-    public override string GetType()
+    public override string GetControlType()
     {
         return "Addition";
     }

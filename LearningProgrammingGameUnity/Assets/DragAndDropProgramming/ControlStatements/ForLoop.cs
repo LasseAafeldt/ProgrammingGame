@@ -11,7 +11,7 @@ public class ForLoop : ControlStatements {
         this.limit = limit;
     }
 
-    public override string GetType()
+    public override string GetControlType()
     {
         return "ForLoop";
     }

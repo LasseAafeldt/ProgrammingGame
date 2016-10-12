@@ -8,10 +8,6 @@ public class IfStatement : ControlStatements {
     private float rightSide;
     private string condition;
     private bool result;
-    public IfStatement(bool result)
-    {
-        this.result = result;
-    }
     public IfStatement(float left, string condition, float right)
     {
         leftSide = left;
@@ -45,7 +41,11 @@ public class IfStatement : ControlStatements {
             result = false;
         }
     }
-    public override string GetType()
+    public IfStatement(bool result)
+    {
+        this.result = result;
+    }
+    public override string GetControlType()
     {
         return "IfStatement";
     }

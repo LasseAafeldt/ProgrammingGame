@@ -27,7 +27,7 @@ public class IfElseStatement : ControlStatements
         else
             result = false;
     }
-    public override string GetType()
+    public override string GetControlType()
     {
         return "IfElseStatement";
     }

@@ -18,7 +18,7 @@ public class Division : ControlStatements
     {
         return result;
     }
-    public override string GetType()
+    public override string GetControlType()
     {
         return "Division";
     }

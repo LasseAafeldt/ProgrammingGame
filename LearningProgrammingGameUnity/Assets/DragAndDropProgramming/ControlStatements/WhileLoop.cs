@@ -4,13 +4,12 @@ using System;
 
 public class WhileLoop : ControlStatements
 {
-    public override string GetType()
+    public override string GetControlType()
     {
         return "WhileLoop";
     }
 
     public override void RunThis()
     {
-        throw new NotImplementedException();
     }
 }

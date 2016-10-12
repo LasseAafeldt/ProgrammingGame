@@ -5,13 +5,22 @@ using System.Collections;
 public class RunQueue {
     private static ArrayList runQueue = new ArrayList();
     private static int iterator = 0;
-    public void AddToQueue(ControlStatements statement)
+    /*public static void AddToQueue(ControlStatements statement)
     {
         runQueue.Add(statement);
+    }*/
+    public static void AddToQueue(ControlStatements statement, int position)
+    {
+        //runQueue.Add(statement, position);
+        runQueue.Insert(position, statement);
     }
-    public void RemoveFromQueue(ControlStatements statement)
+    /*public static void RemoveFromQueue(ControlStatements statement)
     {
         runQueue.Remove(statement);
+    }*/
+    public static void RemoveFromQueue(int position)
+    {
+        runQueue.RemoveAt(position);
     }
 
     public static ControlStatements GetAt(int i)

@@ -2,16 +2,19 @@
 using System.Collections;
 
 public abstract class ControlStatements {
-    public void AddToQueue()
+    /*public void AddToQueue()
     {
         RunQueue queueRunning = new RunQueue();
         queueRunning.AddToQueue(this);
-    }
-    public void RemoveFromQueue()
+    }*/
+    public void AddToQueue(int position)
     {
-        RunQueue queueRunning = new RunQueue();
-        queueRunning.RemoveFromQueue(this);
+        RunQueue.AddToQueue(this, position);
     }
-    public abstract string GetType();
+    public void RemoveFromQueue(int position)
+    {
+        RunQueue.RemoveFromQueue(position);
+    }
+    public abstract string GetControlType();
     public abstract void RunThis();
 }
