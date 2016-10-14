@@ -21,27 +21,30 @@ public class TextChangeListener : MonoBehaviour {
     private void SubmitName(string arg0)
     {
         text = arg0;
-        char[] conditionalStatements = arg0.ToCharArray();
-        Debug.Log(arg0);
-        if (int.TryParse(arg0, out number))
+        //checks if the text entered in the field can be converted to int
+        if (int.TryParse(arg0, out number) && 
+            gameObject.GetInstanceID() != GameObject.Find("Condition").GetInstanceID())
         {
-           number = int.Parse(arg0);
+            //converts to ints
+            number = int.Parse(arg0);
         }
-        else if (gameObject.Equals(GameObject.Find("Condition")) &&
-             conditionalStatements.Length <= 2 &&
-             conditionalStatements[0] == '<' ||
-             conditionalStatements[0] == '=' ||
-             conditionalStatements[0] == '>' ||
-             conditionalStatements[0] == '!')
+        //Checks if the input field is the condition field and there is input in the field
+        else if (gameObject.GetInstanceID() == GameObject.Find("Condition").GetInstanceID())
         {
-            //skip else statement
+            //Checks if this is a acceptable condition. 
+            //This is inverted so if this is not accepted then reset
+            if (!arg0.Equals("<") &&
+             !arg0.Equals("<=") &&
+             !arg0.Equals(">") &&
+             !arg0.Equals(">=") &&
+             !arg0.Equals("==") &&
+             !arg0.Equals("!="))
+            {
+                InputField output = gameObject.GetComponent<InputField>();
+                output.text = "0";
+                number = 0;
+            }
         }
-        else
-        {
-            InputField output = gameObject.GetComponent<InputField>();
-            output.text = "0";
-            number = 0;
-        }
-        Debug.Log(number);
+        Debug.Log("arg0 = (" + arg0 + ")");
     }
 }

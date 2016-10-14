@@ -2,11 +2,9 @@
 using System.Collections;
 using System;
 
-public class Multiplication : ControlStatements
+public class Multiplication : MathFunctions
 {
-    private float num1;
-    private float num2;
-    private float result;
+
     public Multiplication(float num1, float num2)
     {
         this.num1 = num1;
@@ -17,10 +15,7 @@ public class Multiplication : ControlStatements
     {
         return "Multiplication";
     }
-    public float GetResult()
-    {
-        return result;
-    }
+
     public override void RunThis()
     {
         Debug.Log(result);

@@ -2,11 +2,8 @@
 using System.Collections;
 using System;
 
-public class Addition : ControlStatements
+public class Addition : MathFunctions
 {
-    private float num1;
-    private float num2;
-    private float result;
     public Addition(float num1, float num2)
     {
         this.num1 = num1;
@@ -16,10 +13,6 @@ public class Addition : ControlStatements
     public override string GetControlType()
     {
         return "Addition";
-    }
-    public float GetResult()
-    {
-        return result;
     }
     public override void RunThis()
     {

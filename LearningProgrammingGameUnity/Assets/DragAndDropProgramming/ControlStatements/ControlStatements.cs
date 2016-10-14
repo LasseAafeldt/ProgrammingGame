@@ -1,12 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public abstract class ControlStatements {
-    /*public void AddToQueue()
-    {
-        RunQueue queueRunning = new RunQueue();
-        queueRunning.AddToQueue(this);
-    }*/
     public void AddToQueue(int position)
     {
         RunQueue.AddToQueue(this, position);
