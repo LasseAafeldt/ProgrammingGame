@@ -3,12 +3,10 @@ using System.Collections;
 using System;
 
 public class ForLoop : ControlStatements {
-   
-    private int limit = 0;
 
     public ForLoop(int limit)
     {
-        this.limit = limit;
+        leftSide = limit;
     }
 
     public override string GetControlType()
@@ -18,7 +16,7 @@ public class ForLoop : ControlStatements {
 
     public override void RunThis()
     {
-        for(int i = 0; i < limit-1; i++)
+        for(int i = 0; i < leftSide-1; i++)
         {
             RunQueue.Next().RunThis();
         }
