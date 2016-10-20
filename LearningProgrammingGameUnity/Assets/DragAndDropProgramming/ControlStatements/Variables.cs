@@ -4,45 +4,69 @@ using System;
 
 public class Variables : ControlStatements
 {
-    public struct Value
+    public String VarName = null;
+    public new float? leftSide = null;
+
+    public Variables(String name, float? i)
     {
-        public Value(String stre)
-        {
-            str = stre;
-            flot = null;
-        }
-        public Value(float? i)
-        {
-            flot = i;
-            str = null;
-        }
-        public String str;
-        public float? flot;
+        VarName = name;
+        leftSide = i.Value;
+    }
+    public Variables(String name, String a)
+    {
+        VarName = name;
+        str = a;
+    }
+    public override String GetVarName()
+    {
+        return VarName;
     }
 
-    private Value values;
-    public Variables(float? i)
+    public override void SetVarName(String strng)
     {
-        values = new Value(i);
+        VarName = strng;
     }
-    public Variables(String a)
-    {
-        values = new Value(a);
-    }
+
 
     public override string GetControlType()
     {
         return "Variable";
     }
-    public Value GetValue()
+    public void GetValue(out String strng, out float flot)
     {
-        return values;
+        strng = str;
+        flot = leftSide.Value;        
+    }
+    public override void UpdateResult()
+    {
+        result = leftSide.Value + rightSide;
+    }
+    public override float GetLeft() { return leftSide.Value; }
+    public override void SetLeft(float newValue)
+    {
+        leftSide = newValue;
+        UpdateResult();
+    }
+    public override void SetRight(String strng, int index)
+    {
+        if(leftSide == null)
+        {
+            str = strng;
+        }
+        else
+        {
+            new Variables(this.VarName, strng).AddToQueue(index);
+        }
+
     }
     public override void RunThis()
     {
-        if(values.str != null)
-            Debug.Log(values.str);
-        if (values.flot != null)
-            Debug.Log(values.flot);
+        if (VarName != null)
+        {
+            if (str != null)
+                Debug.Log(VarName + " = " + str);
+            if (leftSide != null)
+                Debug.Log(VarName + " = " + leftSide);
+        }
     }
 }

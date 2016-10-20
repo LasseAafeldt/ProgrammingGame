@@ -52,23 +52,34 @@ public class TextChangeListener : MonoBehaviour {
         ChangedInDropPanel();
         //Debug.Log("text = (" + text + ")");
     }
+
     private void ChangedInDropPanel()
     {
         if (gameObject.transform.IsChildOf(GameObject.Find("DropPanel").transform))
         {
             int indexQueue = transform.parent.parent.GetSiblingIndex();
             int indexInParent = transform.GetSiblingIndex();
-            if (number != null)
+            if (transform.parent.tag.Equals("VariableBut"))
             {
-                if(indexInParent == 1)
+                //Debug.Log("variable being changed...");
+                if (indexInParent == 1 && text != null)
+                    RunQueue.GetAt(indexQueue).SetVarName(text);
+                if (indexInParent == 2 && number != null)
                     RunQueue.GetAt(indexQueue).SetLeft(number.Value);
-                if(indexInParent == 2)
-                    RunQueue.GetAt(indexQueue).SetRight(number.Value);
-                if(indexInParent == 3)
-                    RunQueue.GetAt(indexQueue).SetCondition(text);
+                else if (indexInParent == 2 && text != null)
+                    RunQueue.GetAt(indexQueue).SetRight(text,indexQueue);
             }
-            //else
-            //    RunQueue.GetAt(indexQueue).SetLeft(text);
+            else if (number != null)
+            {
+                if (indexInParent == 1)
+                    RunQueue.GetAt(indexQueue).SetLeft(number.Value);
+                if (indexInParent == 2)
+                    RunQueue.GetAt(indexQueue).SetRight(number.Value);
+                if (indexInParent == 3)
+                    RunQueue.GetAt(indexQueue).SetCondition(text);   
+            }
+            else if(text != null)
+                RunQueue.GetAt(indexQueue).SetRight(text);
             Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
         }
     }

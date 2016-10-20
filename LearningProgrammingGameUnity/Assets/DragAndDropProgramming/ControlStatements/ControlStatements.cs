@@ -1,22 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 
 public abstract class ControlStatements {
     protected float leftSide;
     protected float rightSide;
+    public String str = null;
     protected float result;
     protected string condition;
     public virtual void UpdateResult()
     {
         result = leftSide + rightSide;
     }
-    public float GetLeft() { return leftSide; }
-    public void SetLeft(float newValue)
+    public virtual float GetLeft() { return leftSide; }
+    public virtual void SetLeft(float newValue)
     {
         leftSide = newValue;
         UpdateResult();
     }
+    public virtual String GetVarName() { return null; }
+    public virtual void SetVarName(String strng) { }
+    public void SetRight(String strng)
+    {
+        str = strng;
+    }
+    public virtual void SetRight(String strng, int index) { }
     public float GetRight() { return rightSide; }
     public void SetRight(float newValue)
     {

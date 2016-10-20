@@ -26,17 +26,20 @@ public class RunQueue {
         runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
     }
-    /*public static void RemoveFromQueue(ControlStatements statement)
+    public static void RemoveFromQueue(ControlStatements statement)
     {
         runQueue.Remove(statement);
-    }*/
+    }
     public static void RemoveFromQueue(int position)
     {
         runQueue[position] = null;
         /*runQueue.RemoveAt(position);
         runQueue.Insert(position,null);*/
     }
-
+    public static int GetCurrentI()
+    {
+        return iterator;
+    }
     public static ControlStatements GetAt(int i)
     {
         return (ControlStatements)runQueue[i];
