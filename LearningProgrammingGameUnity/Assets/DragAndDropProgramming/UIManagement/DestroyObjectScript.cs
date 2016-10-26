@@ -17,10 +17,12 @@ public class DestroyObjectScript : MonoBehaviour, IDropHandler
             DragHandler.itemBeingDragged != GameObject.Find("ForLoopButton") &&
             DragHandler.itemBeingDragged != GameObject.Find("WhileLoopButton"))
         {
-            Debug.Log("Destroying object : " + DragHandler.itemBeingDragged); 
-            Debug.Log("Removing " + RunQueue.GetAt(DragHandler.index).GetControlType() +" from queue at index " + DragHandler.index);
-            Destroy(DragHandler.itemBeingDragged);
+            Debug.Log("Destroying object : " + DragHandler.itemBeingDragged);
+            Debug.Log("Removing " + DragHandler.index);
+            //Debug.Log(RunQueue.GetAt(DragHandler.index).GetControlType());
+            //Debug.Log(" from queue at index " + DragHandler.index);
             RunQueue.RemoveFromQueue(DragHandler.index);
+            Destroy(DragHandler.itemBeingDragged);
         }
     }
        

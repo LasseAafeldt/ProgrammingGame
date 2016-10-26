@@ -13,6 +13,7 @@ public abstract class ControlStatements {
     {
         result = leftSide + rightSide;
     }
+    public virtual float GetResult() { return result; }
     public virtual float GetLeft() { return leftSide; }
     public virtual void SetLeft(float newValue)
     {

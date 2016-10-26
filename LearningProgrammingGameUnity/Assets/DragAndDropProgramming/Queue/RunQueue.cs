@@ -22,18 +22,13 @@ public class RunQueue {
     }
     public static void AddToQueue(ControlStatements statement, int position)
     {
-        //Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
-        if (RunQueue.GetAt(position) != null)
-        {
-            //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
-            runQueue.RemoveAt(position);
-            runQueue.Insert(position, statement);
-        }
-        else
-        {
-            //Debug.Log("There was nothing here ");
-            runQueue.Add(statement);
-        }
+        Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
+        //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
+        runQueue.RemoveAt(position);
+        runQueue.Insert(position, statement);
+
+        //Debug.Log("There was nothing here ");
+        //runQueue.Add(statement);    
     }
     public static void RemoveFromQueue(ControlStatements statement)
     {
@@ -41,6 +36,7 @@ public class RunQueue {
     }
     public static void RemoveFromQueue(int position)
     {
+        //Debug.Log("setting " + position + " to null...");
         runQueue[position] = null;
         /*runQueue.RemoveAt(position);
         runQueue.Insert(position,null);*/
@@ -59,7 +55,13 @@ public class RunQueue {
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
             if(GetAt(iterator) != null)
+            {
                 GetAt(iterator).RunThis();
+                //Debug.Log("running " + iterator);
+            }
+            //else
+                //Debug.Log("running " + iterator + " was null");
+
         }
     }
 
