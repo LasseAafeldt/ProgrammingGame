@@ -5,7 +5,7 @@ public class ManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        RunQueue.InitializeQueue();
+        //RunQueue.InitializeQueue();
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());
     }
 	

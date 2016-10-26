@@ -10,7 +10,7 @@ public class Variables : ControlStatements
     public Variables(String name, float? i)
     {
         VarName = name;
-        leftSide = i.Value;
+        leftSide = i;
     }
     public Variables(String name, String a)
     {

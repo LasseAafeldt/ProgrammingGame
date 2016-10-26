@@ -7,6 +7,7 @@ using System;
 public class SlotDrop : MonoBehaviour, IDropHandler {
     //used for finding index being dropped on (used for the queue)
     private int indexBeingDroppedOn = -1;
+    private String log;
     //finds if there is an game object that is being dropped on
     public GameObject item
     {
@@ -27,6 +28,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         {
             //Sets the index which the object have been dropped on
             indexBeingDroppedOn = transform.GetSiblingIndex();
+            //Debug.Log("indexBeingDroppedOn = " + indexBeingDroppedOn);
             //Tries to create a 3D component (left,right,condition)
             try
             {
@@ -42,18 +44,22 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                 //Debug.Log("Failed!");
                 try
                 {
+                    log = e.StackTrace;
                     //Debug.Log("trying to create 2d component...");
                     var left = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().number;
                     var right = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                     //Debug.Log(" left = " + left + " right = " + right );
                     if (left != null && right != null)
+                    {
+                        //Debug.Log("Got into the if statement");
                         AddComponentToQueue(left, right);
+                    }
                     else
                         throw new ArgumentNullException("2D component had null in either left or right");
                 }
                 catch (Exception e2)
                 {
-                    //Debug.Log("Failed!");
+                    Debug.Log("Failed! Reason: " + e2.StackTrace);
                     //try to create variable
                     try
                     {
@@ -79,6 +85,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                     //Else tries to create component with 1 value
                     catch (Exception e3)
                     {
+                        log = e3.StackTrace;
                         //Debug.Log("Failed!");
                         //Debug.Log("trying to create for loop...");
                         var number = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().number;
@@ -124,35 +131,30 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
     //Adds 2D (left,right) GameComponent to the RunQueue
     private void AddComponentToQueue(float? left, float? right)
     {
-        //Debug.Log(" lef = " + lef + " righ = " + righ);
-        if (left != null && right != null)
+        if (DragHandler.itemBeingDragged == GameObject.Find("AdditionButton"))
         {
-            //Debug.Log(" local left = " + left + " local right = " + right);
-
-            if (DragHandler.itemBeingDragged == GameObject.Find("AdditionButton"))
-            {
-                new Addition(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added addtion to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
-            if (DragHandler.itemBeingDragged == GameObject.Find("SubtractionButton"))
-            {
-                new Subtraction(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added subtraction to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
-            if (DragHandler.itemBeingDragged == GameObject.Find("DivisionButton"))
-            {
-                new Division(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added division to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
-            if (DragHandler.itemBeingDragged == GameObject.Find("MultiplicationButton"))
-            {
-                new Multiplication(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added multiplication to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
+            //Debug.Log("trying to add addtion");
+            new Addition(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added addtion to queue in index " + indexBeingDroppedOn);
+            InstantiateGameObject();
+        }
+        if (DragHandler.itemBeingDragged == GameObject.Find("SubtractionButton"))
+        {
+            new Subtraction(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added subtraction to queue in index " + indexBeingDroppedOn);
+            InstantiateGameObject();
+        }
+        if (DragHandler.itemBeingDragged == GameObject.Find("DivisionButton"))
+        {
+            new Division(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added division to queue in index " + indexBeingDroppedOn);
+            InstantiateGameObject();
+        }
+        if (DragHandler.itemBeingDragged == GameObject.Find("MultiplicationButton"))
+        {
+            new Multiplication(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added multiplication to queue in index " + indexBeingDroppedOn);
+            InstantiateGameObject();
         }
     }
     //Adds 1D component to queue
@@ -199,4 +201,5 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(0.9f, 0.5f, 0);
     }
+    private void PrintLog() { Debug.Log(log);}
 }

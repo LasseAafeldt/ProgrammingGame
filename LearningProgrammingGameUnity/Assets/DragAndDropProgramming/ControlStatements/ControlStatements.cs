@@ -39,6 +39,7 @@ public abstract class ControlStatements {
     }
     public void AddToQueue(int position)
     {
+        //Debug.Log("Trying to add " + this.GetControlType() + " to queue at position " + position);
         RunQueue.AddToQueue(this, position);
     }
     public void RemoveFromQueue(int position)
