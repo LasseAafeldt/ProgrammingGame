@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System;
 
 public class TextChangeListener : MonoBehaviour {
     public float? number = null;
@@ -24,7 +25,8 @@ public class TextChangeListener : MonoBehaviour {
         float number1;
         text = arg0;
         //checks if the text entered in the field can be converted to int
-        if (float.TryParse(arg0, out number1) && 
+		try{
+		if (float.TryParse(arg0, out number1) && gameObject != null &&
             gameObject.GetInstanceID() != GameObject.Find("Condition").GetInstanceID())
         {
             //converts to float
@@ -32,7 +34,7 @@ public class TextChangeListener : MonoBehaviour {
             //Debug.Log("float conversion possible " + arg0 + " number = " + this.number);
         }
         //Checks if the input field is the condition field and there is input in the field
-        else if (gameObject.GetInstanceID() == GameObject.Find("Condition").GetInstanceID())
+        else if (gameObject != null && gameObject.GetInstanceID() == GameObject.Find("Condition").GetInstanceID())
         {
             //Checks if this is a acceptable condition. 
             //This is inverted so if this is not accepted then reset'
@@ -48,7 +50,11 @@ public class TextChangeListener : MonoBehaviour {
                 output.text = "0";
                 number = null;
             }
-        }
+			}
+		}
+		catch(Exception e){
+			
+		}
         ChangedInDropPanel();
         //Debug.Log("text = (" + text + ")");
     }

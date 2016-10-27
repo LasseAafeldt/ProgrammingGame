@@ -8,6 +8,8 @@ public class room1_AccessPanelAssignement : Assignment {
     {
         description = " descripe panel assignment in room one... ";
         IsFinalCorrect = false;
+		correctionList = new ArrayList ();
+		IsEachCorrect = new ArrayList ();
         correctionList.Add(9.0f);
         correctionList.Add(5.0f);
         correctionList.Add(8.0f);
