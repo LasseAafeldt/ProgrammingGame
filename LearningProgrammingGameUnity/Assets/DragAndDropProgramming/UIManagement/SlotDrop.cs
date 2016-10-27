@@ -199,7 +199,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         GameObject copyObject = Instantiate(DragHandler.itemBeingDragged) as GameObject;
         copyObject.transform.SetParent(transform);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
-        copyObject.transform.localScale = new Vector3(0.9f, 0.5f, 0);
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
     }
     private void PrintLog() { Debug.Log(log);}
 }
