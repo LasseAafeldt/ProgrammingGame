@@ -19,4 +19,10 @@ public class ManagerScript : MonoBehaviour {
         RunQueue.run();
         //QueueTest.test();
     }
+
+    public void Hint()
+    {
+        ConsoleUI.ResetText();
+        ConsoleUI.AddText(room1_AccessPanelAssignement.hints.GetNextHint());
+    }
 }

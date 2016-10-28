@@ -23,7 +23,7 @@ public class ConsoleUI : MonoBehaviour {
     }
     public static void ResetText()
     {
-        console.GetComponent<Text>().text = "Console: \n";
+        console.GetComponent<Text>().text = "";
     }
 
     

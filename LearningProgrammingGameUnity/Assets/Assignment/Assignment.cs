@@ -11,4 +11,18 @@ public abstract class Assignment  {
     protected bool FinalCorrect;
     public abstract void IsThisResultCorrect(int position, int positionInQueue);
     public String GetDescription() { return description; }
+
+    public bool IsFinalResultTrue()
+    {
+        foreach (bool i in IsEachCorrect)
+        {
+            if (!i)
+            {
+                continue;
+            }
+            else
+                return true;
+        }
+        return false;
+    }
 }

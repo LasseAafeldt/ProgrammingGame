@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+
 
 public class CameraMousePan : MonoBehaviour {
     Vector2 mouseLook;
@@ -23,7 +25,9 @@ public class CameraMousePan : MonoBehaviour {
             smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
             smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
             mouseLook += smoothV;
+            mouseLook.y = Mathf.Clamp(mouseLook.y,-50,70);
             transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+
             character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
         }
     }

@@ -71,6 +71,8 @@ public class RunQueue {
         {
             //open door
             ConsoleUI.AddText("\nCorrect code...");
+            GameObject sphere = GameObject.Find("Sphere");
+            sphere.SetActive(false);
             //Debug.Log("open door");
         }
         else
