@@ -14,8 +14,4 @@ public class Addition : MathFunctions
     {
         return "Addition";
     }
-    public override void RunThis()
-    {
-        Debug.Log(result);
-    }
 }

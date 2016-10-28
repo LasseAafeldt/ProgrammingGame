@@ -6,8 +6,8 @@ public class room1_AccessPanelAssignement : Assignment {
 
     public room1_AccessPanelAssignement()
     {
-        description = " descripe panel assignment in room one... ";
-        IsFinalCorrect = false;
+        description = "Write the 4 digit password code. Each digit must have its own slot.";
+        FinalCorrect = true;
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
         correctionList.Add(9.0f);
@@ -16,22 +16,33 @@ public class room1_AccessPanelAssignement : Assignment {
         correctionList.Add(3.0f);
     }
 
-    public override bool IsThisResultCorrect(int positionInCorrection, int positionInQueue)
+    public override void IsThisResultCorrect(int positionInCorrection, int positionInQueue)
     {
-        currentTestPosition = 0;
-        if (RunQueue.GetAt(positionInQueue).GetResult() == (float)correctionList[currentTestPosition])
-        {
-            IsEachCorrect.Add(true);
+        if (correctionList.Count > positionInCorrection) {
+            if (RunQueue.GetAt(positionInQueue).GetResult() == (float)correctionList[positionInCorrection])
+            {
+                IsEachCorrect.Add(true);
+            }
+            else
+                IsEachCorrect.Add(false);
         }
-        else
+        else 
             IsEachCorrect.Add(false);
 
-        foreach (bool i in IsEachCorrect) {
-            if (!i)
+        //Debug.Log(RunQueue.GetAt(positionInQueue).GetResult() + " " + correctionList[positionInCorrection]);
+    }
+
+    public bool IsFinalResultTrue()
+    {
+        foreach(bool i in IsEachCorrect)
+        {
+            if (i)
             {
-                IsFinalCorrect = true;
+                continue;
             }
+            else
+                return false;
         }
-        return IsFinalCorrect;
+        return true;
     }
 }

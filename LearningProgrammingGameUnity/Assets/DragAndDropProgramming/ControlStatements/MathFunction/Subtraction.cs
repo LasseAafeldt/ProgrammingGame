@@ -18,8 +18,4 @@ public class Subtraction : MathFunctions
     {
         return "Subtraction";
     }
-    public override void RunThis()
-    {
-        Debug.Log(result);
-    }
 }

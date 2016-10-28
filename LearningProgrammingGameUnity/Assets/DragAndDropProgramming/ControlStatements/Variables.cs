@@ -5,17 +5,23 @@ using System;
 public class Variables : ControlStatements
 {
     public String VarName = null;
-    public new float? leftSide = null;
 
-    public Variables(String name, float? i)
+    public Variables(String name, float i)
     {
         VarName = name;
-        leftSide = i;
+        rightSide = i;
+        str = null;
+        result = i;
     }
     public Variables(String name, String a)
     {
         VarName = name;
         str = a;
+    }
+    public override float GetResult()
+    {
+        //Debug.Log(this.result + " name = " + this.GetVarName());
+        return this.result;
     }
     public override String GetVarName()
     {
@@ -26,8 +32,6 @@ public class Variables : ControlStatements
     {
         VarName = strng;
     }
-
-
     public override string GetControlType()
     {
         return "Variable";
@@ -35,38 +39,38 @@ public class Variables : ControlStatements
     public void GetValue(out String strng, out float flot)
     {
         strng = str;
-        flot = leftSide.Value;        
+        flot = rightSide;        
     }
     public override void UpdateResult()
     {
-        result = leftSide.Value + rightSide;
+        result = rightSide;
     }
-    public override float GetLeft() { return leftSide.Value; }
-    public override void SetLeft(float newValue)
+
+    public override void SetRight(float newValue)
     {
-        leftSide = newValue;
+        rightSide = newValue;
+        Debug.Log("set right to " + newValue);
+        str = null;
         UpdateResult();
     }
     public override void SetRight(String strng, int index)
     {
-        if(leftSide == null)
-        {
-            str = strng;
-        }
-        else
-        {
-            new Variables(this.VarName, strng).AddToQueue(index);
-        }
-
+        new Variables(this.VarName, strng).AddToQueue(index);
     }
     public override void RunThis()
     {
         if (VarName != null)
         {
             if (str != null)
+            {
                 Debug.Log(VarName + " = " + str);
-            if (leftSide != null)
-                Debug.Log(VarName + " = " + leftSide);
+                ConsoleUI.AddText(VarName + " = " + str);
+            }
+            else
+            {
+                Debug.Log(VarName + " = " + rightSide);
+                ConsoleUI.AddText(VarName + " = " + rightSide);
+            }
         }
     }
 }

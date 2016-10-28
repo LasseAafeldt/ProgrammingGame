@@ -19,9 +19,4 @@ public class Multiplication : MathFunctions
     {
         return "Multiplication";
     }
-
-    public override void RunThis()
-    {
-        Debug.Log(result);
-    }
 }

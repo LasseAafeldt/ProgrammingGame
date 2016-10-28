@@ -25,11 +25,16 @@ public class room1_loadAccessPanelAssignment : MonoBehaviour {
 			else
 				activeChildCount ++;
 		}
-		Debug.Log (new room1_AccessPanelAssignement ().GetDescription ());
+		//Debug.Log (new room1_AccessPanelAssignement ().GetDescription ());
 		GameObject.Find ("HeaderText").GetComponent<Text> ().text = new room1_AccessPanelAssignement ().GetDescription ();
 		this.scaleDragPanel ();
+        obj = GameObject.Find("DropPanel");
+        for (int i = 4; i < obj.transform.childCount; i++)
+        {
+            obj.transform.GetChild(i).gameObject.SetActive(false);
+        }
 
-	}
+    }
 
 	public void reset(){
 		for(int i = 0; i<obj.transform.childCount; i++){

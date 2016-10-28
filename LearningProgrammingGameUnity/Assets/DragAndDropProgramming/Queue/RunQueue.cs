@@ -22,7 +22,7 @@ public class RunQueue {
     }
     public static void AddToQueue(ControlStatements statement, int position)
     {
-        Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
+        //Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
         //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
         runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
@@ -52,16 +52,32 @@ public class RunQueue {
 
     public static void run()
     {
+        ConsoleUI.ResetText();
+        int indexInCorrectionList = 0;
+        room1_AccessPanelAssignement roomOne = new room1_AccessPanelAssignement();
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
             if(GetAt(iterator) != null)
             {
                 GetAt(iterator).RunThis();
+                roomOne.IsThisResultCorrect(indexInCorrectionList, iterator);
+                indexInCorrectionList++;
                 //Debug.Log("running " + iterator);
             }
             //else
                 //Debug.Log("running " + iterator + " was null");
-
+        }
+        if (roomOne.IsFinalResultTrue())
+        {
+            //open door
+            ConsoleUI.AddText("\nCorrect code...");
+            //Debug.Log("open door");
+        }
+        else
+        {
+            //Error sound
+            ConsoleUI.AddText("\nWrong code! Please try again...");
+            //Debug.Log("Wrong");
         }
     }
 

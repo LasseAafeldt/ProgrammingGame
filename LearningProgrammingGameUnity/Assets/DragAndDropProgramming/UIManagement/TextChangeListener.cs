@@ -5,11 +5,12 @@ using System;
 
 public class TextChangeListener : MonoBehaviour {
     public float? number = null;
+    private float number2 = 0;
     public string text = null;
-
+    InputField input;
     // Use this for initialization
     void Start () {
-        var input = gameObject.GetComponent<InputField>();
+        input = gameObject.GetComponent<InputField>();
         var se = new InputField.SubmitEvent();
         se.AddListener(SubmitName);
         input.onEndEdit = se;
@@ -25,16 +26,17 @@ public class TextChangeListener : MonoBehaviour {
         float number1;
         text = arg0;
         //checks if the text entered in the field can be converted to int
-		try{
-		if (float.TryParse(arg0, out number1) && gameObject != null &&
-            gameObject.GetInstanceID() != GameObject.Find("Condition").GetInstanceID())
+
+		if (float.TryParse(arg0, out number1)) 
         {
             //converts to float
             number = float.Parse(arg0);
+            number2 = float.Parse(arg0);
+            text = null;
             //Debug.Log("float conversion possible " + arg0 + " number = " + this.number);
         }
         //Checks if the input field is the condition field and there is input in the field
-        else if (gameObject != null && gameObject.GetInstanceID() == GameObject.Find("Condition").GetInstanceID())
+        /*else if (gameObject != null )//&& gameObject.GetInstanceID() == GameObject.Find("Condition").GetInstanceID())
         {
             //Checks if this is a acceptable condition. 
             //This is inverted so if this is not accepted then reset'
@@ -50,11 +52,7 @@ public class TextChangeListener : MonoBehaviour {
                 output.text = "0";
                 number = null;
             }
-			}
-		}
-		catch(Exception e){
-			
-		}
+        }*/
         ChangedInDropPanel();
         //Debug.Log("text = (" + text + ")");
     }
@@ -67,28 +65,31 @@ public class TextChangeListener : MonoBehaviour {
             int indexInParent = transform.GetSiblingIndex();
             if (transform.parent.tag.Equals("VariableBut"))
             {
-                //Debug.Log("variable being changed...");
-                if (indexInParent == 1 && text != null)
-                    RunQueue.GetAt(indexQueue).SetVarName(text);
-                if (indexInParent == 2 && number != null)
-                    RunQueue.GetAt(indexQueue).SetLeft(number.Value);
-                else if (indexInParent == 2 && text != null)
-                    RunQueue.GetAt(indexQueue).SetRight(text,indexQueue);
+                //Debug.Log("3number = " + number2);
+                if (number != null)
+                {
+                    if (indexInParent == 2)
+                    {
+                        Debug.Log("4number = " + number2);
+                        RunQueue.GetAt(indexQueue).SetRight(number.Value);
+                    }
+                }
+                else if (text != null)
+                {
+                    //Debug.Log("variable being changed...");
+                    if (indexInParent == 1 && text != null)
+                        RunQueue.GetAt(indexQueue).SetVarName(text);
+                    if (indexInParent == 2 && text != null)
+                    {
+                        RunQueue.GetAt(indexQueue).SetRight(text, indexQueue);
+                        //Debug.Log("2number = " + number2);
+                    }
+                }
+                Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
             }
-            else if (number != null)
-            {
-                if (indexInParent == 1)
-                    RunQueue.GetAt(indexQueue).SetLeft(number.Value);
-                if (indexInParent == 2)
-                    RunQueue.GetAt(indexQueue).SetRight(number.Value);
-                if (indexInParent == 3)
-                    RunQueue.GetAt(indexQueue).SetCondition(text);   
-            }
-            else if(text != null)
-                RunQueue.GetAt(indexQueue).SetRight(text);
-            Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
         }
     }
+
     public void ResetVariables()
     {
         number = null;

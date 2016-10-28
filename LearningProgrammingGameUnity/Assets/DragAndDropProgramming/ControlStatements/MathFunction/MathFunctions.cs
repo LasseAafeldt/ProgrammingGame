@@ -4,5 +4,10 @@ using System;
 
 public abstract class MathFunctions : ControlStatements
 {
-    public float GetResult(){return result;}
+    public new float GetResult(){return result;}
+    public override void RunThis()
+    {
+        Debug.Log(result);
+        ConsoleUI.AddText(result.ToString());
+    }
 }

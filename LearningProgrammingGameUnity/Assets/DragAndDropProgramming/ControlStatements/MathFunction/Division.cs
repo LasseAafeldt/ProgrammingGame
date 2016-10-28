@@ -18,9 +18,4 @@ public class Division : MathFunctions
     {
         return "Division";
     }
-
-    public override void RunThis()
-    {
-        Debug.Log(result);
-    }
 }

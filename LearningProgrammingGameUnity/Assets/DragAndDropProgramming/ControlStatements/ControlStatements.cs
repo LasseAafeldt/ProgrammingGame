@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-
+//abstract, cannot instantiate but create methods that are inheritet
 public abstract class ControlStatements {
     protected float leftSide;
     protected float rightSide;
@@ -28,7 +28,7 @@ public abstract class ControlStatements {
     }
     public virtual void SetRight(String strng, int index) { }
     public float GetRight() { return rightSide; }
-    public void SetRight(float newValue)
+    public virtual void SetRight(float newValue)
     {
         rightSide = newValue;
         UpdateResult();

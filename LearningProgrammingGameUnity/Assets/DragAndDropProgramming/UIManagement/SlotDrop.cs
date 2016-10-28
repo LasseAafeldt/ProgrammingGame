@@ -59,7 +59,8 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                 }
                 catch (Exception e2)
                 {
-                    Debug.Log("Failed! Reason: " + e2.StackTrace);
+                    //Debug.Log("Failed! Reason: " + e2.StackTrace);
+                    log = e2.StackTrace;
                     //try to create variable
                     try
                     {
@@ -72,7 +73,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                             if (number != null)
                             {
                                 //Debug.Log("creating variable with name = " +name +" and with value = " + number);
-                                AddComponentToQueue(name,number);
+                                AddComponentToQueue(name,number.Value);
                             }
                             else if(text != null)
                             {
@@ -182,7 +183,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         }
     }
     //add component variable of type float
-    private void AddComponentToQueue(String name, float? value)
+    private void AddComponentToQueue(String name, float value)
     {
         //variable
         if (DragHandler.itemBeingDragged == GameObject.Find("VariableButton"))
