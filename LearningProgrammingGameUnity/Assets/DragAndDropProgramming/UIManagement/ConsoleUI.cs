@@ -10,16 +10,18 @@ public class ConsoleUI : MonoBehaviour {
 	void Start () {
         console = gameObject;
 	}
-	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
     public static void AddText(String text)
     {
         //Debug.Log("adding text " + text + " to console...");
         console.GetComponent<Text>().text += text + "\n";
+    }
+    public static void SetText(String text)
+    {
+        console.GetComponent<Text>().text = text + "\n";
     }
     public static void ResetText()
     {

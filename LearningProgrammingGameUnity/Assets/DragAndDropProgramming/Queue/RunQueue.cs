@@ -54,20 +54,21 @@ public class RunQueue {
     {
         ConsoleUI.ResetText();
         int indexInCorrectionList = 0;
-        room1_AccessPanelAssignement roomOne = new room1_AccessPanelAssignement();
+       
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
             if(GetAt(iterator) != null)
             {
                 GetAt(iterator).RunThis();
-                roomOne.IsThisResultCorrect(indexInCorrectionList, iterator);
+                //if(ShowAndHideDragAndDrop.WhichAccessPanel == 1)
+                 //   roomOne.IsThisResultCorrect(indexInCorrectionList, iterator);
                 indexInCorrectionList++;
                 //Debug.Log("running " + iterator);
             }
             //else
                 //Debug.Log("running " + iterator + " was null");
         }
-        if (roomOne.IsFinalResultTrue())
+        if (false)//roomOne.IsFinalResultTrue())
         {
             //open door
             ConsoleUI.AddText("\nCorrect code...");
