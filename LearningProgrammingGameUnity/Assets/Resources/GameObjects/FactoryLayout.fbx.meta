@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 9e56ec6eedfd34fa3af84b7126fb3773
+timeCreated: 1478009050
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: factory_layout_ControlRoom:pipe_ellipse_double1
+    100002: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart0
+    100004: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart1
+    100006: factory_layout_ControlRoom:pipe_ellipse_single12
+    100008: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart0
+    100010: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart1
+    100012: factory_layout_ControlRoom:pipes:handle
+    100014: FactoryFloor
+    100016: //RootNode
+    100018: FactoryWalls
+    100020: group1
+    100022: handle_stairs_inner
+    100024: handle_stairs_inner1
+    100026: handle_stairs_outer1
+    100028: pCube2
+    100030: pCube3
+    100032: pCube4
+    100034: pCube5
+    100036: pCube6
+    100038: pCube7
+    100040: pCylinder1
+    100042: polySurface1
+    100044: polySurface2
+    100046: pPlane1
+    100048: pPlane2
+    100050: support_inner
+    100052: transform3
+    100054: transform6
+    100056: Window_ControlRoom
+    100058: windows
+    400000: factory_layout_ControlRoom:pipe_ellipse_double1
+    400002: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart0
+    400004: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart1
+    400006: factory_layout_ControlRoom:pipe_ellipse_single12
+    400008: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart0
+    400010: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart1
+    400012: factory_layout_ControlRoom:pipes:handle
+    400014: FactoryFloor
+    400016: //RootNode
+    400018: FactoryWalls
+    400020: group1
+    400022: handle_stairs_inner
+    400024: handle_stairs_inner1
+    400026: handle_stairs_outer1
+    400028: pCube2
+    400030: pCube3
+    400032: pCube4
+    400034: pCube5
+    400036: pCube6
+    400038: pCube7
+    400040: pCylinder1
+    400042: polySurface1
+    400044: polySurface2
+    400046: pPlane1
+    400048: pPlane2
+    400050: support_inner
+    400052: transform3
+    400054: transform6
+    400056: Window_ControlRoom
+    400058: windows
+    2300000: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart0
+    2300002: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart1
+    2300004: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart0
+    2300006: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart1
+    2300008: factory_layout_ControlRoom:pipes:handle
+    2300010: FactoryFloor
+    2300012: pCube2
+    2300014: pCube3
+    2300016: pCube4
+    2300018: pCube5
+    2300020: pCube6
+    2300022: pCube7
+    2300024: polySurface1
+    2300026: polySurface2
+    2300028: pPlane1
+    2300030: pPlane2
+    2300032: support_inner
+    2300034: Window_ControlRoom
+    3300000: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart0
+    3300002: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart1
+    3300004: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart0
+    3300006: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart1
+    3300008: factory_layout_ControlRoom:pipes:handle
+    3300010: FactoryFloor
+    3300012: pCube2
+    3300014: pCube3
+    3300016: pCube4
+    3300018: pCube5
+    3300020: pCube6
+    3300022: pCube7
+    3300024: polySurface1
+    3300026: polySurface2
+    3300028: pPlane1
+    3300030: pPlane2
+    3300032: support_inner
+    3300034: Window_ControlRoom
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: FactoryFloor
+    4300006: Window_ControlRoom
+    4300008: factory_layout_ControlRoom:pipes:handle
+    4300010: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart0
+    4300012: factory_layout_ControlRoom:pipe_ellipse_double1_MeshPart1
+    4300014: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart0
+    4300016: factory_layout_ControlRoom:pipe_ellipse_single12_MeshPart1
+    4300018: pPlane1
+    4300020: pCube3
+    4300022: pCube4
+    4300024: pCube6
+    4300026: pCube5
+    4300028: pCube2
+    4300030: pPlane2
+    4300032: support_inner
+    4300034: pCube7
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
