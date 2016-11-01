@@ -3,8 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 
-public class room1_AccessPanelAssignement : Assignment {
-    public room1_AccessPanelAssignement()
+public class room1AccessPanelAssignement : Assignment {
+    public room1AccessPanelAssignement()
     {
         description = "Write the 4 digit password code. Each digit must have its own slot.";
         FinalCorrect = true;
@@ -31,38 +31,5 @@ public class room1_AccessPanelAssignement : Assignment {
         else 
             IsEachCorrect.Add(false);
         //Debug.Log(RunQueue.GetAt(positionInQueue).GetResult() + " " + correctionList[positionInCorrection]);
-    }
-
-    //LOADER
-    // Use this for initialization
-    new void Start()
-    {
-        base.Start();
-    }
-
-    // Update is called once per frame
-    new void Update()
-    {
-
-    }
-
-    public override void load()
-    {
-        for (int i = 0; i < obj.transform.childCount; i++)
-        {
-            if (i != GameObject.Find("DragSlot9").transform.GetSiblingIndex())
-                obj.transform.GetChild(i).gameObject.SetActive(false);
-            else
-                activeChildCount++;
-        }
-        //Debug.Log (new room1_AccessPanelAssignement ().GetDescription ());
-        GameObject.Find("HeaderText").GetComponent<Text>().text = new room1_AccessPanelAssignement().GetDescription();
-        this.scaleDragPanel();
-        obj = GameObject.Find("DropPanel");
-        for (int i = 4; i < obj.transform.childCount; i++)
-        {
-            obj.transform.GetChild(i).gameObject.SetActive(false);
-        }
-
     }
 }

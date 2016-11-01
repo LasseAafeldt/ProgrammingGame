@@ -39,30 +39,4 @@ public abstract class Assignment{
             ConsoleUI.ResetText();
         }
     }
-
-    //LOADER:
-    protected GameObject obj;
-    protected int activeChildCount;
-    // Use this for initialization
-    protected void Start()
-    {
-        activeChildCount = 0;
-        obj = gameObject;
-    }
-    // Update is called once per frame
-    protected void Update(){ }
-    public abstract void load();
-    protected void scaleDragPanel()
-    {
-        if (activeChildCount < 6)
-        {
-            obj.GetComponent<RectTransform>().sizeDelta = new Vector2(200, 250);
-            obj.GetComponent<GridLayoutGroup>().childAlignment = TextAnchor.UpperCenter;
-        }
-        else
-        {
-            obj.GetComponent<RectTransform>().sizeDelta = new Vector2(200 * 2, 250);
-            obj.GetComponent<GridLayoutGroup>().childAlignment = TextAnchor.MiddleCenter;
-        }
-    }
 }

@@ -7,11 +7,16 @@ public abstract class ControlStatements {
     protected float leftSide;
     protected float rightSide;
     public String str = null;
+    public String VarName = null;
     protected float result;
     protected string condition;
     public virtual void UpdateResult()
     {
         result = leftSide + rightSide;
+    }
+    public String GetString()
+    {
+        return str;
     }
     public virtual float GetResult() { return result; }
     public virtual float GetLeft() { return leftSide; }
@@ -20,7 +25,7 @@ public abstract class ControlStatements {
         leftSide = newValue;
         UpdateResult();
     }
-    public virtual String GetVarName() { return null; }
+    public String GetVarName() { return VarName; }
     public virtual void SetVarName(String strng) { }
     public void SetRight(String strng)
     {

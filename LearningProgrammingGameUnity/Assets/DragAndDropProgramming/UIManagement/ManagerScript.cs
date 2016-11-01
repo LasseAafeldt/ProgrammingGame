@@ -23,6 +23,6 @@ public class ManagerScript : MonoBehaviour {
     public void Hint()
     {
         ConsoleUI.ResetText();
-        ConsoleUI.AddText(room1_AccessPanelAssignement.hints.GetNextHint());
+        ConsoleUI.AddText(room1AccessPanelAssignement.hints.GetNextHint());
     }
 }

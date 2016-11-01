@@ -49,6 +49,10 @@ public class RunQueue {
     {
         return (ControlStatements)runQueue[i];
     }
+    public static void Reset()
+    {
+        runQueue.Clear();
+    }
 
     public static void run()
     {
@@ -68,7 +72,7 @@ public class RunQueue {
             //else
                 //Debug.Log("running " + iterator + " was null");
         }
-        if (false)//roomOne.IsFinalResultTrue())
+        /*if (false)//roomOne.IsFinalResultTrue())
         {
             //open door
             ConsoleUI.AddText("\nCorrect code...");
@@ -81,7 +85,7 @@ public class RunQueue {
             //Error sound
             ConsoleUI.AddText("\nWrong code! Please try again...");
             //Debug.Log("Wrong");
-        }
+        }*/
     }
 
     public static ControlStatements Next()
