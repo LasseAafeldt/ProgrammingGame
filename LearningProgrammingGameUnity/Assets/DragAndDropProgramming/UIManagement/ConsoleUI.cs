@@ -8,7 +8,6 @@ public class ConsoleUI : MonoBehaviour {
     private static GameObject console;
 	// Use this for initialization
 	void Start () {
-        console = gameObject;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -16,16 +15,20 @@ public class ConsoleUI : MonoBehaviour {
 	}
     public static void AddText(String text)
     {
+        console = CanvasHandler.Console;
         //Debug.Log("adding text " + text + " to console...");
-        console.GetComponent<Text>().text += text + "\n";
+        //Debug.Log(console);
+        console.transform.GetChild(0).GetComponent<Text>().text += text + "\n";
     }
     public static void SetText(String text)
     {
-        console.GetComponent<Text>().text = text + "\n";
+        console = CanvasHandler.Console;
+        console.transform.GetChild(0).GetComponent<Text>().text = text + "\n";
     }
     public static void ResetText()
     {
-        console.GetComponent<Text>().text = "";
+        console = CanvasHandler.Console;
+        console.transform.GetChild(0).GetComponent<Text>().text = "";
     }
 
     

@@ -4,8 +4,6 @@ using System;
 
 public class Variables : ControlStatements
 {
-    public String VarName = null;
-
     public Variables(String name, float i)
     {
         VarName = name;
@@ -22,10 +20,6 @@ public class Variables : ControlStatements
     {
         //Debug.Log(this.result + " name = " + this.GetVarName());
         return this.result;
-    }
-    public override String GetVarName()
-    {
-        return VarName;
     }
 
     public override void SetVarName(String strng)

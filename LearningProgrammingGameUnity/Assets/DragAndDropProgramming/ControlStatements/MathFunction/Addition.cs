@@ -10,6 +10,14 @@ public class Addition : MathFunctions
         rightSide = num2;
         result = num1 + num2;
     }
+    public Addition(string first, string second)
+    {
+        str = first;
+        VarName = second;
+        result = 0;
+        leftSide = 0;
+        rightSide = 0;
+    }
     public override string GetControlType()
     {
         return "Addition";
