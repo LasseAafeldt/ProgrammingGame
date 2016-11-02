@@ -26,7 +26,6 @@ public class RunQueue {
         //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
         runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
-
         //Debug.Log("There was nothing here ");
         //runQueue.Add(statement);    
     }
@@ -56,36 +55,48 @@ public class RunQueue {
 
     public static void run()
     {
-        ConsoleUI.ResetText();
-        int indexInCorrectionList = 0;
-       
+        ConsoleUI.ResetText();   
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
             if(GetAt(iterator) != null)
             {
                 GetAt(iterator).RunThis();
-                //if(ShowAndHideDragAndDrop.WhichAccessPanel == 1)
-                 //   roomOne.IsThisResultCorrect(indexInCorrectionList, iterator);
-                indexInCorrectionList++;
-                //Debug.Log("running " + iterator);
             }
-            //else
-                //Debug.Log("running " + iterator + " was null");
         }
-        /*if (false)//roomOne.IsFinalResultTrue())
+        switch (ManagerScript.ActiveID)
         {
-            //open door
-            ConsoleUI.AddText("\nCorrect code...");
-            GameObject sphere = GameObject.Find("Sphere");
-            sphere.SetActive(false);
-            //Debug.Log("open door");
+            case 1: 
+                Debug.Log("Room one is active! Checking results...");
+                room1AccessPanelAssignement.IsEachResultCorrect();
+                //open door
+                if (room1AccessPanelAssignement.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect code...");
+                    //Debug.Log("open door");
+                }
+                else
+                {
+                    //Error sound
+                    ConsoleUI.AddText("\nWrong code! Please try again...");
+                    //Debug.Log("Wrong");
+                }
+                break;
+            case 2:
+                room2_AdditionAssignment.IsEachResultCorrect();
+                if (room2_AdditionAssignment.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect code...");
+                    //Debug.Log("open door");
+                }
+                else
+                {
+                    //Error sound
+                    ConsoleUI.AddText("\nWrong code! Please try again...");
+                    //Debug.Log("Wrong");
+                }
+                break;
+                
         }
-        else
-        {
-            //Error sound
-            ConsoleUI.AddText("\nWrong code! Please try again...");
-            //Debug.Log("Wrong");
-        }*/
     }
 
     public static ControlStatements Next()

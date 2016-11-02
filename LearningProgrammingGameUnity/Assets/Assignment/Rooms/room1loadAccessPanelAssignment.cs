@@ -7,9 +7,11 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
     private GameObject player;
     private GameObject console;
     protected int activeChildCount;
+    private static int ID = 1;
     // Use this for initialization
     void Start()
     {
+        ID = 1;
         activeChildCount = 0;
         obj = gameObject;
         console = obj;
@@ -20,6 +22,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         float distanceToConsole = Vector3.Distance(player.transform.position, console.transform.position);
         if (Input.GetKeyDown("e") && distanceToConsole < 1.2f && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
         {
+            ManagerScript.ActiveID = ID;
             CanvasHandler.DragAndDropCanvas.SetActive(true);
             RunQueue.InitializeQueue();
             Cursor.lockState = CursorLockMode.None;
@@ -30,6 +33,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);

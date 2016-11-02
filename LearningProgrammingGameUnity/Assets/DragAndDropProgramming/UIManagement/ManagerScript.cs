@@ -2,9 +2,10 @@
 using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    public static int ActiveID;
+    // Use this for initialization
+    void Start () {
+        ActiveID = 0;
         //RunQueue.InitializeQueue();
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());
     }
@@ -24,5 +25,9 @@ public class ManagerScript : MonoBehaviour {
     {
         ConsoleUI.ResetText();
         ConsoleUI.AddText(room1AccessPanelAssignement.hints.GetNextHint());
+    }
+    public static void ResetID()
+    {
+        ActiveID = 0;
     }
 }

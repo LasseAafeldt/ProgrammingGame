@@ -9,9 +9,12 @@ public class room2loadAdditionAssignment : MonoBehaviour
     GameObject console;
     GameObject player;
     protected int activeChildCount;
+    private static int ID = 2;
+
     // Use this for initialization
     void Start()
     {
+
         activeChildCount = 0;
         obj = gameObject;
         console = obj;
@@ -24,6 +27,7 @@ public class room2loadAdditionAssignment : MonoBehaviour
         float distanceToConsole = Vector3.Distance(player.transform.position, console.transform.position);
         if (Input.GetKeyDown("e") && distanceToConsole < 1.2f && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
         {
+            ManagerScript.ActiveID = ID;
             CanvasHandler.DragAndDropCanvas.SetActive(true);
             RunQueue.InitializeQueue();
             Cursor.lockState = CursorLockMode.None;
@@ -34,6 +38,7 @@ public class room2loadAdditionAssignment : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
@@ -60,32 +65,47 @@ public class room2loadAdditionAssignment : MonoBehaviour
 
         //Debug.Log(CanvasHandler.VariableButton + " "+ CanvasHandler.DropPanel);
 
+        // j variable button
         GameObject copyObject = Instantiate(
             CanvasHandler.VariableButton,
             CanvasHandler.DropPanel.transform.GetChild(0))
             as GameObject;
         Destroy(copyObject.GetComponent<DragHandler>());
+        Destroy(copyObject.transform.GetChild(1).gameObject);
+        copyObject.transform.GetChild(0).GetComponent<Text>().text = "j = ";
+        GameObject emptyGameobj = new GameObject();
+        emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(0).transform.GetChild(0));
+        emptyGameobj.transform.SetSiblingIndex(1);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
+        //i variable button
         copyObject = Instantiate(
             CanvasHandler.VariableButton,
             CanvasHandler.DropPanel.transform.GetChild(1))
             as GameObject;
         Destroy(copyObject.GetComponent<DragHandler>());
+        Destroy(copyObject.transform.GetChild(1).gameObject);
+        copyObject.transform.GetChild(0).GetComponent<Text>().text = "i = ";
+        emptyGameobj = new GameObject();
+        emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(1).transform.GetChild(0));
+        emptyGameobj.transform.SetSiblingIndex(1);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
     
+        //equation text
         copyObject = Instantiate(
             CanvasHandler.EquationButton,
             CanvasHandler.DropPanel.transform.GetChild(2))
             as GameObject;
-        //CanvasHandler.EquationButton.transform.GetChild(0).GetComponent<Text>().text = "hej";
+        copyObject.transform.GetChild(0).GetComponent<Text>().text = "i + j = 20";
         Destroy(copyObject.GetComponent<DragHandler>());
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
-        new Variables("i", null).AddToQueue(0);
+
+        //Add the things to the queue
         new Variables("j", null).AddToQueue(1);
+        new Variables("i", null).AddToQueue(0);
         new Equation("i + j = 20").AddToQueue(2);
     }
 
