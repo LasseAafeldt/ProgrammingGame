@@ -5,7 +5,6 @@ using System.Collections;
 public class room1loadAccessPanelAssignment : MonoBehaviour{
     protected GameObject obj;
     private GameObject player;
-    private GameObject console;
     protected int activeChildCount;
     private static int ID = 1;
     // Use this for initialization
@@ -14,13 +13,12 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         ID = 1;
         activeChildCount = 0;
         obj = gameObject;
-        console = obj;
         player = GameObject.Find("Player");
     }
     void Update()
     {
-        float distanceToConsole = Vector3.Distance(player.transform.position, console.transform.position);
-        if (Input.GetKeyDown("e") && distanceToConsole < 1.2f && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
+        float distanceToObj = Vector3.Distance(player.transform.position, obj.transform.position);
+        if (Input.GetKeyDown("e") && distanceToObj < 1.2f && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
         {
             ManagerScript.ActiveID = ID;
             CanvasHandler.DragAndDropCanvas.SetActive(true);
