@@ -5,10 +5,25 @@ using UnityEngine.UI;
 
 public class room2_AdditionAssignment : Assignment
 {
-
-
-    public override void IsThisResultCorrect(int position, int positionInQueue)
+    public room2_AdditionAssignment()
     {
+        description = "Set the two variables such that the equation is true";
+        correctionList = new ArrayList();
+        IsEachCorrect = new ArrayList();
+    }
+
+
+    public static void IsEachResultCorrect()
+    {
+
+        IsEachCorrect.Clear();
+        if (RunQueue.GetAt(0).GetRight() + RunQueue.GetAt(1).GetRight() == 20)
+        {
+            IsEachCorrect.Add(true);
+        }
+        else
+            IsEachCorrect.Add(false);
+
     }
     // i = ?;
     // j = ?;

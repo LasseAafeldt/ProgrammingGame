@@ -7,23 +7,22 @@ public abstract class Assignment{
     public static Hint hints;
     protected String description;
     protected int currentTestPosition;
-    protected ArrayList correctionList;
-    protected ArrayList IsEachCorrect;
-    protected bool FinalCorrect;
-    public abstract void IsThisResultCorrect(int position, int positionInQueue);
+    protected static ArrayList correctionList;
+    protected static ArrayList IsEachCorrect;
     public String GetDescription() { return description; }
 
-    public bool IsFinalResultTrue()
+    public static bool IsFinalResultTrue()
     {
+        int numberOfTrue = 0;
         foreach (bool i in IsEachCorrect)
         {
-            if (!i)
+            if (i)
             {
-                continue;
+                numberOfTrue++;
             }
-            else
-                return true;
         }
+        if (numberOfTrue == IsEachCorrect.Count)
+            return true;
         return false;
     }
 

@@ -5,7 +5,6 @@ using System;
 
 public class TextChangeListener : MonoBehaviour {
     public float? number = null;
-    private float number2 = 0;
     public string text = null;
     InputField input;
     // Use this for initialization
@@ -31,7 +30,6 @@ public class TextChangeListener : MonoBehaviour {
         {
             //converts to float
             number = float.Parse(arg0);
-            number2 = float.Parse(arg0);
             text = null;
             //Debug.Log("float conversion possible " + arg0 + " number = " + this.number);
         }
@@ -59,7 +57,7 @@ public class TextChangeListener : MonoBehaviour {
 
     private void ChangedInDropPanel()
     {
-        if (gameObject.transform.IsChildOf(GameObject.Find("DropPanel").transform))
+        if (gameObject.transform.IsChildOf(CanvasHandler.DropPanel.transform))
         {
             int indexQueue = transform.parent.parent.GetSiblingIndex();
             int indexInParent = transform.GetSiblingIndex();
@@ -70,7 +68,7 @@ public class TextChangeListener : MonoBehaviour {
                 {
                     if (indexInParent == 2)
                     {
-                        Debug.Log("4number = " + number2);
+                        //Debug.Log("4number = " + number2);
                         RunQueue.GetAt(indexQueue).SetRight(number.Value);
                     }
                 }
