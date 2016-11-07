@@ -23,8 +23,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - first:
+        name: _Glossiness
+      second: 0.5
+    - first:
         name: _Height
       second: 128
+    - first:
+        name: _Metallic
+      second: 0
     - first:
         name: _Width
       second: 1

@@ -40,10 +40,10 @@
 				{
 					vertexOutput output;
 					float2 rasterPosition = float2(
-						(_ScreenParams.x / 2
-						+ _ScreenParams.x * (input.vertex.x)),
-						(_ScreenParams.y / 2
-						+ _ScreenParams.y * (input.vertex.y))) * 2;
+						(_ScreenParams.x / 2 //center in x direction
+						+ _ScreenParams.x * (input.vertex.x)), //sets how much of the screen should be filled
+						(_ScreenParams.y / 2 //center in y direction
+						+ _ScreenParams.y * (input.vertex.y))) * 2; //sets how much of the screen should be filled, multiply with 2 to fill entire screen
 					output.pos = float4(
 						rasterPosition.x / _ScreenParams.x - 1.0,
 						_ProjectionParams.x * (rasterPosition.y / _ScreenParams.y - 1.0),
