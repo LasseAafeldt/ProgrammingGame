@@ -15,8 +15,11 @@ public class CanvasHandler : MonoBehaviour {
     public static GameObject AdditionButton;
     public static GameObject EquationButton;
     public static GameObject AccessPanel1;
+    public static GameObject ScreenOverlay;
     // Use this for initialization
     void Start () {
+        ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
+        ScreenOverlay.SetActive(false);
         DragAndDropCanvas = GameObject.Find("DragAndDropCanvas");
         AccessPanel1 = GameObject.Find("AccessPanel1");
         DragPanel = GameObject.Find("DragPanel");
