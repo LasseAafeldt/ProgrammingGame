@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System;
-
+#pragma warning disable 
 public class room1AccessPanelAssignement : Assignment {
     public room1AccessPanelAssignement()
     {
