@@ -9,21 +9,25 @@ public class CanvasHandler : MonoBehaviour {
     public static GameObject DragPanel;
     public static GameObject DropPanel;
     public static GameObject Console;
+    public static GameObject Player;
     public static GameObject HeaderText;
     public static GameObject VariableButton;
     public static GameObject AdditionButton;
     public static GameObject EquationButton;
+    public static GameObject AccessPanel1;
     // Use this for initialization
     void Start () {
         DragAndDropCanvas = GameObject.Find("DragAndDropCanvas");
+        AccessPanel1 = GameObject.Find("AccessPanel1");
         DragPanel = GameObject.Find("DragPanel");
         Console = GameObject.Find("ConsolePanel");
+        Player = GameObject.Find("Player");
         DropPanel = GameObject.Find("DropPanel");
         HeaderText = GameObject.Find("HeaderText");
         VariableButton = GameObject.Find("VariableButton");
         AdditionButton = GameObject.Find("AdditionButton");
         EquationButton = GameObject.Find("EquationButton");
-        //Debug.Log("cosole = " + ConsoleUI + "\n DropPanel = " + DropPanel) ;
+        //Debug.Log("player = " + Player + "\n DropPanel = " + DropPanel) ;
         WhichAccessPanel = -1;
         IsInRange = false;
         DragAndDropCanvas.SetActive(false);

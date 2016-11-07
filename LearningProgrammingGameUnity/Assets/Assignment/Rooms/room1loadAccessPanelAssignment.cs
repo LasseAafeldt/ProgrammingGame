@@ -13,21 +13,23 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         ID = 1;
         activeChildCount = 0;
         obj = gameObject;
-        player = GameObject.Find("Player");
     }
     void Update()
     {
-        float distanceToObj = Vector3.Distance(player.transform.position, obj.transform.position);
-        if (Input.GetKeyDown("e") && distanceToObj < 1.2f && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
+        if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
         {
-            ManagerScript.ActiveID = ID;
-            CanvasHandler.DragAndDropCanvas.SetActive(true);
-            RunQueue.InitializeQueue();
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            CharacterControll.canMove = false;
-            CameraMousePan.canMove = false;
-            this.load();
+            float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
+            if(distanceToObj < 1.2f)
+            {
+                ManagerScript.ActiveID = ID;
+                CanvasHandler.DragAndDropCanvas.SetActive(true);
+                RunQueue.InitializeQueue();
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+                CharacterControll.canMove = false;
+                CameraMousePan.canMove = false;
+                this.load();
+            }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -44,11 +46,11 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
     public void load() {
         Debug.Log("Room 1 load");
         activeChildCount = 0;
-        obj = CanvasHandler.DragPanel;
+        GameObject dragPanel = CanvasHandler.DragPanel;
         //Debug.Log(obj);
-        for (int i = 0; i < obj.transform.childCount; i++){
+        for (int i = 0; i < dragPanel.transform.childCount; i++){
 			if(i != GameObject.Find("DragSlot9").transform.GetSiblingIndex())
-				obj.transform.GetChild(i).gameObject.SetActive(false);
+                dragPanel.transform.GetChild(i).gameObject.SetActive(false);
 			else
 				activeChildCount ++;
 		}

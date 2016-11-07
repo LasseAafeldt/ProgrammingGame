@@ -21,7 +21,5 @@ public class CharacterControll : MonoBehaviour {
             straffe *= Time.deltaTime;
             transform.Translate(straffe, 0, translation);
         }
-//        if (Key)
-  //          GetComponent<Rigidbody>().contraints = RigidbodyConstraints.FreezePosition;
     }
 }
