@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: ab8fec481f42b1b4799195bfe9efb57b
+timeCreated: 1478530329
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BagStang
+    100002: //RootNode
+    100004: MainWheelStuff
+    100006: null1
+    100008: pCube1
+    100010: pCylinder2
+    100012: pCylinder3
+    100014: pCylinder4
+    100016: pPipe1
+    100018: pSphere1
+    100020: pSphere2
+    100022: pTorus1
+    100024: Seat
+    100026: Seat1
+    100028: StolStangOver
+    100030: StolStangUnder
+    100032: transform1
+    100034: transform2
+    100036: transform3
+    100038: UnderChair
+    100040: Wheel1
+    100042: Wheel2
+    100044: Wheel3
+    100046: Wheel4
+    100048: Wheel5
+    100050: WheelStuff
+    400000: BagStang
+    400002: //RootNode
+    400004: MainWheelStuff
+    400006: null1
+    400008: pCube1
+    400010: pCylinder2
+    400012: pCylinder3
+    400014: pCylinder4
+    400016: pPipe1
+    400018: pSphere1
+    400020: pSphere2
+    400022: pTorus1
+    400024: Seat
+    400026: Seat1
+    400028: StolStangOver
+    400030: StolStangUnder
+    400032: transform1
+    400034: transform2
+    400036: transform3
+    400038: UnderChair
+    400040: Wheel1
+    400042: Wheel2
+    400044: Wheel3
+    400046: Wheel4
+    400048: Wheel5
+    400050: WheelStuff
+    2300000: BagStang
+    2300002: MainWheelStuff
+    2300004: pCube1
+    2300006: pCylinder2
+    2300008: pCylinder3
+    2300010: pSphere2
+    2300012: pTorus1
+    2300014: Seat
+    2300016: Seat1
+    2300018: StolStangOver
+    2300020: StolStangUnder
+    2300022: UnderChair
+    2300024: Wheel1
+    2300026: Wheel2
+    2300028: Wheel3
+    2300030: Wheel4
+    2300032: Wheel5
+    3300000: BagStang
+    3300002: MainWheelStuff
+    3300004: pCube1
+    3300006: pCylinder2
+    3300008: pCylinder3
+    3300010: pSphere2
+    3300012: pTorus1
+    3300014: Seat
+    3300016: Seat1
+    3300018: StolStangOver
+    3300020: StolStangUnder
+    3300022: UnderChair
+    3300024: Wheel1
+    3300026: Wheel2
+    3300028: Wheel3
+    3300030: Wheel4
+    3300032: Wheel5
+    4300000: pCylinder2
+    4300002: pCylinder3
+    4300004: StolStangUnder
+    4300006: StolStangOver
+    4300008: MainWheelStuff
+    4300010: Wheel1
+    4300012: Wheel2
+    4300014: Wheel3
+    4300016: Wheel4
+    4300018: Wheel5
+    4300020: UnderChair
+    4300022: BagStang
+    4300024: Seat
+    4300026: Seat1
+    4300028: pCube1
+    4300030: pTorus1
+    4300032: pSphere2
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
