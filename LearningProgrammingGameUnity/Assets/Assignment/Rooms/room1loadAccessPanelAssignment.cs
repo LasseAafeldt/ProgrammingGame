@@ -19,7 +19,8 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
         {
             float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-            if(distanceToObj < 1.2f)
+            Debug.Log(distanceToObj);
+            if(distanceToObj < 1.5f)
             {
                 ManagerScript.ActiveID = ID;
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
