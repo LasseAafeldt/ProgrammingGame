@@ -60,6 +60,11 @@ public class room2loadAdditionAssignment : MonoBehaviour
         CanvasHandler.HeaderText.GetComponent<Text>().text = new room2_AdditionAssignment().GetDescription();
         CanvasHandler.scaleDragPanel(activeChildCount);
         GameObject objDrop = CanvasHandler.DropPanel;
+
+		for(int i = 0; i < CanvasHandler.arrowDragPanel.transform.childCount; i++){
+			CanvasHandler.arrowDragPanel.transform.GetChild (i).gameObject.SetActive(false);
+		}
+
         for (int i = 3; i < objDrop.transform.childCount; i++)
             objDrop.transform.GetChild(i).gameObject.SetActive(false);
 
@@ -104,8 +109,8 @@ public class room2loadAdditionAssignment : MonoBehaviour
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
         //Add the things to the queue
-        new Variables("j", null).AddToQueue(1);
-        new Variables("i", null).AddToQueue(0);
+		new Variables("j", (string) null).AddToQueue(1);
+		new Variables("i", (string) null).AddToQueue(0);
         new Equation("i + j = 20").AddToQueue(2);
     }
 

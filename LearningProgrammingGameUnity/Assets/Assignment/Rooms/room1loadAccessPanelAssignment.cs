@@ -48,9 +48,16 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         activeChildCount = 0;
         GameObject dragPanel = CanvasHandler.DragPanel;
         //Debug.Log(obj);
+
+		//Sets the number of arrows shown in the drop panel to one. 
+		for(int i = 1; i < CanvasHandler.arrowDragPanel.transform.childCount; i++){
+			CanvasHandler.arrowDragPanel.transform.GetChild (i).gameObject.SetActive(false);
+		}
+
         for (int i = 0; i < dragPanel.transform.childCount; i++){
-			if(i != GameObject.Find("DragSlot9").transform.GetSiblingIndex())
-                dragPanel.transform.GetChild(i).gameObject.SetActive(false);
+			if (i != GameObject.Find ("DragSlot9").transform.GetSiblingIndex ()) {
+				dragPanel.transform.GetChild (i).gameObject.SetActive (false);
+			}
 			else
 				activeChildCount ++;
 		}

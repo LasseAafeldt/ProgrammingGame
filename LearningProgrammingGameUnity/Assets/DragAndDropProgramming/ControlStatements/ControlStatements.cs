@@ -40,12 +40,13 @@ public abstract class ControlStatements {
     }
     public void SetCondition(string condition)
     {
+//		Debug.Log("Old condition = " + this.condition + " new condition " + condition);
         this.condition = condition;
         UpdateResult();
     }
     public void AddToQueue(int position)
     {
-        //Debug.Log("Trying to add " + this.GetControlType() + " to queue at position " + position);
+//        Debug.Log("Trying to add " + this.GetControlType() + " to queue at position " + position);
         RunQueue.AddToQueue(this, position);
     }
     public void RemoveFromQueue(int position)

@@ -22,11 +22,11 @@ public class RunQueue {
     }
     public static void AddToQueue(ControlStatements statement, int position)
     {
-        //Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
+        Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
         //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
         runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
-        //Debug.Log("There was nothing here ");
+//        Debug.Log("There was nothing here ");
         //runQueue.Add(statement);    
     }
     public static void RemoveFromQueue(ControlStatements statement)
@@ -46,11 +46,13 @@ public class RunQueue {
     }
     public static ControlStatements GetAt(int i)
     {
+		Debug.Log ("at i = " + runQueue[i]);
         return (ControlStatements)runQueue[i];
     }
-    public static void Reset()
+    public static void ResetQueue()
     {
         runQueue.Clear();
+		InitializeQueue ();
     }
 
     public static void run()

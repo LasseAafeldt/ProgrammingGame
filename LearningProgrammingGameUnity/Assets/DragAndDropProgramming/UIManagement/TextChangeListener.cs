@@ -59,6 +59,7 @@ public class TextChangeListener : MonoBehaviour {
     {
         if (gameObject.transform.IsChildOf(CanvasHandler.DropPanel.transform))
         {
+//			Debug.Log ("Is child of drop panel");
             int indexQueue = transform.parent.parent.GetSiblingIndex();
             int indexInParent = transform.GetSiblingIndex();
             if (transform.parent.tag.Equals("VariableBut"))
@@ -66,7 +67,7 @@ public class TextChangeListener : MonoBehaviour {
                 //Debug.Log("3number = " + number2);
                 if (number != null)
                 {
-                    if (indexInParent == 2)
+                    if (indexInParent == 3)
                     {
                         //Debug.Log("4number = " + number2);
                         RunQueue.GetAt(indexQueue).SetRight(number.Value);
@@ -75,16 +76,57 @@ public class TextChangeListener : MonoBehaviour {
                 else if (text != null)
                 {
                     //Debug.Log("variable being changed...");
-                    if (indexInParent == 1 && text != null)
+                    if (indexInParent == 2)
                         RunQueue.GetAt(indexQueue).SetVarName(text);
-                    if (indexInParent == 2 && text != null)
+                    if (indexInParent == 3)
                     {
                         RunQueue.GetAt(indexQueue).SetRight(text, indexQueue);
                         //Debug.Log("2number = " + number2);
                     }
                 }
-                Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
+                Debug.Log("Changed in drop panel at index " + indexQueue + " type = " + RunQueue.GetAt(indexQueue).GetControlType());
             }
+
+			if (transform.parent.tag.Equals("TwoInputBut"))
+			{
+				//Debug.Log("3number = " + number2);
+				if (number != null)
+				{
+					Debug.Log ("queue index " + indexQueue);
+					Debug.Log(" "  + RunQueue.GetAt(indexQueue).ToString());
+					//Debug.Log("variable being changed...");
+					if (indexInParent == 2)
+						RunQueue.GetAt(indexQueue).SetLeft(number.Value);
+					if (indexInParent == 3)
+					{
+						//Debug.Log("4number = " + number2);
+						RunQueue.GetAt(indexQueue).SetRight(number.Value);
+					}
+				}
+				Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
+			}
+
+			if (transform.parent.tag.Equals("ThreeInputBut"))
+			{
+				//Debug.Log("3number = " + number2);
+				if (number != null || text != null)
+				{
+					//Debug.Log("variable being changed...");
+					if (indexInParent == 2)
+						RunQueue.GetAt(indexQueue).SetLeft(number.Value);
+					if (indexInParent == 3)
+					{
+						//Debug.Log("4number = " + number2);
+						RunQueue.GetAt(indexQueue).SetRight(number.Value);
+					}
+					if (indexInParent == 4)
+					{
+//						Debug.Log("changed condition to " + text);
+						RunQueue.GetAt(indexQueue).SetCondition(text);
+					}
+				}
+				Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
+			}
         }
     }
 

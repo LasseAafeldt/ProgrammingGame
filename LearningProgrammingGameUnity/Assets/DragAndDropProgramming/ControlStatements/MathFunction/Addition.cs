@@ -4,11 +4,14 @@ using System;
 
 public class Addition : MathFunctions
 {
-    public Addition(float num1, float num2)
+    public Addition(float? left, float? right)
     {
-        leftSide = num1;
-        rightSide = num2;
-        result = num1 + num2;
+		if(left != null)
+			leftSide = left.Value;
+		if(right !=null)
+			rightSide = right.Value;
+		if (left != null && right != null)
+			result = left.Value + right.Value;
     }
     public Addition(string first, string second)
     {

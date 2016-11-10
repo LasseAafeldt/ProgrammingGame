@@ -5,11 +5,16 @@ using System;
 public class IfElseStatement : ControlStatements
 {
     private new bool result;
-    public IfElseStatement(float left, string condition, float right)
+    public IfElseStatement(float? left, string condition, float? right)
     {
-        leftSide = left;
-        rightSide = right;
-        initIfElse();
+		if(left != null)
+			leftSide = left.Value;
+		if(right !=null)
+			rightSide = right.Value;
+		if (condition != null)
+			this.condition = condition;
+		if (left != null && right != null)
+        	initIfElse();
     }
     public override string GetControlType()
     {

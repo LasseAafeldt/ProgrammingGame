@@ -16,10 +16,11 @@ public class CanvasHandler : MonoBehaviour {
     public static GameObject EquationButton;
     public static GameObject AccessPanel1;
     public static GameObject ScreenOverlay;
+	public static GameObject arrowDragPanel;
     // Use this for initialization
     void Start () {
-        ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
-        ScreenOverlay.SetActive(false);
+        //ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
+        //ScreenOverlay.SetActive(false);
         DragAndDropCanvas = GameObject.Find("DragAndDropCanvas");
         AccessPanel1 = GameObject.Find("AccessPanel1");
         DragPanel = GameObject.Find("DragPanel");
@@ -30,10 +31,11 @@ public class CanvasHandler : MonoBehaviour {
         VariableButton = GameObject.Find("VariableButton");
         AdditionButton = GameObject.Find("AdditionButton");
         EquationButton = GameObject.Find("EquationButton");
+		arrowDragPanel = GameObject.Find ("arrowDragPanel");
         //Debug.Log("player = " + Player + "\n DropPanel = " + DropPanel) ;
         WhichAccessPanel = -1;
         IsInRange = false;
-        DragAndDropCanvas.SetActive(false);
+        //DragAndDropCanvas.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -61,7 +63,7 @@ public class CanvasHandler : MonoBehaviour {
         }
         ConsoleUI.ResetText();
         HeaderText.GetComponent<Text>().text = "";
-        RunQueue.Reset();
+        RunQueue.ResetQueue();
     }
     public static void scaleDragPanel(int activeChildCount)
     {

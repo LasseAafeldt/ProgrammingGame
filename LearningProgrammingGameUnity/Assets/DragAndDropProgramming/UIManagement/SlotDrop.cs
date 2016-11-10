@@ -26,48 +26,51 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         //if gameobject exists
         if (!item)
         {
+			
             //Sets the index which the object have been dropped on
             indexBeingDroppedOn = transform.GetSiblingIndex();
-            //Debug.Log("indexBeingDroppedOn = " + indexBeingDroppedOn);
+			//Debug.Log("item " + DragHandler.itemBeingDragged+ " being dropped on indexBeingDroppedOn = " + indexBeingDroppedOn);
             //Tries to create a 3D component (left,right,condition)
             try
             {
-                //Debug.Log("trying to create 3d component...");
-                var left = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().number;
-                var right = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
-                var condition = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().text;
+                Debug.Log("trying to create 3d component...");
+
+                var left = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
+                var right = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
+                var condition = DragHandler.itemBeingDragged.transform.GetChild(4).GetComponent<TextChangeListener>().text;
+				//Debug.Log("left " + left + " right " + right + " condition " + condition);
                 AddComponentToQueue(left, right, condition);
             }
             //Else tries to create component with 2 values (left,right)
             catch (Exception e)
             {
-                //Debug.Log("Failed!");
+//                Debug.Log("Failed!");
                 try
                 {
-                    log = e.StackTrace;
-                    //Debug.Log("trying to create 2d component...");
-                    var left = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().number;
-                    var right = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
-                    //Debug.Log(" left = " + left + " right = " + right );
-                    if (left != null && right != null)
-                    {
-                        //Debug.Log("Got into the if statement");
-                        AddComponentToQueue(left, right);
-                    }
-                    else
-                        throw new ArgumentNullException("2D component had null in either left or right");
+					Debug.Log("trying to create 2d component...");
+					if (DragHandler.itemBeingDragged.transform.gameObject.tag == "TwoInputBut")
+					{                    
+						log = e.StackTrace;
+		                var left = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
+		                var right = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
+		                //Debug.Log(" left = " + left + " right = " + right );
+						AddComponentToQueue(left, right);
+					}
+					else
+						throw new Exception();
+                    
                 }
                 catch (Exception e2)
                 {
-                    //Debug.Log("Failed! Reason: " + e2.StackTrace);
+                    Debug.Log("Failed! Reason: " + e2.StackTrace);
                     log = e2.StackTrace;
                     //try to create variable
                     try
                     {
-                        //Debug.Log("trying to create variable...");
-                        var name = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().text;
-                        var text = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().text;
-                        float? number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
+                        Debug.Log("trying to create variable...");
+                        var name = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().text;
+                        var text = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().text;
+                        float? number = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
                         if (name != null)
                         {
                             if (number != null)
@@ -89,7 +92,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                         log = e3.StackTrace;
                         //Debug.Log("Failed!");
                         //Debug.Log("trying to create for loop...");
-                        var number = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().number;
+						var number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                         if (number != null)
                             AddComponentToQueue(number);
 
@@ -101,32 +104,27 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
     //Adds 3D (left,right,condition) GameComponent to the RunQueue
     private void AddComponentToQueue(float? left, float? right, string condition)
     {
-
-        //if numbers are not empty
-        if (left != null && right != null) {
-            //if statement 
-            if (DragHandler.itemBeingDragged == GameObject.Find("IfStatementButton") &&
-                condition != null && !condition.Equals("0") && !condition.Equals(""))
-            {
-                new IfStatement(left.Value, condition, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added if statement to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
-            //if else statement
-            if (DragHandler.itemBeingDragged == GameObject.Find("IfElseStatementButton") &&
-                condition != null && !condition.Equals("0") && !condition.Equals(""))
-            {
-                new IfElseStatement(left.Value, condition, right.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added if else statement to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
-            //While Loop
-            if (DragHandler.itemBeingDragged == GameObject.Find("WhileLoopButton"))
-            {
-                new WhileLoop().AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added while loop to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
-            }
+        //if statement 
+		if (DragHandler.itemBeingDragged == GameObject.Find("IfStatementButton"))
+        {
+			InstantiateGameObject();
+			//Debug.Log ("Item being dragged == if statement");
+            new IfStatement(left, condition, right).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added if statement to queue in index " + indexBeingDroppedOn);
+        }
+        //if else statement
+        if (DragHandler.itemBeingDragged == GameObject.Find("IfElseStatementButton"))
+        {
+			InstantiateGameObject();
+            new IfElseStatement(left.Value, condition, right.Value).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added if else statement to queue in index " + indexBeingDroppedOn);
+        }
+        //While Loop
+        if (DragHandler.itemBeingDragged == GameObject.Find("WhileLoopButton"))
+        {
+			InstantiateGameObject();
+            new WhileLoop().AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added while loop to queue in index " + indexBeingDroppedOn);
         }
     }
     //Adds 2D (left,right) GameComponent to the RunQueue
@@ -134,28 +132,28 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
     {
         if (DragHandler.itemBeingDragged == GameObject.Find("AdditionButton"))
         {
-            //Debug.Log("trying to add addtion");
-            new Addition(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+			InstantiateGameObject();
+            //Debug.Log("trying to add addition");
+            new Addition(left, right).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added addtion to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("SubtractionButton"))
         {
+			InstantiateGameObject();
             new Subtraction(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added subtraction to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("DivisionButton"))
         {
+			InstantiateGameObject();
             new Division(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added division to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("MultiplicationButton"))
         {
+			InstantiateGameObject();
             new Multiplication(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added multiplication to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
     }
     //Adds 1D component to queue
@@ -165,9 +163,9 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         if(left != null)
             if (DragHandler.itemBeingDragged == GameObject.Find("ForLoopButton"))
             {
+				InstantiateGameObject();
                 new ForLoop((int)left.Value).AddToQueue(indexBeingDroppedOn);
                 Debug.Log("added for loop to queue in index " + indexBeingDroppedOn);
-                InstantiateGameObject();
             }
     }
 
@@ -177,9 +175,9 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         //variable
         if (DragHandler.itemBeingDragged == GameObject.Find("VariableButton"))
         {
+			InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added string variable to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
     }
     //add component variable of type float
@@ -188,9 +186,9 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         //variable
         if (DragHandler.itemBeingDragged == GameObject.Find("VariableButton"))
         {
+			InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added number varible to queue in index " + indexBeingDroppedOn);
-            InstantiateGameObject();
         }
     }
 

@@ -4,12 +4,14 @@ using System;
 
 public class Variables : ControlStatements
 {
-    public Variables(String name, float i)
+    public Variables(String name, float? i)
     {
         VarName = name;
-        rightSide = i;
+		if (i != null) {
+			rightSide = i.Value;
+			result = i.Value;
+		}
         str = null;
-        result = i;
     }
     public Variables(String name, String a)
     {
