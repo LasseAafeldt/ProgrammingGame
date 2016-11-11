@@ -6,6 +6,8 @@ TagManager:
   tags:
   - VariableBut
   - DragAndDropPanel
+  - TwoInputBut
+  - ThreeInputBut
   layers:
   - Default
   - TransparentFX

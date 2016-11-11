@@ -4,11 +4,14 @@ using System;
 
 public class Subtraction : MathFunctions
 {
-    public Subtraction(float num1, float num2)
+    public Subtraction(float? left, float? right)
     {
-        leftSide = num1;
-        rightSide = num2;
-        result = num1 - num2;
+		if(left != null)
+			leftSide = left.Value;
+		if(right !=null)
+			rightSide = right.Value;
+		if (left != null && right != null)
+			result = left.Value + right.Value;
     }
     public override void UpdateResult()
     {
