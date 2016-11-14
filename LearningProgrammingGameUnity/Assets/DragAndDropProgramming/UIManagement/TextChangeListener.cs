@@ -93,8 +93,9 @@ public class TextChangeListener : MonoBehaviour {
 				if (number != null)
 				{
 					Debug.Log ("queue index " + indexQueue);
-					Debug.Log(" "  + RunQueue.GetAt(indexQueue).ToString());
-					//Debug.Log("variable being changed...");
+                    Debug.Log(" " + RunQueue.GetSize());
+                    Debug.Log(" "  + RunQueue.GetAt(indexQueue));
+					Debug.Log("variable being changed...");
 					if (indexInParent == 2)
 						RunQueue.GetAt(indexQueue).SetLeft(number.Value);
 					if (indexInParent == 3)

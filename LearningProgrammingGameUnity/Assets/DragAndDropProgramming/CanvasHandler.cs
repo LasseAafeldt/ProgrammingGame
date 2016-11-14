@@ -19,8 +19,8 @@ public class CanvasHandler : MonoBehaviour {
 	public static GameObject arrowDragPanel;
     // Use this for initialization
     void Start () {
-        //ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
-        //ScreenOverlay.SetActive(false);
+        ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
+        ScreenOverlay.SetActive(false);
         DragAndDropCanvas = GameObject.Find("DragAndDropCanvas");
         AccessPanel1 = GameObject.Find("AccessPanel1");
         DragPanel = GameObject.Find("DragPanel");
@@ -35,7 +35,7 @@ public class CanvasHandler : MonoBehaviour {
         //Debug.Log("player = " + Player + "\n DropPanel = " + DropPanel) ;
         WhichAccessPanel = -1;
         IsInRange = false;
-        //DragAndDropCanvas.SetActive(false);
+        DragAndDropCanvas.SetActive(false);
     }
 	
 	// Update is called once per frame

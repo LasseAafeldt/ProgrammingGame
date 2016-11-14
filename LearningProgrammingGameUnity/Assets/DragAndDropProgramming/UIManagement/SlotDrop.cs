@@ -49,11 +49,12 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                 {
 					Debug.Log("trying to create 2d component...");
 					if (DragHandler.itemBeingDragged.transform.gameObject.tag == "TwoInputBut")
-					{                    
+					{
+                        //Debug.Log("DragHandler.itemBeingDragged.transform.gameObject.tag == TwoInputBut");
 						log = e.StackTrace;
 		                var left = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
 		                var right = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
-		                //Debug.Log(" left = " + left + " right = " + right );
+		                //Debug.Log(" left = " + left + " right = " + right);
 						AddComponentToQueue(left, right);
 					}
 					else
@@ -67,35 +68,46 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                     //try to create variable
                     try
                     {
-                        Debug.Log("trying to create variable...");
-                        var name = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().text;
-                        var text = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().text;
-                        float? number = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
-                        if (name != null)
+                        if (DragHandler.itemBeingDragged.transform.gameObject.tag == "VariableBut")
                         {
-                            if (number != null)
-                            {
-                                //Debug.Log("creating variable with name = " +name +" and with value = " + number);
-                                AddComponentToQueue(name,number.Value);
-                            }
-                            else if(text != null)
-                            {
-                                //Debug.Log("creating variable with name = " + name + " and with value = " + text);
-                                AddComponentToQueue(name, text);
+                            Debug.Log("trying to create variable...");
+                            var name = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().text;
+                            var text = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().text;
+                            float? number = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
+                            if (name != null)
+                            { 
+                                Debug.Log("name != null " + name);
+                                if (number != null)
+                                {
+                                    Debug.Log("number != null " + number);
+                                    //Debug.Log("creating variable with name = " +name +" and with value = " + number);
+                                    AddComponentToQueue(name, number.Value);
+                                }
+                                else if (text != null)
+                                {
+                                    Debug.Log("text != null " + text);
+                                    //Debug.Log("creating variable with name = " + name + " and with value = " + text);
+                                    AddComponentToQueue(name, text);
+                                }
                             }
                         }
+                        else
+                            throw new Exception();
                         //DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<TextChangeListener>().ResetVariables();
                     }
                     //Else tries to create component with 1 value
                     catch (Exception e3)
                     {
-                        log = e3.StackTrace;
-                        //Debug.Log("Failed!");
-                        //Debug.Log("trying to create for loop...");
-						var number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
-                        if (number != null)
+                        if (DragHandler.itemBeingDragged.transform.gameObject.tag == "LoopsBut")
+                        {
+                            log = e3.StackTrace;
+                            Debug.Log("Failed!");
+                            Debug.Log("trying to create for loop...");
+                            var number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                             AddComponentToQueue(number);
-
+                        }
+                        else
+                            throw new Exception();
                     }
                 }
             }
@@ -116,7 +128,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         if (DragHandler.itemBeingDragged == GameObject.Find("IfElseStatementButton"))
         {
 			InstantiateGameObject();
-            new IfElseStatement(left.Value, condition, right.Value).AddToQueue(indexBeingDroppedOn);
+            new IfElseStatement(left, condition, right).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added if else statement to queue in index " + indexBeingDroppedOn);
         }
         //While Loop
@@ -140,19 +152,19 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         if (DragHandler.itemBeingDragged == GameObject.Find("SubtractionButton"))
         {
 			InstantiateGameObject();
-            new Subtraction(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            new Subtraction(left, right).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added subtraction to queue in index " + indexBeingDroppedOn);
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("DivisionButton"))
         {
 			InstantiateGameObject();
-            new Division(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            new Division(left, right).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added division to queue in index " + indexBeingDroppedOn);
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("MultiplicationButton"))
         {
 			InstantiateGameObject();
-            new Multiplication(left.Value, right.Value).AddToQueue(indexBeingDroppedOn);
+            new Multiplication(left, right).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added multiplication to queue in index " + indexBeingDroppedOn);
         }
     }
@@ -160,13 +172,13 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
     private void AddComponentToQueue(float? left)
     {
         //for loop
-        if(left != null)
-            if (DragHandler.itemBeingDragged == GameObject.Find("ForLoopButton"))
-            {
-				InstantiateGameObject();
-                new ForLoop((int)left.Value).AddToQueue(indexBeingDroppedOn);
-                Debug.Log("added for loop to queue in index " + indexBeingDroppedOn);
-            }
+        if (DragHandler.itemBeingDragged == GameObject.Find("ForLoopButton"))
+        {
+			InstantiateGameObject();
+            Debug.Log("Trying to add for loop...");
+            new ForLoop(left).AddToQueue(indexBeingDroppedOn);
+            Debug.Log("added for loop to queue in index " + indexBeingDroppedOn);
+        }
     }
 
     //add component variable of type string
@@ -175,7 +187,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         //variable
         if (DragHandler.itemBeingDragged == GameObject.Find("VariableButton"))
         {
-			InstantiateGameObject();
+            InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added string variable to queue in index " + indexBeingDroppedOn);
         }

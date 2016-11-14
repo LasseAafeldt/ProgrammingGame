@@ -12,7 +12,7 @@ public class Multiplication : MathFunctions
 		if(right !=null)
 			rightSide = right.Value;
 		if (left != null && right != null)
-			result = left.Value + right.Value;
+			result = left.Value * right.Value;
     }
     public override void UpdateResult()
     {
