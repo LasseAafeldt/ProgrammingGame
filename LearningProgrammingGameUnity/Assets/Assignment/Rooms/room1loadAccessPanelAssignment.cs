@@ -4,24 +4,20 @@ using System.Collections;
 
 public class room1loadAccessPanelAssignment : MonoBehaviour{
     protected GameObject obj;
-    private GameObject player;
     protected int activeChildCount;
+    public static float distanceToObj;
     private static int ID = 1;
     // Use this for initialization
     void Start()
     {
-        ID = 1;
         activeChildCount = 0;
         obj = gameObject;
     }
     void Update()
     {
-        float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-        if (distanceToObj < 3f)
-        {
-
-            PressEToInteract.currentToolTipText = "Press E to interact";
-            //Debug.Log(distanceToObj);
+        distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
+        Debug.Log(distanceToObj);
+        if (distanceToObj < 3f) {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
@@ -34,8 +30,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
                 CameraMousePan.canMove = false;
                 this.load();
             }
-        } else
-            PressEToInteract.currentToolTipText = "";
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ManagerScript.ResetID();

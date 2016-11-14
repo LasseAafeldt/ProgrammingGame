@@ -9,6 +9,7 @@ TagManager:
   - TwoInputBut
   - ThreeInputBut
   - LoopsBut
+  - ConstructionModule
   layers:
   - Default
   - TransparentFX

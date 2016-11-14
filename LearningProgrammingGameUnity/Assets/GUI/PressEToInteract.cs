@@ -8,7 +8,8 @@ public class PressEToInteract : MonoBehaviour {
     public static bool active = false;
 
     public static String currentToolTipText = "";
-    public static String constructionCounterTooltip = "Construction modules: 0/4";
+    public static int currentCount = 0;
+    public static String constructionCounterTooltip = "Construction modules: " + currentCount + "/5";
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
  
@@ -29,7 +30,7 @@ public class PressEToInteract : MonoBehaviour {
     }
     void Update()
     {
-            
+        
     }
 
     void OnGUI()
@@ -38,13 +39,18 @@ public class PressEToInteract : MonoBehaviour {
         float y;
         if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
         {
-            if (currentToolTipText != "")
+            if (room1loadAccessPanelAssignment.distanceToObj < 3f || 
+                room2loadAdditionAssignment.distanceToObj < 3f
+               )
             {
+                PressEToInteract.currentToolTipText = "Press E to interact";
                 x = Screen.width / 2;
                 y = Screen.height - 150;
                 GUI.Label(new Rect(x - 149, y + 40, 300, 60), currentToolTipText, guiStyleBack);
                 GUI.Label(new Rect(x - 150, y + 40, 300, 60), currentToolTipText, guiStyleFore);
             }
+            else
+                PressEToInteract.currentToolTipText = "";
             x = 60;
             y = 60;
             GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleBack);

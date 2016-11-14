@@ -84,7 +84,7 @@ public class TextChangeListener : MonoBehaviour {
                         //Debug.Log("2number = " + number2);
                     }
                 }
-                Debug.Log("Changed in drop panel at index " + indexQueue + " type = " + RunQueue.GetAt(indexQueue).GetControlType());
+                //Debug.Log("Changed in drop panel at index " + indexQueue + " type = " + RunQueue.GetAt(indexQueue).GetControlType());
             }
 
 			if (transform.parent.tag.Equals("TwoInputBut"))
@@ -92,10 +92,10 @@ public class TextChangeListener : MonoBehaviour {
 				//Debug.Log("3number = " + number2);
 				if (number != null)
 				{
-					Debug.Log ("queue index " + indexQueue);
-                    Debug.Log(" " + RunQueue.GetSize());
-                    Debug.Log(" "  + RunQueue.GetAt(indexQueue));
-					Debug.Log("variable being changed...");
+					//Debug.Log ("queue index " + indexQueue);
+                    //Debug.Log(" " + RunQueue.GetSize());
+                    //Debug.Log(" "  + RunQueue.GetAt(indexQueue));
+					//Debug.Log("variable being changed...");
 					if (indexInParent == 2)
 						RunQueue.GetAt(indexQueue).SetLeft(number.Value);
 					if (indexInParent == 3)
@@ -104,7 +104,7 @@ public class TextChangeListener : MonoBehaviour {
 						RunQueue.GetAt(indexQueue).SetRight(number.Value);
 					}
 				}
-				Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
+				//Debug.Log("Changed in drop panel at index " + indexQueue + " type = " +RunQueue.GetAt(indexQueue).GetControlType());
 			}
 
 			if (transform.parent.tag.Equals("ThreeInputBut"))
