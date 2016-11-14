@@ -70,22 +70,22 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                     {
                         if (DragHandler.itemBeingDragged.transform.gameObject.tag == "VariableBut")
                         {
-                            Debug.Log("trying to create variable...");
+                            //Debug.Log("trying to create variable...");
                             var name = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().text;
                             var text = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().text;
                             float? number = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
                             if (name != null)
                             { 
-                                Debug.Log("name != null " + name);
+                                //Debug.Log("name != null " + name);
                                 if (number != null)
                                 {
-                                    Debug.Log("number != null " + number);
+                                    //Debug.Log("number != null " + number);
                                     //Debug.Log("creating variable with name = " +name +" and with value = " + number);
                                     AddComponentToQueue(name, number.Value);
                                 }
                                 else if (text != null)
                                 {
-                                    Debug.Log("text != null " + text);
+                                    //Debug.Log("text != null " + text);
                                     //Debug.Log("creating variable with name = " + name + " and with value = " + text);
                                     AddComponentToQueue(name, text);
                                 }

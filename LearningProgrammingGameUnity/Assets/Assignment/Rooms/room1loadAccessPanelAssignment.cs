@@ -16,22 +16,26 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
     }
     void Update()
     {
-        if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
+        float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
+        if (distanceToObj < 3f)
         {
-            float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-            Debug.Log(distanceToObj);
-            if(distanceToObj < 1.5f)
+
+            PressEToInteract.currentToolTipText = "Press E to interact";
+            //Debug.Log(distanceToObj);
+            if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
+                PressEToInteract.currentToolTipText = "";
                 ManagerScript.ActiveID = ID;
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.InitializeQueue();
+                RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 CharacterControll.canMove = false;
                 CameraMousePan.canMove = false;
                 this.load();
             }
-        }
+        } else
+            PressEToInteract.currentToolTipText = "";
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ManagerScript.ResetID();
@@ -57,7 +61,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
 
         for (int i = 0; i < dragPanel.transform.childCount; i++){
 			if (i != GameObject.Find ("DragSlot9").transform.GetSiblingIndex ()) {
-				dragPanel.transform.GetChild (i).gameObject.SetActive (false);
+				dragPanel.transform.GetChild(i).gameObject.SetActive(false);
 			}
 			else
 				activeChildCount ++;

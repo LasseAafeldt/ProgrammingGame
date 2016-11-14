@@ -9,7 +9,7 @@ public class DoorAnimation : MonoBehaviour {
     private Quaternion doorOpen = Quaternion.identity;
     private Quaternion doorClose = Quaternion.identity;
     public bool doorStatus = false; //false is close, true is open
-    private bool doorGo = false; //for Coroutine, when start only one
+    private bool doorChangingState = false; //for Coroutine, when start only one
     void Start()
     {
         doorStatus = false; //door is open, maybe change
@@ -20,8 +20,27 @@ public class DoorAnimation : MonoBehaviour {
     }
     void Update()
     {
+
+    }
+    public IEnumerator moveDoor(Quaternion dest)
+    {
+        doorChangingState = true;
+        //Check if close/open, if angle less 4 degree, or use another value more 0
+        while (Quaternion.Angle(transform.localRotation, dest) > 4.0f)
+        {
+            transform.localRotation = Quaternion.Slerp(transform.localRotation, dest, Time.deltaTime * doorAnimSpeed);
+            //UPDATE 1: add yield
+            yield return null;
+        }
+        doorChangingState = false;
+        //UPDATE 1: add yield
+        yield return null;
+    }
+
+    public void ChangeState()
+    {
         //If press F key on keyboard
-        if (!doorGo)
+        if (!doorChangingState)
         {
             if (doorStatus)
             { //close door
@@ -30,23 +49,7 @@ public class DoorAnimation : MonoBehaviour {
             else
             { //open door
                 StartCoroutine(this.moveDoor(doorOpen));
-            } 
+            }
         }
-    }
-    public IEnumerator moveDoor(Quaternion dest)
-    {
-        doorGo = true;
-        //Check if close/open, if angle less 4 degree, or use another value more 0
-        while (Quaternion.Angle(transform.localRotation, dest) > 4.0f)
-        {
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, dest, Time.deltaTime * doorAnimSpeed);
-            //UPDATE 1: add yield
-            yield return null;
-        }
-        //Change door status
-        doorStatus = !doorStatus;
-        doorGo = false;
-        //UPDATE 1: add yield
-        yield return null;
     }
 }

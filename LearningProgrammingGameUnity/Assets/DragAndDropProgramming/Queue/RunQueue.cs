@@ -15,7 +15,7 @@ public class RunQueue {
     }
     public static void InitializeQueue()
     {
-        for (int i = 0; i < GameObject.Find("DropPanel").transform.childCount; i++)
+        for (int i = 0; i < CanvasHandler.DropPanel.transform.childCount; i++)
         {
             runQueue.Add(null);
         }
@@ -74,7 +74,7 @@ public class RunQueue {
                 if (room1AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    //Debug.Log("open door");
+                    GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().ChangeState();
                 }
                 else
                 {

@@ -6,8 +6,6 @@ public class ManagerScript : MonoBehaviour {
     //this for initialization
     void Start () {
         ActiveID = 0;
-        RunQueue.InitializeQueue();
-        GameObject.Find("DragAndDrop_old").transform.gameObject.SetActive(false);
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());
     }
 	
