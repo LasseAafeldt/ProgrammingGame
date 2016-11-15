@@ -20,8 +20,8 @@ public class room2loadAdditionAssignment : MonoBehaviour{
     void Update()
     {
         distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-        Debug.Log(distanceToObj); 
-        if (distanceToObj < 3f) {
+        //Debug.Log(distanceToObj); 
+        if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
             if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 ManagerScript.ActiveID = ID;
@@ -71,12 +71,23 @@ public class room2loadAdditionAssignment : MonoBehaviour{
             CanvasHandler.VariableButton,
             CanvasHandler.DropPanel.transform.GetChild(0))
             as GameObject;
+        copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition = new Vector3(
+             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x -18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
         Destroy(copyObject.transform.GetChild(2).gameObject);
         copyObject.transform.GetChild(1).GetComponent<Text>().text = "j = ";
+        copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
+        //1,3
+        copyObject.transform.GetChild(1).Translate(
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 20,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
+
+
+
         GameObject emptyGameobj = new GameObject();
         emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(0).transform.GetChild(0));
-        emptyGameobj.transform.SetSiblingIndex(1);
+        emptyGameobj.transform.SetSiblingIndex(2);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
@@ -85,13 +96,19 @@ public class room2loadAdditionAssignment : MonoBehaviour{
             CanvasHandler.VariableButton,
             CanvasHandler.DropPanel.transform.GetChild(1))
             as GameObject;
+        copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition = new Vector3(
+            copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
         Destroy(copyObject.transform.GetChild(2).gameObject);
         copyObject.transform.GetChild(1).GetComponent<Text>().text = "i = ";
         copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
+        copyObject.transform.GetChild(1).Translate(
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 20,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
         emptyGameobj = new GameObject();
         emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(1).transform.GetChild(0));
-        emptyGameobj.transform.SetSiblingIndex(1);
+        emptyGameobj.transform.SetSiblingIndex(2);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
     

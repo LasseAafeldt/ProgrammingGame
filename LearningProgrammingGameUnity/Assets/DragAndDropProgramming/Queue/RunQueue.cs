@@ -88,7 +88,7 @@ public class RunQueue {
                 if (room2_AdditionAssignment.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    //Debug.Log("open door");
+                    GameObject.Find("DoorAnimationFixerOfficeHallway").GetComponent<DoorAnimation>().ChangeState();
                 }
                 else
                 {

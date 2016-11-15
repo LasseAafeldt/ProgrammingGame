@@ -7,17 +7,19 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
     protected int activeChildCount;
     public static float distanceToObj;
     private static int ID = 1;
+    public static float interactionDistance;
     // Use this for initialization
     void Start()
     {
+        interactionDistance = 3;
         activeChildCount = 0;
         obj = gameObject;
     }
     void Update()
     {
         distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-        Debug.Log(distanceToObj);
-        if (distanceToObj < 3f) {
+        //Debug.Log(distanceToObj);
+        if (distanceToObj < interactionDistance) {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";

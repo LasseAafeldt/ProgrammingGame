@@ -4,7 +4,6 @@ using System.Collections;
 
 public class PressEToInteract : MonoBehaviour {
 
-    String text = "YOUR TEXT HERE";
     public static bool active = false;
 
     public static String currentToolTipText = "";
@@ -39,8 +38,8 @@ public class PressEToInteract : MonoBehaviour {
         float y;
         if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
         {
-            if (room1loadAccessPanelAssignment.distanceToObj < 3f || 
-                room2loadAdditionAssignment.distanceToObj < 3f
+            if (room1loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance|| 
+                room2loadAdditionAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance
                )
             {
                 PressEToInteract.currentToolTipText = "Press E to interact";
