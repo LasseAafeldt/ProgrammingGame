@@ -102,7 +102,7 @@ GameObject:
   - 114: {fileID: 3258242}
   - 114: {fileID: 3258241}
   - 114: {fileID: 3258240}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Condition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   - 224: {fileID: 7546241}
   - 222: {fileID: 7546243}
   - 114: {fileID: 7546242}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - 224: {fileID: 14522349}
   - 222: {fileID: 14522351}
   - 114: {fileID: 14522350}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   - 222: {fileID: 26878182}
   - 114: {fileID: 26878181}
   - 114: {fileID: 26878180}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   - 224: {fileID: 26931838}
   - 222: {fileID: 26931840}
   - 114: {fileID: 26931839}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   - 224: {fileID: 27072628}
   - 222: {fileID: 27072630}
   - 114: {fileID: 27072629}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - 224: {fileID: 32898944}
   - 222: {fileID: 32898946}
   - 114: {fileID: 32898945}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ GameObject:
   - 224: {fileID: 34254918}
   - 222: {fileID: 34254920}
   - 114: {fileID: 34254919}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   - 224: {fileID: 35167955}
   - 222: {fileID: 35167957}
   - 114: {fileID: 35167956}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   - 224: {fileID: 42998935}
   - 222: {fileID: 42998937}
   - 114: {fileID: 42998936}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   - 114: {fileID: 62406731}
   - 114: {fileID: 62406730}
   - 114: {fileID: 62406729}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +1062,7 @@ GameObject:
   - 114: {fileID: 68205236}
   - 114: {fileID: 68205235}
   - 114: {fileID: 68205234}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1207,7 +1207,7 @@ GameObject:
   - 224: {fileID: 68424929}
   - 222: {fileID: 68424931}
   - 114: {fileID: 68424930}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1321,7 +1321,7 @@ GameObject:
   - 224: {fileID: 74601599}
   - 222: {fileID: 74601601}
   - 114: {fileID: 74601600}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1398,7 +1398,7 @@ GameObject:
   - 222: {fileID: 89701893}
   - 114: {fileID: 89701891}
   - 225: {fileID: 89701890}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1475,7 +1475,7 @@ GameObject:
   - 222: {fileID: 98461579}
   - 114: {fileID: 98461578}
   - 114: {fileID: 98461577}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RunButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1595,7 +1595,7 @@ GameObject:
   - 224: {fileID: 105934541}
   - 222: {fileID: 105934543}
   - 114: {fileID: 105934542}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,7 +1669,7 @@ GameObject:
   - 224: {fileID: 135905294}
   - 222: {fileID: 135905296}
   - 114: {fileID: 135905295}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1745,7 +1745,7 @@ GameObject:
   - 114: {fileID: 149352284}
   - 114: {fileID: 149352283}
   - 114: {fileID: 149352282}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1890,7 +1890,7 @@ GameObject:
   - 224: {fileID: 152774728}
   - 222: {fileID: 152774730}
   - 114: {fileID: 152774729}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1958,7 +1958,7 @@ GameObject:
   - 224: {fileID: 161662130}
   - 222: {fileID: 161662132}
   - 114: {fileID: 161662131}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2034,7 +2034,7 @@ GameObject:
   - 114: {fileID: 175568888}
   - 114: {fileID: 175568887}
   - 225: {fileID: 175568886}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2055,10 +2055,10 @@ RectTransform:
   - {fileID: 1609939439}
   m_Father: {fileID: 483089963}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -185}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &175568886
 CanvasGroup:
@@ -2137,7 +2137,7 @@ GameObject:
   - 224: {fileID: 196925652}
   - 222: {fileID: 196925654}
   - 114: {fileID: 196925653}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2213,7 +2213,7 @@ GameObject:
   - 114: {fileID: 203865191}
   - 114: {fileID: 203865190}
   - 114: {fileID: 203865189}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   - 224: {fileID: 204907570}
   - 222: {fileID: 204907572}
   - 114: {fileID: 204907571}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2433,7 +2433,7 @@ GameObject:
   - 222: {fileID: 207365193}
   - 114: {fileID: 207365192}
   - 114: {fileID: 207365191}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RunButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2456,7 +2456,7 @@ RectTransform:
   m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 514, y: -378.4}
+  m_AnchoredPosition: {x: 375, y: -75}
   m_SizeDelta: {x: 50, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &207365191
@@ -2554,7 +2554,7 @@ GameObject:
   - 224: {fileID: 232731610}
   - 222: {fileID: 232731612}
   - 114: {fileID: 232731611}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2628,7 +2628,7 @@ GameObject:
   - 224: {fileID: 242816595}
   - 222: {fileID: 242816597}
   - 114: {fileID: 242816596}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2699,7 +2699,7 @@ GameObject:
   - 114: {fileID: 246107248}
   - 114: {fileID: 246107247}
   - 114: {fileID: 246107246}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2813,7 +2813,7 @@ GameObject:
   - 222: {fileID: 271974805}
   - 114: {fileID: 271974804}
   - 114: {fileID: 271974803}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: HintButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2836,7 +2836,7 @@ RectTransform:
   m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 753, y: -374.95746}
+  m_AnchoredPosition: {x: 441, y: -75}
   m_SizeDelta: {x: 50, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271974803
@@ -2937,7 +2937,7 @@ GameObject:
   - 114: {fileID: 288095517}
   - 114: {fileID: 288095516}
   - 225: {fileID: 288095515}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: MultiplicationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2960,10 +2960,10 @@ RectTransform:
   - {fileID: 1438688339}
   m_Father: {fileID: 1145387469}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &288095515
 CanvasGroup:
@@ -3072,7 +3072,7 @@ GameObject:
   - 222: {fileID: 316830383}
   - 114: {fileID: 316830381}
   - 225: {fileID: 316830380}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3150,7 @@ GameObject:
   - 114: {fileID: 348439235}
   - 114: {fileID: 348439234}
   - 114: {fileID: 348439233}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3295,7 +3295,7 @@ GameObject:
   - 224: {fileID: 351359631}
   - 222: {fileID: 351359633}
   - 114: {fileID: 351359632}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3369,7 +3369,7 @@ GameObject:
   - 224: {fileID: 358200176}
   - 222: {fileID: 358200178}
   - 114: {fileID: 358200177}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: HeaderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3443,7 @@ GameObject:
   - 224: {fileID: 365277407}
   - 222: {fileID: 365277409}
   - 114: {fileID: 365277408}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3517,7 +3517,7 @@ GameObject:
   - 224: {fileID: 365455009}
   - 222: {fileID: 365455011}
   - 114: {fileID: 365455010}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3594,7 +3594,7 @@ GameObject:
   - 114: {fileID: 381035747}
   - 114: {fileID: 381035746}
   - 114: {fileID: 381035745}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3666,7 +3666,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
@@ -3753,7 +3753,7 @@ GameObject:
   - 224: {fileID: 403287032}
   - 222: {fileID: 403287034}
   - 114: {fileID: 403287033}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3827,7 +3827,7 @@ GameObject:
   - 224: {fileID: 405573184}
   - 222: {fileID: 405573186}
   - 114: {fileID: 405573185}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3901,7 +3901,7 @@ GameObject:
   - 224: {fileID: 414246276}
   - 222: {fileID: 414246278}
   - 114: {fileID: 414246277}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3978,7 +3978,7 @@ GameObject:
   - 114: {fileID: 418781761}
   - 114: {fileID: 418781760}
   - 114: {fileID: 418781759}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4091,7 +4091,7 @@ GameObject:
   - 224: {fileID: 428274192}
   - 222: {fileID: 428274194}
   - 114: {fileID: 428274193}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4165,7 +4165,7 @@ GameObject:
   - 224: {fileID: 432213279}
   - 222: {fileID: 432213281}
   - 114: {fileID: 432213280}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4242,7 +4242,7 @@ GameObject:
   - 114: {fileID: 445861330}
   - 114: {fileID: 445861329}
   - 114: {fileID: 445861328}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4262,10 +4262,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 4
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -112.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &445861328
 MonoBehaviour:
@@ -4361,7 +4361,7 @@ GameObject:
   - 224: {fileID: 453186641}
   - 222: {fileID: 453186643}
   - 114: {fileID: 453186642}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4435,7 +4435,7 @@ GameObject:
   - 224: {fileID: 454478167}
   - 222: {fileID: 454478169}
   - 114: {fileID: 454478168}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4510,7 +4510,7 @@ GameObject:
   - 222: {fileID: 461331211}
   - 114: {fileID: 461331209}
   - 225: {fileID: 461331208}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4586,7 +4586,7 @@ GameObject:
   - 224: {fileID: 473986676}
   - 222: {fileID: 473986678}
   - 114: {fileID: 473986677}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4663,7 +4663,7 @@ GameObject:
   - 114: {fileID: 478513157}
   - 114: {fileID: 478513156}
   - 225: {fileID: 478513155}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: VariableButton
   m_TagString: VariableBut
   m_Icon: {fileID: 0}
@@ -4800,7 +4800,7 @@ GameObject:
   - 114: {fileID: 483089966}
   - 114: {fileID: 483089965}
   - 114: {fileID: 483089964}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4914,7 +4914,7 @@ GameObject:
   - 114: {fileID: 505012960}
   - 114: {fileID: 505012959}
   - 114: {fileID: 505012958}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5062,7 +5062,7 @@ GameObject:
   - 114: {fileID: 512028869}
   - 114: {fileID: 512028868}
   - 114: {fileID: 512028867}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5175,7 +5175,7 @@ GameObject:
   - 224: {fileID: 521055027}
   - 222: {fileID: 521055029}
   - 114: {fileID: 521055028}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5249,7 +5249,7 @@ GameObject:
   - 224: {fileID: 530270201}
   - 222: {fileID: 530270203}
   - 114: {fileID: 530270202}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5325,7 +5325,7 @@ GameObject:
   - 114: {fileID: 531326158}
   - 114: {fileID: 531326157}
   - 114: {fileID: 531326156}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5473,7 +5473,7 @@ GameObject:
   - 114: {fileID: 540279955}
   - 114: {fileID: 540279954}
   - 225: {fileID: 540279953}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ForLoopButton
   m_TagString: LoopsBut
   m_Icon: {fileID: 0}
@@ -5607,7 +5607,7 @@ GameObject:
   - 224: {fileID: 545589723}
   - 222: {fileID: 545589725}
   - 114: {fileID: 545589724}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ConsoleHeader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5684,7 +5684,7 @@ GameObject:
   - 114: {fileID: 554787806}
   - 114: {fileID: 554787805}
   - 225: {fileID: 554787804}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: SubtractionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5707,10 +5707,10 @@ RectTransform:
   - {fileID: 1342032766}
   m_Father: {fileID: 994496245}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &554787804
 CanvasGroup:
@@ -5818,7 +5818,7 @@ GameObject:
   - 224: {fileID: 568433966}
   - 222: {fileID: 568433968}
   - 114: {fileID: 568433967}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5892,7 +5892,7 @@ GameObject:
   - 224: {fileID: 573246401}
   - 222: {fileID: 573246403}
   - 114: {fileID: 573246402}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5966,7 +5966,7 @@ GameObject:
   - 224: {fileID: 593678383}
   - 222: {fileID: 593678385}
   - 114: {fileID: 593678384}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6042,7 +6042,7 @@ GameObject:
   - 114: {fileID: 606181907}
   - 114: {fileID: 606181906}
   - 114: {fileID: 606181905}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6189,13 +6189,13 @@ GameObject:
   - 114: {fileID: 606307680}
   - 114: {fileID: 606307679}
   - 225: {fileID: 606307678}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &606307677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6210,10 +6210,10 @@ RectTransform:
   - {fileID: 1953375748}
   m_Father: {fileID: 483089963}
   m_RootOrder: 9
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 297, y: -145}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &606307678
 CanvasGroup:
@@ -6354,7 +6354,7 @@ GameObject:
   - 224: {fileID: 620680359}
   - 222: {fileID: 620680361}
   - 114: {fileID: 620680360}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6428,7 +6428,7 @@ GameObject:
   - 224: {fileID: 626498240}
   - 222: {fileID: 626498242}
   - 114: {fileID: 626498241}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6505,7 +6505,7 @@ GameObject:
   - 114: {fileID: 639933803}
   - 114: {fileID: 639933802}
   - 114: {fileID: 639933801}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6621,7 +6621,7 @@ GameObject:
   - 114: {fileID: 641178321}
   - 114: {fileID: 641178320}
   - 225: {fileID: 641178319}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: WhileLoopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6645,10 +6645,10 @@ RectTransform:
   - {fileID: 867467825}
   m_Father: {fileID: 717822499}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &641178319
 CanvasGroup:
@@ -6756,7 +6756,7 @@ GameObject:
   - 224: {fileID: 646120667}
   - 222: {fileID: 646120669}
   - 114: {fileID: 646120668}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6833,7 +6833,7 @@ GameObject:
   - 114: {fileID: 646328243}
   - 114: {fileID: 646328242}
   - 114: {fileID: 646328241}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6946,7 +6946,7 @@ GameObject:
   - 224: {fileID: 654853013}
   - 222: {fileID: 654853015}
   - 114: {fileID: 654853014}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7107,7 +7107,7 @@ GameObject:
   - 224: {fileID: 674058453}
   - 222: {fileID: 674058455}
   - 114: {fileID: 674058454}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7181,7 +7181,7 @@ GameObject:
   - 224: {fileID: 711247043}
   - 222: {fileID: 711247045}
   - 114: {fileID: 711247044}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7255,7 +7255,7 @@ GameObject:
   - 224: {fileID: 712131535}
   - 222: {fileID: 712131537}
   - 114: {fileID: 712131536}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7331,13 +7331,13 @@ GameObject:
   - 114: {fileID: 717822502}
   - 114: {fileID: 717822501}
   - 225: {fileID: 717822500}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &717822499
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7352,10 +7352,10 @@ RectTransform:
   - {fileID: 641178318}
   m_Father: {fileID: 483089963}
   m_RootOrder: 7
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 297, y: -65}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &717822500
 CanvasGroup:
@@ -7434,7 +7434,7 @@ GameObject:
   - 224: {fileID: 738463456}
   - 222: {fileID: 738463458}
   - 114: {fileID: 738463457}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7509,7 +7509,7 @@ GameObject:
   - 222: {fileID: 741332894}
   - 114: {fileID: 741332892}
   - 225: {fileID: 741332891}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7587,7 +7587,7 @@ GameObject:
   - 114: {fileID: 789235244}
   - 114: {fileID: 789235243}
   - 114: {fileID: 789235242}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7735,7 +7735,7 @@ GameObject:
   - 114: {fileID: 796885065}
   - 114: {fileID: 796885064}
   - 114: {fileID: 796885063}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7755,10 +7755,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -162.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &796885063
 MonoBehaviour:
@@ -7855,7 +7855,7 @@ GameObject:
   - 222: {fileID: 798334619}
   - 114: {fileID: 798334618}
   - 114: {fileID: 798334617}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7959,7 +7959,7 @@ GameObject:
   - 114: {fileID: 800400270}
   - 114: {fileID: 800400269}
   - 225: {fileID: 800400268}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SubtractionButton
   m_TagString: TwoInputBut
   m_Icon: {fileID: 0}
@@ -8095,7 +8095,7 @@ GameObject:
   - 224: {fileID: 801785807}
   - 222: {fileID: 801785809}
   - 114: {fileID: 801785808}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Addition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8174,7 +8174,7 @@ GameObject:
   - 114: {fileID: 802082377}
   - 114: {fileID: 802082376}
   - 114: {fileID: 802082375}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ConditionIfElse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8321,7 +8321,7 @@ GameObject:
   - 114: {fileID: 811661284}
   - 114: {fileID: 811661283}
   - 114: {fileID: 811661282}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8469,7 +8469,7 @@ GameObject:
   - 114: {fileID: 814958515}
   - 114: {fileID: 814958514}
   - 114: {fileID: 814958513}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8489,10 +8489,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -12.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &814958513
 MonoBehaviour:
@@ -8591,7 +8591,7 @@ GameObject:
   - 114: {fileID: 817221572}
   - 222: {fileID: 817221571}
   - 114: {fileID: 817221570}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragAndDropCanvas
   m_TagString: DragAndDropPanel
   m_Icon: {fileID: 0}
@@ -8727,7 +8727,7 @@ GameObject:
   - 114: {fileID: 820937029}
   - 114: {fileID: 820937028}
   - 114: {fileID: 820937027}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8747,10 +8747,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -37.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820937027
 MonoBehaviour:
@@ -8849,7 +8849,7 @@ GameObject:
   - 114: {fileID: 839802087}
   - 114: {fileID: 839802086}
   - 114: {fileID: 839802085}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8869,10 +8869,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 8
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -212.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839802085
 MonoBehaviour:
@@ -8968,7 +8968,7 @@ GameObject:
   - 224: {fileID: 863080448}
   - 222: {fileID: 863080450}
   - 114: {fileID: 863080449}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9044,7 +9044,7 @@ GameObject:
   - 114: {fileID: 867467828}
   - 114: {fileID: 867467827}
   - 114: {fileID: 867467826}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ConditionWhile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9189,7 +9189,7 @@ GameObject:
   - 224: {fileID: 884294722}
   - 222: {fileID: 884294724}
   - 114: {fileID: 884294723}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9266,7 +9266,7 @@ GameObject:
   - 114: {fileID: 903828681}
   - 114: {fileID: 903828680}
   - 225: {fileID: 903828679}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IfElseStatementButton
   m_TagString: ThreeInputBut
   m_Icon: {fileID: 0}
@@ -9402,7 +9402,7 @@ GameObject:
   - 224: {fileID: 914646208}
   - 222: {fileID: 914646210}
   - 114: {fileID: 914646209}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9472,7 +9472,7 @@ GameObject:
   - 114: {fileID: 914837359}
   - 114: {fileID: 914837358}
   - 114: {fileID: 914837357}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,7 +9619,7 @@ GameObject:
   - 114: {fileID: 918147788}
   - 225: {fileID: 918147787}
   - 114: {fileID: 918147786}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: TrashSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9707,7 +9707,7 @@ GameObject:
   - 114: {fileID: 939528597}
   - 114: {fileID: 939528596}
   - 114: {fileID: 939528595}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9854,7 +9854,7 @@ GameObject:
   - 114: {fileID: 957994881}
   - 114: {fileID: 957994880}
   - 114: {fileID: 957994879}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10000,7 +10000,7 @@ GameObject:
   - 224: {fileID: 959605170}
   - 222: {fileID: 959605172}
   - 114: {fileID: 959605171}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Addition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10077,7 +10077,7 @@ GameObject:
   - 224: {fileID: 961393884}
   - 222: {fileID: 961393886}
   - 114: {fileID: 961393885}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10153,7 +10153,7 @@ GameObject:
   - 114: {fileID: 965114178}
   - 114: {fileID: 965114177}
   - 114: {fileID: 965114176}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10299,7 +10299,7 @@ GameObject:
   - 222: {fileID: 973248315}
   - 114: {fileID: 973248313}
   - 225: {fileID: 973248312}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10375,7 +10375,7 @@ GameObject:
   - 224: {fileID: 980683541}
   - 222: {fileID: 980683543}
   - 114: {fileID: 980683542}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10450,7 +10450,7 @@ GameObject:
   - 222: {fileID: 984777396}
   - 114: {fileID: 984777395}
   - 114: {fileID: 984777394}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10537,7 +10537,7 @@ GameObject:
   - 114: {fileID: 988076487}
   - 114: {fileID: 988076486}
   - 114: {fileID: 988076485}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ConditionIfElse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10682,7 +10682,7 @@ GameObject:
   - 224: {fileID: 989110895}
   - 222: {fileID: 989110897}
   - 114: {fileID: 989110896}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10756,7 +10756,7 @@ GameObject:
   - 224: {fileID: 994476029}
   - 222: {fileID: 994476031}
   - 114: {fileID: 994476030}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10832,7 +10832,7 @@ GameObject:
   - 114: {fileID: 994496248}
   - 114: {fileID: 994496247}
   - 225: {fileID: 994496246}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10853,10 +10853,10 @@ RectTransform:
   - {fileID: 554787803}
   m_Father: {fileID: 483089963}
   m_RootOrder: 1
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -65}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &994496246
 CanvasGroup:
@@ -10937,7 +10937,7 @@ GameObject:
   - 114: {fileID: 1006376282}
   - 114: {fileID: 1006376281}
   - 225: {fileID: 1006376280}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10958,10 +10958,10 @@ RectTransform:
   - {fileID: 2031436113}
   m_Father: {fileID: 483089963}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -25}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1006376280
 CanvasGroup:
@@ -11043,7 +11043,7 @@ GameObject:
   - 114: {fileID: 1013694617}
   - 114: {fileID: 1013694616}
   - 225: {fileID: 1013694615}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: EquationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11176,7 +11176,7 @@ GameObject:
   - 224: {fileID: 1026235263}
   - 222: {fileID: 1026235265}
   - 114: {fileID: 1026235264}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11244,7 +11244,7 @@ GameObject:
   - 224: {fileID: 1026648326}
   - 222: {fileID: 1026648328}
   - 114: {fileID: 1026648327}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11315,7 +11315,7 @@ GameObject:
   - 114: {fileID: 1031859912}
   - 114: {fileID: 1031859911}
   - 114: {fileID: 1031859910}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11335,10 +11335,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -62.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1031859910
 MonoBehaviour:
@@ -11434,7 +11434,7 @@ GameObject:
   - 224: {fileID: 1037859033}
   - 222: {fileID: 1037859035}
   - 114: {fileID: 1037859034}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11509,7 +11509,7 @@ GameObject:
   - 222: {fileID: 1040779045}
   - 114: {fileID: 1040779044}
   - 114: {fileID: 1040779043}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HintButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11632,7 +11632,7 @@ GameObject:
   - 114: {fileID: 1045651973}
   - 114: {fileID: 1045651972}
   - 225: {fileID: 1045651971}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: IfElseStatementButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11656,10 +11656,10 @@ RectTransform:
   - {fileID: 802082374}
   m_Father: {fileID: 1396985689}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1045651971
 CanvasGroup:
@@ -11770,7 +11770,7 @@ GameObject:
   - 114: {fileID: 1057171566}
   - 222: {fileID: 1057171565}
   - 114: {fileID: 1057171564}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragAndDropCanvas_old
   m_TagString: DragAndDropPanel
   m_Icon: {fileID: 0}
@@ -11904,7 +11904,7 @@ GameObject:
   - 224: {fileID: 1069394032}
   - 222: {fileID: 1069394034}
   - 114: {fileID: 1069394033}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11972,7 +11972,7 @@ GameObject:
   - 224: {fileID: 1095811188}
   - 222: {fileID: 1095811190}
   - 114: {fileID: 1095811189}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12046,7 +12046,7 @@ GameObject:
   - 224: {fileID: 1143736037}
   - 222: {fileID: 1143736039}
   - 114: {fileID: 1143736038}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HeaderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12120,7 +12120,7 @@ GameObject:
   - 224: {fileID: 1144240580}
   - 222: {fileID: 1144240582}
   - 114: {fileID: 1144240581}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12190,7 +12190,7 @@ GameObject:
   - 114: {fileID: 1145387472}
   - 114: {fileID: 1145387471}
   - 225: {fileID: 1145387470}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12211,10 +12211,10 @@ RectTransform:
   - {fileID: 288095514}
   m_Father: {fileID: 483089963}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -145}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1145387470
 CanvasGroup:
@@ -12293,7 +12293,7 @@ GameObject:
   - 224: {fileID: 1162503067}
   - 222: {fileID: 1162503069}
   - 114: {fileID: 1162503068}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12367,7 +12367,7 @@ GameObject:
   - 224: {fileID: 1174404404}
   - 222: {fileID: 1174404406}
   - 114: {fileID: 1174404405}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12438,7 +12438,7 @@ GameObject:
   - 114: {fileID: 1178667579}
   - 114: {fileID: 1178667578}
   - 114: {fileID: 1178667577}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12551,7 +12551,7 @@ GameObject:
   - 224: {fileID: 1187794600}
   - 222: {fileID: 1187794602}
   - 114: {fileID: 1187794601}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12626,7 +12626,7 @@ GameObject:
   - 222: {fileID: 1190702609}
   - 114: {fileID: 1190702607}
   - 225: {fileID: 1190702606}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12704,7 +12704,7 @@ GameObject:
   - 114: {fileID: 1195309652}
   - 114: {fileID: 1195309651}
   - 225: {fileID: 1195309650}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12725,10 +12725,10 @@ RectTransform:
   - {fileID: 1659058705}
   m_Father: {fileID: 483089963}
   m_RootOrder: 2
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -105}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1195309650
 CanvasGroup:
@@ -12808,7 +12808,7 @@ GameObject:
   - 222: {fileID: 1211767851}
   - 114: {fileID: 1211767849}
   - 225: {fileID: 1211767848}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12887,7 +12887,7 @@ GameObject:
   - 114: {fileID: 1220463770}
   - 114: {fileID: 1220463769}
   - 225: {fileID: 1220463768}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: WhileLoopButton
   m_TagString: LoopsBut
   m_Icon: {fileID: 0}
@@ -13021,7 +13021,7 @@ GameObject:
   - 224: {fileID: 1224364280}
   - 222: {fileID: 1224364282}
   - 114: {fileID: 1224364281}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13098,7 +13098,7 @@ GameObject:
   - 114: {fileID: 1227662834}
   - 114: {fileID: 1227662833}
   - 225: {fileID: 1227662832}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: VariableButton
   m_TagString: VariableBut
   m_Icon: {fileID: 0}
@@ -13121,10 +13121,10 @@ RectTransform:
   - {fileID: 2000379715}
   m_Father: {fileID: 1446274871}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1227662832
 CanvasGroup:
@@ -13232,7 +13232,7 @@ GameObject:
   - 224: {fileID: 1228306209}
   - 222: {fileID: 1228306211}
   - 114: {fileID: 1228306210}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13252,10 +13252,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1981942647}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -17.5}
+  m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1228306210
 MonoBehaviour:
@@ -13300,7 +13300,7 @@ GameObject:
   - 224: {fileID: 1252083128}
   - 222: {fileID: 1252083130}
   - 114: {fileID: 1252083129}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13374,7 +13374,7 @@ GameObject:
   - 224: {fileID: 1268855279}
   - 222: {fileID: 1268855281}
   - 114: {fileID: 1268855280}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13444,7 +13444,7 @@ GameObject:
   - 114: {fileID: 1268908511}
   - 114: {fileID: 1268908510}
   - 114: {fileID: 1268908509}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Condition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13592,7 +13592,7 @@ GameObject:
   - 114: {fileID: 1279620563}
   - 114: {fileID: 1279620562}
   - 114: {fileID: 1279620561}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13708,7 +13708,7 @@ GameObject:
   - 114: {fileID: 1280674310}
   - 114: {fileID: 1280674309}
   - 114: {fileID: 1280674308}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13823,7 +13823,7 @@ GameObject:
   - 114: {fileID: 1283933740}
   - 114: {fileID: 1283933739}
   - 114: {fileID: 1283933738}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13970,7 +13970,7 @@ GameObject:
   - 114: {fileID: 1302380667}
   - 114: {fileID: 1302380666}
   - 114: {fileID: 1302380665}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14115,7 +14115,7 @@ GameObject:
   - 224: {fileID: 1308308481}
   - 222: {fileID: 1308308483}
   - 114: {fileID: 1308308482}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14191,7 +14191,7 @@ GameObject:
   - 114: {fileID: 1312758377}
   - 114: {fileID: 1312758376}
   - 114: {fileID: 1312758375}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14336,7 +14336,7 @@ GameObject:
   - 224: {fileID: 1330044449}
   - 222: {fileID: 1330044451}
   - 114: {fileID: 1330044450}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14410,7 +14410,7 @@ GameObject:
   - 224: {fileID: 1334455709}
   - 222: {fileID: 1334455711}
   - 114: {fileID: 1334455710}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14486,7 +14486,7 @@ GameObject:
   - 114: {fileID: 1342032769}
   - 114: {fileID: 1342032768}
   - 114: {fileID: 1342032767}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14631,7 +14631,7 @@ GameObject:
   - 224: {fileID: 1368677143}
   - 222: {fileID: 1368677145}
   - 114: {fileID: 1368677144}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14698,7 +14698,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1375325197}
   - 222: {fileID: 1375325198}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: HeaderImageForDragPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14741,7 +14741,7 @@ GameObject:
   - 222: {fileID: 1378959145}
   - 114: {fileID: 1378959143}
   - 225: {fileID: 1378959142}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14817,7 +14817,7 @@ GameObject:
   - 224: {fileID: 1381581763}
   - 222: {fileID: 1381581765}
   - 114: {fileID: 1381581764}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14890,7 +14890,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 1391907874}
   - 114: {fileID: 1391907875}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: arrowDragPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14956,7 +14956,7 @@ GameObject:
   - 114: {fileID: 1396985692}
   - 114: {fileID: 1396985691}
   - 225: {fileID: 1396985690}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14977,10 +14977,10 @@ RectTransform:
   - {fileID: 1045651970}
   m_Father: {fileID: 483089963}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100, y: -225}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1396985690
 CanvasGroup:
@@ -15059,7 +15059,7 @@ GameObject:
   - 224: {fileID: 1399670617}
   - 222: {fileID: 1399670619}
   - 114: {fileID: 1399670618}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Subtraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15136,7 +15136,7 @@ GameObject:
   - 222: {fileID: 1401959022}
   - 114: {fileID: 1401959021}
   - 114: {fileID: 1401959020}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15237,7 +15237,7 @@ GameObject:
   - 224: {fileID: 1416929174}
   - 222: {fileID: 1416929176}
   - 114: {fileID: 1416929175}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15311,7 +15311,7 @@ GameObject:
   - 224: {fileID: 1423993339}
   - 222: {fileID: 1423993341}
   - 114: {fileID: 1423993340}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Subtraction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15389,7 +15389,7 @@ GameObject:
   - 114: {fileID: 1438688342}
   - 114: {fileID: 1438688341}
   - 114: {fileID: 1438688340}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15536,13 +15536,13 @@ GameObject:
   - 114: {fileID: 1446274874}
   - 114: {fileID: 1446274873}
   - 225: {fileID: 1446274872}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1446274871
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15557,10 +15557,10 @@ RectTransform:
   - {fileID: 1227662831}
   m_Father: {fileID: 483089963}
   m_RootOrder: 8
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 297, y: -105}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1446274872
 CanvasGroup:
@@ -15642,7 +15642,7 @@ GameObject:
   - 114: {fileID: 1450581045}
   - 114: {fileID: 1450581044}
   - 225: {fileID: 1450581043}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IfStatementButton
   m_TagString: ThreeInputBut
   m_Icon: {fileID: 0}
@@ -15778,7 +15778,7 @@ GameObject:
   - 224: {fileID: 1473545286}
   - 222: {fileID: 1473545288}
   - 114: {fileID: 1473545287}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15852,7 +15852,7 @@ GameObject:
   - 224: {fileID: 1481910307}
   - 222: {fileID: 1481910309}
   - 114: {fileID: 1481910308}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15924,7 +15924,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 224: {fileID: 1490402947}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragAndDropIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15964,7 +15964,7 @@ GameObject:
   - 114: {fileID: 1494548788}
   - 114: {fileID: 1494548787}
   - 225: {fileID: 1494548786}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ForLoopButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15986,10 +15986,10 @@ RectTransform:
   - {fileID: 957994878}
   m_Father: {fileID: 1816349085}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1494548786
 CanvasGroup:
@@ -16097,7 +16097,7 @@ GameObject:
   - 224: {fileID: 1496804746}
   - 222: {fileID: 1496804748}
   - 114: {fileID: 1496804747}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16171,7 +16171,7 @@ GameObject:
   - 224: {fileID: 1514818813}
   - 222: {fileID: 1514818815}
   - 114: {fileID: 1514818814}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16248,7 +16248,7 @@ GameObject:
   - 114: {fileID: 1522203458}
   - 114: {fileID: 1522203457}
   - 114: {fileID: 1522203456}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16268,10 +16268,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 5
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -137.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1522203456
 MonoBehaviour:
@@ -16367,7 +16367,7 @@ GameObject:
   - 224: {fileID: 1522233620}
   - 222: {fileID: 1522233622}
   - 114: {fileID: 1522233621}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16441,7 +16441,7 @@ GameObject:
   - 224: {fileID: 1540866946}
   - 222: {fileID: 1540866948}
   - 114: {fileID: 1540866947}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16515,7 +16515,7 @@ GameObject:
   - 224: {fileID: 1541653111}
   - 222: {fileID: 1541653113}
   - 114: {fileID: 1541653112}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16589,7 +16589,7 @@ GameObject:
   - 224: {fileID: 1579370545}
   - 222: {fileID: 1579370547}
   - 114: {fileID: 1579370546}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16663,7 +16663,7 @@ GameObject:
   - 224: {fileID: 1591735511}
   - 222: {fileID: 1591735513}
   - 114: {fileID: 1591735512}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16737,7 +16737,7 @@ GameObject:
   - 224: {fileID: 1600267041}
   - 222: {fileID: 1600267043}
   - 114: {fileID: 1600267042}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16814,7 +16814,7 @@ GameObject:
   - 114: {fileID: 1609939442}
   - 114: {fileID: 1609939441}
   - 225: {fileID: 1609939440}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: IfStatementButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16838,10 +16838,10 @@ RectTransform:
   - {fileID: 3258239}
   m_Father: {fileID: 175568885}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1609939440
 CanvasGroup:
@@ -16949,7 +16949,7 @@ GameObject:
   - 224: {fileID: 1625831286}
   - 222: {fileID: 1625831288}
   - 114: {fileID: 1625831287}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17026,7 +17026,7 @@ GameObject:
   - 114: {fileID: 1640140366}
   - 114: {fileID: 1640140365}
   - 114: {fileID: 1640140364}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17046,10 +17046,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 9
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -237.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640140364
 MonoBehaviour:
@@ -17145,7 +17145,7 @@ GameObject:
   - 224: {fileID: 1642661481}
   - 222: {fileID: 1642661483}
   - 114: {fileID: 1642661482}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17213,7 +17213,7 @@ GameObject:
   - 224: {fileID: 1647904805}
   - 222: {fileID: 1647904807}
   - 114: {fileID: 1647904806}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17290,7 +17290,7 @@ GameObject:
   - 114: {fileID: 1659058708}
   - 114: {fileID: 1659058707}
   - 225: {fileID: 1659058706}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DivisionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17313,10 +17313,10 @@ RectTransform:
   - {fileID: 1283933737}
   m_Father: {fileID: 1195309649}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1659058706
 CanvasGroup:
@@ -17423,13 +17423,13 @@ GameObject:
   m_Component:
   - 224: {fileID: 1669404442}
   - 222: {fileID: 1669404441}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragAndDrop_old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &1669404441
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17443,7 +17443,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1669404440}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -190}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -17467,7 +17467,7 @@ GameObject:
   - 114: {fileID: 1679220382}
   - 114: {fileID: 1679220381}
   - 114: {fileID: 1679220380}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17612,7 +17612,7 @@ GameObject:
   - 224: {fileID: 1687495362}
   - 222: {fileID: 1687495364}
   - 114: {fileID: 1687495363}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17682,7 +17682,7 @@ GameObject:
   - 114: {fileID: 1689790644}
   - 114: {fileID: 1689790643}
   - 114: {fileID: 1689790642}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17829,7 +17829,7 @@ GameObject:
   - 114: {fileID: 1728008977}
   - 114: {fileID: 1728008976}
   - 114: {fileID: 1728008975}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17974,7 +17974,7 @@ GameObject:
   - 224: {fileID: 1728649819}
   - 222: {fileID: 1728649821}
   - 114: {fileID: 1728649820}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18048,7 +18048,7 @@ GameObject:
   - 224: {fileID: 1730956940}
   - 222: {fileID: 1730956942}
   - 114: {fileID: 1730956941}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18116,7 +18116,7 @@ GameObject:
   - 224: {fileID: 1737414268}
   - 222: {fileID: 1737414270}
   - 114: {fileID: 1737414269}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18184,7 +18184,7 @@ GameObject:
   - 224: {fileID: 1739813606}
   - 222: {fileID: 1739813608}
   - 114: {fileID: 1739813607}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18258,7 +18258,7 @@ GameObject:
   - 224: {fileID: 1748250698}
   - 222: {fileID: 1748250700}
   - 114: {fileID: 1748250699}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18335,7 +18335,7 @@ GameObject:
   - 114: {fileID: 1749992585}
   - 114: {fileID: 1749992584}
   - 225: {fileID: 1749992583}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MultiplicationButton
   m_TagString: TwoInputBut
   m_Icon: {fileID: 0}
@@ -18470,7 +18470,7 @@ GameObject:
   - 224: {fileID: 1754028348}
   - 222: {fileID: 1754028350}
   - 114: {fileID: 1754028349}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18544,7 +18544,7 @@ GameObject:
   - 224: {fileID: 1759021563}
   - 222: {fileID: 1759021566}
   - 114: {fileID: 1759021564}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18618,7 +18618,7 @@ GameObject:
   - 224: {fileID: 1760286670}
   - 222: {fileID: 1760286672}
   - 114: {fileID: 1760286671}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18689,7 +18689,7 @@ GameObject:
   - 114: {fileID: 1770240341}
   - 114: {fileID: 1770240340}
   - 114: {fileID: 1770240339}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18709,10 +18709,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 7
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -187.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1770240339
 MonoBehaviour:
@@ -18808,7 +18808,7 @@ GameObject:
   - 224: {fileID: 1770371920}
   - 222: {fileID: 1770371922}
   - 114: {fileID: 1770371921}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18884,7 +18884,7 @@ GameObject:
   - 114: {fileID: 1780122714}
   - 114: {fileID: 1780122713}
   - 114: {fileID: 1780122712}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19029,7 +19029,7 @@ GameObject:
   - 224: {fileID: 1789440197}
   - 222: {fileID: 1789440199}
   - 114: {fileID: 1789440198}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19107,7 +19107,7 @@ GameObject:
   - 114: {fileID: 1799082457}
   - 225: {fileID: 1799082455}
   - 114: {fileID: 1799082456}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: AdditionButton
   m_TagString: TwoInputBut
   m_Icon: {fileID: 0}
@@ -19250,7 +19250,7 @@ GameObject:
   - 114: {fileID: 1803716697}
   - 114: {fileID: 1803716696}
   - 114: {fileID: 1803716695}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19409,7 +19409,7 @@ GameObject:
   - 224: {fileID: 1810769001}
   - 222: {fileID: 1810769003}
   - 114: {fileID: 1810769002}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19483,7 +19483,7 @@ GameObject:
   - 224: {fileID: 1812550297}
   - 222: {fileID: 1812550299}
   - 114: {fileID: 1812550298}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: ConsolePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19554,7 +19554,7 @@ GameObject:
   - 114: {fileID: 1815872216}
   - 114: {fileID: 1815872215}
   - 114: {fileID: 1815872214}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19701,13 +19701,13 @@ GameObject:
   - 114: {fileID: 1816349088}
   - 114: {fileID: 1816349087}
   - 225: {fileID: 1816349086}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragSlot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1816349085
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19722,10 +19722,10 @@ RectTransform:
   - {fileID: 1494548785}
   m_Father: {fileID: 483089963}
   m_RootOrder: 6
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 297, y: -25}
+  m_SizeDelta: {x: 197, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1816349086
 CanvasGroup:
@@ -19804,7 +19804,7 @@ GameObject:
   - 224: {fileID: 1822298243}
   - 222: {fileID: 1822298245}
   - 114: {fileID: 1822298244}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19878,7 +19878,7 @@ GameObject:
   - 224: {fileID: 1823942913}
   - 222: {fileID: 1823942915}
   - 114: {fileID: 1823942914}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19952,7 +19952,7 @@ GameObject:
   - 224: {fileID: 1830229390}
   - 222: {fileID: 1830229392}
   - 114: {fileID: 1830229391}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20026,7 +20026,7 @@ GameObject:
   - 224: {fileID: 1851356201}
   - 222: {fileID: 1851356203}
   - 114: {fileID: 1851356202}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20100,7 +20100,7 @@ GameObject:
   - 224: {fileID: 1855467816}
   - 222: {fileID: 1855467818}
   - 114: {fileID: 1855467817}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: ConsolePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20172,7 +20172,7 @@ GameObject:
   - 114: {fileID: 1856911104}
   - 114: {fileID: 1856911103}
   - 114: {fileID: 1856911102}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20192,10 +20192,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 798334616}
   m_RootOrder: 3
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 125, y: -87.5}
+  m_SizeDelta: {x: 240, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1856911102
 MonoBehaviour:
@@ -20291,7 +20291,7 @@ GameObject:
   - 224: {fileID: 1872040275}
   - 222: {fileID: 1872040277}
   - 114: {fileID: 1872040276}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20366,7 +20366,7 @@ GameObject:
   - 222: {fileID: 1892009508}
   - 114: {fileID: 1892009506}
   - 225: {fileID: 1892009505}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20442,7 +20442,7 @@ GameObject:
   - 224: {fileID: 1894324601}
   - 222: {fileID: 1894324603}
   - 114: {fileID: 1894324602}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20512,7 +20512,7 @@ GameObject:
   - 114: {fileID: 1910606541}
   - 114: {fileID: 1910606540}
   - 114: {fileID: 1910606539}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20657,7 +20657,7 @@ GameObject:
   - 224: {fileID: 1912278183}
   - 222: {fileID: 1912278185}
   - 114: {fileID: 1912278184}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20731,7 +20731,7 @@ GameObject:
   - 224: {fileID: 1912473264}
   - 222: {fileID: 1912473266}
   - 114: {fileID: 1912473265}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20805,7 +20805,7 @@ GameObject:
   - 224: {fileID: 1917861321}
   - 222: {fileID: 1917861323}
   - 114: {fileID: 1917861322}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20879,7 +20879,7 @@ GameObject:
   - 224: {fileID: 1918902580}
   - 222: {fileID: 1918902582}
   - 114: {fileID: 1918902581}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20958,7 +20958,7 @@ GameObject:
   - 114: {fileID: 1953375751}
   - 114: {fileID: 1953375750}
   - 225: {fileID: 1953375749}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: EquationButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20979,10 +20979,10 @@ RectTransform:
   - {fileID: 1416929174}
   m_Father: {fileID: 606307677}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1953375749
 CanvasGroup:
@@ -21090,7 +21090,7 @@ GameObject:
   - 224: {fileID: 1958637072}
   - 222: {fileID: 1958637074}
   - 114: {fileID: 1958637073}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21164,7 +21164,7 @@ GameObject:
   - 224: {fileID: 1959154561}
   - 222: {fileID: 1959154563}
   - 114: {fileID: 1959154562}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21238,7 +21238,7 @@ GameObject:
   - 224: {fileID: 1973021596}
   - 222: {fileID: 1973021598}
   - 114: {fileID: 1973021597}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21314,7 +21314,7 @@ GameObject:
   - 114: {fileID: 1978130972}
   - 114: {fileID: 1978130971}
   - 114: {fileID: 1978130970}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21462,7 +21462,7 @@ GameObject:
   - 114: {fileID: 1981942650}
   - 225: {fileID: 1981942649}
   - 114: {fileID: 1981942648}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: TrashSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21485,7 +21485,7 @@ RectTransform:
   m_RootOrder: 9
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 310, y: -374.95746}
+  m_AnchoredPosition: {x: 310, y: -75}
   m_SizeDelta: {x: 50, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981942648
@@ -21577,7 +21577,7 @@ GameObject:
   - 114: {fileID: 1982388397}
   - 222: {fileID: 1982388396}
   - 114: {fileID: 1982388395}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragAndDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21657,7 +21657,7 @@ GameObject:
   - 224: {fileID: 1982455194}
   - 222: {fileID: 1982455196}
   - 114: {fileID: 1982455195}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21733,7 +21733,7 @@ GameObject:
   - 114: {fileID: 1991576730}
   - 114: {fileID: 1991576729}
   - 114: {fileID: 1991576728}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21880,7 +21880,7 @@ GameObject:
   - 114: {fileID: 2000379718}
   - 114: {fileID: 2000379717}
   - 114: {fileID: 2000379716}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22025,7 +22025,7 @@ GameObject:
   - 224: {fileID: 2015305598}
   - 222: {fileID: 2015305600}
   - 114: {fileID: 2015305599}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DragPanelHeader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22102,7 +22102,7 @@ GameObject:
   - 222: {fileID: 2018417279}
   - 114: {fileID: 2018417277}
   - 225: {fileID: 2018417276}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DragSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22182,7 +22182,7 @@ GameObject:
   - 114: {fileID: 2031436116}
   - 114: {fileID: 2031436115}
   - 225: {fileID: 2031436114}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: AdditionButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22206,10 +22206,10 @@ RectTransform:
   - {fileID: 203865188}
   m_Father: {fileID: 1006376279}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 98.5, y: -20}
+  m_SizeDelta: {x: 125, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &2031436114
 CanvasGroup:
@@ -22325,7 +22325,7 @@ GameObject:
   - 114: {fileID: 2034607695}
   - 114: {fileID: 2034607694}
   - 114: {fileID: 2034607693}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22440,7 +22440,7 @@ GameObject:
   - 114: {fileID: 2050491667}
   - 114: {fileID: 2050491666}
   - 114: {fileID: 2050491665}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22585,7 +22585,7 @@ GameObject:
   - 224: {fileID: 2059989461}
   - 222: {fileID: 2059989463}
   - 114: {fileID: 2059989462}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22659,7 +22659,7 @@ GameObject:
   - 224: {fileID: 2070319668}
   - 222: {fileID: 2070319670}
   - 114: {fileID: 2070319669}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22733,7 +22733,7 @@ GameObject:
   - 224: {fileID: 2071807908}
   - 222: {fileID: 2071807910}
   - 114: {fileID: 2071807909}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: DropPanelHeader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22808,7 +22808,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 2076402486}
   - 222: {fileID: 2076402487}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HeaderImageForDragPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22852,7 +22852,7 @@ GameObject:
   - 114: {fileID: 2076524348}
   - 114: {fileID: 2076524347}
   - 114: {fileID: 2076524346}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22997,7 +22997,7 @@ GameObject:
   - 224: {fileID: 2088421284}
   - 222: {fileID: 2088421286}
   - 114: {fileID: 2088421285}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23074,7 +23074,7 @@ GameObject:
   - 114: {fileID: 2099127506}
   - 114: {fileID: 2099127505}
   - 225: {fileID: 2099127504}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DivisionButton
   m_TagString: TwoInputBut
   m_Icon: {fileID: 0}
@@ -23211,7 +23211,7 @@ GameObject:
   - 114: {fileID: 2118251828}
   - 114: {fileID: 2118251827}
   - 114: {fileID: 2118251826}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RightInput
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23356,7 +23356,7 @@ GameObject:
   - 224: {fileID: 2118955996}
   - 222: {fileID: 2118955998}
   - 114: {fileID: 2118955997}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23430,7 +23430,7 @@ GameObject:
   - 224: {fileID: 2136506538}
   - 222: {fileID: 2136506540}
   - 114: {fileID: 2136506539}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Placeholder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23507,7 +23507,7 @@ GameObject:
   - 114: {fileID: 2138767333}
   - 114: {fileID: 2138767332}
   - 114: {fileID: 2138767331}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DropSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23620,7 +23620,7 @@ GameObject:
   - 224: {fileID: 2141279401}
   - 222: {fileID: 2141279403}
   - 114: {fileID: 2141279402}
-  m_Layer: 8
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23694,7 +23694,7 @@ GameObject:
   - 224: {fileID: 2145192274}
   - 222: {fileID: 2145192276}
   - 114: {fileID: 2145192275}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

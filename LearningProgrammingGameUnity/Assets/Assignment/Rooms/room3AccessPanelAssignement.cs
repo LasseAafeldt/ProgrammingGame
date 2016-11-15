@@ -3,16 +3,12 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 #pragma warning disable 
-public class room1AccessPanelAssignement : Assignment {
-    public room1AccessPanelAssignement()
+public class room3AccessPanelAssignement : Assignment {
+    public room3AccessPanelAssignement()
     {
-        description = "Write the 4 digit password code. Each digit must have its own slot.";
+        description = "Find every book in the office area and enter how many you found.";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
-        correctionList.Add(9.0f);
-        correctionList.Add(5.0f);
-        correctionList.Add(8.0f);
-        correctionList.Add(3.0f);
 
         hints = new Hint("You can drag items from the drag panel to the drop panel.",
             "The password code is hidden inside the room.", 
