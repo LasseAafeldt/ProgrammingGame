@@ -8,6 +8,9 @@ TagManager:
   - DragAndDropPanel
   - TwoInputBut
   - ThreeInputBut
+  - LoopsBut
+  - ConstructionModule
+  - room5
   layers:
   - Default
   - TransparentFX

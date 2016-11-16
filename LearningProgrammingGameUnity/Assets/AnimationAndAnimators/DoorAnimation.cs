@@ -8,9 +8,8 @@ public class DoorAnimation : MonoBehaviour {
     public float doorAnimSpeed = 2.0f;
     private Quaternion doorOpen = Quaternion.identity;
     private Quaternion doorClose = Quaternion.identity;
-    private Transform playerTrans = null;
     public bool doorStatus = false; //false is close, true is open
-    private bool doorGo = false; //for Coroutine, when start only one
+    private bool doorChangingState = false; //for Coroutine, when start only one
     void Start()
     {
         doorStatus = false; //door is open, maybe change
@@ -18,30 +17,14 @@ public class DoorAnimation : MonoBehaviour {
         doorOpen = Quaternion.Euler(0, doorOpenAngle, 0);
         doorClose = Quaternion.Euler(0, doorCloseAngle, 0);
         //Find only one time your player and get him reference
-        playerTrans = CanvasHandler.Player.transform;
     }
     void Update()
     {
-        //If press F key on keyboard
-        if (Input.GetKeyDown(KeyCode.F) && !doorGo)
-        {
-            //Calculate distance between player and door
-            if (Vector3.Distance(playerTrans.position, this.transform.position) < 5f)
-            {
-                if (doorStatus)
-                { //close door
-                    StartCoroutine(this.moveDoor(doorClose));
-                }
-                else
-                { //open door
-                    StartCoroutine(this.moveDoor(doorOpen));
-                }
-            }
-        }
+
     }
     public IEnumerator moveDoor(Quaternion dest)
     {
-        doorGo = true;
+        doorChangingState = true;
         //Check if close/open, if angle less 4 degree, or use another value more 0
         while (Quaternion.Angle(transform.localRotation, dest) > 4.0f)
         {
@@ -49,10 +32,24 @@ public class DoorAnimation : MonoBehaviour {
             //UPDATE 1: add yield
             yield return null;
         }
-        //Change door status
-        doorStatus = !doorStatus;
-        doorGo = false;
+        doorChangingState = false;
         //UPDATE 1: add yield
         yield return null;
+    }
+
+    public void ChangeState()
+    {
+        //If press F key on keyboard
+        if (!doorChangingState)
+        {
+            if (doorStatus)
+            { //close door
+                StartCoroutine(this.moveDoor(doorClose));
+            }
+            else
+            { //open door
+                StartCoroutine(this.moveDoor(doorOpen));
+            }
+        }
     }
 }

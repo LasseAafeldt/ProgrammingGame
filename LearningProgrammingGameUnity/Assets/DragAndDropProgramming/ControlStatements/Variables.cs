@@ -45,7 +45,7 @@ public class Variables : ControlStatements
     public override void SetRight(float newValue)
     {
         rightSide = newValue;
-        Debug.Log("set right to " + newValue);
+        //Debug.Log("set right to " + newValue);
         str = null;
         UpdateResult();
     }

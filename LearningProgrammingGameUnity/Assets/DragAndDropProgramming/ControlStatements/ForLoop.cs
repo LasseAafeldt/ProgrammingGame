@@ -4,9 +4,10 @@ using System;
 
 public class ForLoop : ControlStatements {
 
-    public ForLoop(int limit)
+    public ForLoop(float? limit)
     {
-        leftSide = limit;
+        if(limit != null)
+            leftSide = (int)limit.Value;
     }
 
     public override string GetControlType()

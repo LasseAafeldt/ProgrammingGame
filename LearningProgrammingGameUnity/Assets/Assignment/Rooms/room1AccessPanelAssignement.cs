@@ -25,7 +25,7 @@ public class room1AccessPanelAssignement : Assignment {
         IsEachCorrect.Clear();
         foreach (float i in correctionList)
             IsEachCorrect.Add(false);
-        Debug.Log("Checking each" + RunQueue.GetSize());
+        //Debug.Log("Checking each" + RunQueue.GetSize());
         for (int i = 0; i < RunQueue.GetSize(); i++)
         {
             if (i < correctionList.Count)

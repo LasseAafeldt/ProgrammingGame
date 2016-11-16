@@ -4,27 +4,28 @@ using System.Collections;
 
 public class room1loadAccessPanelAssignment : MonoBehaviour{
     protected GameObject obj;
-    private GameObject player;
     protected int activeChildCount;
+    public static float distanceToObj;
     private static int ID = 1;
+    public static float interactionDistance;
     // Use this for initialization
     void Start()
     {
-        ID = 1;
+        interactionDistance = 3;
         activeChildCount = 0;
         obj = gameObject;
     }
     void Update()
     {
-        if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
-        {
-            float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-            Debug.Log(distanceToObj);
-            if(distanceToObj < 1.5f)
+        distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
+        //Debug.Log(distanceToObj);
+        if (distanceToObj < interactionDistance) {
+            if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
+                PressEToInteract.currentToolTipText = "";
                 ManagerScript.ActiveID = ID;
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.InitializeQueue();
+                RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 CharacterControll.canMove = false;
@@ -57,7 +58,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
 
         for (int i = 0; i < dragPanel.transform.childCount; i++){
 			if (i != GameObject.Find ("DragSlot9").transform.GetSiblingIndex ()) {
-				dragPanel.transform.GetChild (i).gameObject.SetActive (false);
+				dragPanel.transform.GetChild(i).gameObject.SetActive(false);
 			}
 			else
 				activeChildCount ++;

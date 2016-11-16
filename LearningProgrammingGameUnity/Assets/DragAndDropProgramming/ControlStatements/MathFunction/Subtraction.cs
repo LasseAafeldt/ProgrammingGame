@@ -11,7 +11,8 @@ public class Subtraction : MathFunctions
 		if(right !=null)
 			rightSide = right.Value;
 		if (left != null && right != null)
-			result = left.Value + right.Value;
+			result = left.Value - right.Value;
+        Debug.Log("Created subtraction");
     }
     public override void UpdateResult()
     {

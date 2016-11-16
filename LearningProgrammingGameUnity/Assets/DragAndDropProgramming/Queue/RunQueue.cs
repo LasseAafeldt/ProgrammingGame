@@ -15,14 +15,14 @@ public class RunQueue {
     }
     public static void InitializeQueue()
     {
-        for (int i = 0; i < GameObject.Find("DropPanel").transform.childCount; i++)
+        for (int i = 0; i < CanvasHandler.DropPanel.transform.childCount; i++)
         {
             runQueue.Add(null);
         }
     }
     public static void AddToQueue(ControlStatements statement, int position)
     {
-        Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
+        //Debug.Log("trying to add " + statement.GetControlType() + " at position " + position + "...");
         //Debug.Log("there was an object there already! " + RunQueue.GetAt(position).GetControlType());
         runQueue.RemoveAt(position);
         runQueue.Insert(position, statement);
@@ -46,7 +46,7 @@ public class RunQueue {
     }
     public static ControlStatements GetAt(int i)
     {
-		Debug.Log ("at i = " + runQueue[i]);
+		//Debug.Log ("at i = " + runQueue[i]);
         return (ControlStatements)runQueue[i];
     }
     public static void ResetQueue()
@@ -74,7 +74,7 @@ public class RunQueue {
                 if (room1AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    //Debug.Log("open door");
+                    GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().ChangeState();
                 }
                 else
                 {
@@ -88,7 +88,7 @@ public class RunQueue {
                 if (room2_AdditionAssignment.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    //Debug.Log("open door");
+                    GameObject.Find("DoorAnimationFixerOfficeHallway").GetComponent<DoorAnimation>().ChangeState();
                 }
                 else
                 {

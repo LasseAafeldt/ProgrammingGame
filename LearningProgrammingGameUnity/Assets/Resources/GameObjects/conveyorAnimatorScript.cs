@@ -14,8 +14,10 @@ public class conveyorAnimatorScript : MonoBehaviour {
 	void Update () {
 		if (true)
 			animator.SetTrigger ("on");
-		if (false)
-			animator.SetTrigger ("off");
+		
 	
 	}
 }
+/*if (false)
+			animator.SetTrigger ("off");
+*/
