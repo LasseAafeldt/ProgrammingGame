@@ -60,8 +60,13 @@ public class CharacterControll : MonoBehaviour {
             transformBeingCarried = other.transform.parent;
             transformBeingCarried.GetComponent<Rigidbody>().isKinematic = true;
             transformBeingCarried.SetParent(GameObject.Find("ItemBeingCarriedParent").transform);
-            transformBeingCarried.transform.localPosition = new Vector3(0,0, 2.5f);
+            transformBeingCarried.transform.localPosition = new Vector3(0, 0, 2.5f);
             transformBeingCarried.localRotation = Quaternion.identity;
+        }
+        if (other.transform.parent.gameObject.CompareTag("book"))
+        {
+            Destroy(other.transform.parent.gameObject);
+            PressEToInteract.bookCount++;
         }
     }
 }

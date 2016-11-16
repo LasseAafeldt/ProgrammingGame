@@ -8,6 +8,7 @@ public class PressEToInteract : MonoBehaviour {
 
     public static String currentToolTipText = "";
     public static int currentCount = 0;
+    public static int bookCount = 0;
     public static String constructionCounterTooltip = "Construction modules: " + currentCount + "/5";
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;

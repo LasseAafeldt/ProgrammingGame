@@ -6,7 +6,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
     protected GameObject obj;
     protected int activeChildCount;
     public static float distanceToObj;
-    private static int ID = 1;
+    private static int ID = 3;
     // Use this for initialization
     void Start()
     {
@@ -70,7 +70,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
         Destroy(copyObject.transform.GetChild(2).gameObject);
-        copyObject.transform.GetChild(1).GetComponent<Text>().text = "i = ";
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "booksFound = ";
         copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
         copyObject.transform.GetChild(1).Translate(
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 20,
