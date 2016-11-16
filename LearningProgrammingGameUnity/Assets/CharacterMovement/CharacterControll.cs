@@ -53,15 +53,16 @@ public class CharacterControll : MonoBehaviour {
             PressEToInteract.currentCount++;
             PressEToInteract.constructionCounterTooltip = "Construction modules: " + PressEToInteract.currentCount + "/5";
         }
-        if (other.transform.parent.gameObject.CompareTag("room5"))
+        if (other.transform.parent.gameObject.CompareTag("room5") && !isCarryingItem)
         {
             isCarryingItem = true;
             Parent = GameObject.Find("ItemBeingCarriedParent");
             transformBeingCarried = other.transform.parent;
             transformBeingCarried.GetComponent<Rigidbody>().isKinematic = true;
             transformBeingCarried.SetParent(GameObject.Find("ItemBeingCarriedParent").transform);
-            transformBeingCarried.transform.localPosition = new Vector3(0,0, 2.5f);
+            transformBeingCarried.transform.localPosition = new Vector3(0,0, 2f);
             transformBeingCarried.localRotation = Quaternion.identity;
+            transformBeingCarried.localScale = new Vector3(1, 0.5f, 1);
         }
     }
 }
