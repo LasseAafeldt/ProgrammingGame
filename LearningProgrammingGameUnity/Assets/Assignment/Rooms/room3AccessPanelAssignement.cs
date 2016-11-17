@@ -4,23 +4,24 @@ using System.Collections;
 using System;
 #pragma warning disable 
 public class room3AccessPanelAssignement : Assignment {
+    public static int maxBooks = 5;
     public room3AccessPanelAssignement()
     {
-        description = "Find every book in the office area and enter how many you found.";
+        description = "Find every book in this office and enter how many you found.";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
+        
 
         hints = new Hint("You can drag items from the drag panel to the drop panel.",
-            "The password code is hidden inside the room.", 
-            "Add more hints here...");
+           // "The password code is hidden inside the room.", 
+            "A0dd more hints here...");
         ConsoleUI.AddText(hints.GetNextHint());
     }
 
     public static void IsEachResultCorrect()
     {
         IsEachCorrect.Clear();
-        foreach (float i in correctionList)
-            IsEachCorrect.Add(false);
+        IsEachCorrect.Add(false);
         //Debug.Log("Checking each" + RunQueue.GetSize());
         for (int i = 0; i < RunQueue.GetSize(); i++)
         {
@@ -28,9 +29,9 @@ public class room3AccessPanelAssignement : Assignment {
             {
                 if(RunQueue.GetAt(i) != null)
                 {
-                    if (RunQueue.GetAt(i).GetResult() == (float)correctionList[i])
+                    if (PressEToInteract.bookCount == maxBooks)
                     {
-                        IsEachCorrect[i] = true;
+                        IsEachCorrect[0] = true;
                     }
                 }
             }

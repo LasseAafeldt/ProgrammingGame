@@ -65,5 +65,10 @@ public class CharacterControll : MonoBehaviour {
             transformBeingCarried.localRotation = Quaternion.identity;
             transformBeingCarried.localScale = new Vector3(1, 0.5f, 1);
         }
+        if (other.transform.parent.gameObject.CompareTag("book"))
+        {
+            Destroy(other.transform.parent.gameObject);
+            PressEToInteract.bookCount++;
+        }
     }
 }
