@@ -6,7 +6,7 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
     protected GameObject obj;
     protected int activeChildCount;
     public static float distanceToObj;
-    private static int ID = 1;
+    private static int ID = 7;
     public static float interactionDistance;
     // Use this for initialization
     void Start()
@@ -49,21 +49,20 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
         Debug.Log("Room 7 load");
         activeChildCount = 0;
         //Debug.Log(obj);
-
-		//Sets the number of arrows shown in the drop panel to one. 
-		for(int i = 1; i < CanvasHandler.arrowDragPanel.transform.childCount; i++){
-			CanvasHandler.arrowDragPanel.transform.GetChild (i).gameObject.SetActive(false);
-		}
-
         for (int i = 0; i < CanvasHandler.DragPanel.transform.childCount; i++){
-			if (i != GameObject.Find ("DragSlot10").transform.GetSiblingIndex () ||
-                i != GameObject.Find("DragSlot11").transform.GetSiblingIndex() ||
-                i != GameObject.Find("DragSlot12").transform.GetSiblingIndex())
+            //Debug.Log("i = " + i +" " + GameObject.Find ("DragSlot10").transform.GetSiblingIndex ());
+            //Debug.Log(i == GameObject.Find("DragSlot10").transform.GetSiblingIndex());
+            if (i == GameObject.Find("DragSlot10").transform.GetSiblingIndex() ||
+                i == GameObject.Find("DragSlot11").transform.GetSiblingIndex() ||
+                i == GameObject.Find("DragSlot12").transform.GetSiblingIndex())
             {
+                activeChildCount++;
+            }
+            else
+            {
+                //Debug.Log("Deactivated " + CanvasHandler.DragPanel.transform.GetChild(i));
                 CanvasHandler.DragPanel.transform.GetChild(i).gameObject.SetActive(false);
-			}
-			else
-				activeChildCount ++;
+            }
 		}
 		CanvasHandler.scaleDragPanel (activeChildCount);
 		//Debug.Log (new room1_AccessPanelAssignement ().GetDescription ());
@@ -73,9 +72,14 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
         {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
         }
-        GameObject.Find("DragSlot11").transform.GetChild(1).GetComponent<Text>().text = "For Each Fuse";
-        GameObject.Find("DragSlot12").transform.GetChild(1).GetComponent<Text>().text = "If Fuse Is Damaged";
-        GameObject.Find("DragSlot10").transform.GetChild(1).GetComponent<Text>().text = "Change Fuse";
+        //Sets the number of arrows shown in the drop panel to one. 
+        for (int i = activeChildCount; i < CanvasHandler.arrowDragPanel.transform.childCount; i++)
+        {
+            CanvasHandler.arrowDragPanel.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        GameObject.Find("DragSlot11").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text = "For Each Fuse";
+        GameObject.Find("DragSlot12").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text = "If Fuse Is Damaged";
+        GameObject.Find("DragSlot10").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text = "Change Fuse";
 
     }
 }

@@ -22,17 +22,24 @@ public class room7AccessPanelAssignement : Assignment {
         for(int i = 0; i < 3; i++)
             IsEachCorrect.Add(false);
         //Debug.Log("Checking each" + RunQueue.GetSize());
-        if (GameObject.Find("DropSlot1").transform.GetChild(0).Equals(GameObject.Find("DragSlot11")))
+        String textt = GameObject.Find("DropSlot1").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text;
+        if (textt.Equals("For Each Fuse"))
         {
             IsEachCorrect[0] = true;
+            //Debug.Log("first true");
         }
-        if (GameObject.Find("DropSlot2").transform.GetChild(0).Equals(GameObject.Find("DragSlot12")))
+        textt = GameObject.Find("DropSlot2").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text;
+        if (textt.Equals("If Fuse Is Damaged"))
         {
             IsEachCorrect[1] = true;
+            //Debug.Log("second true");
         }
-        if (GameObject.Find("DropSlot3").transform.GetChild(0).Equals(GameObject.Find("DragSlot10")))
+        textt = GameObject.Find("DropSlot3").transform.GetChild(0).transform.GetChild(1).GetComponent<Text>().text;
+        if (textt.Equals("Change Fuse"))
         {
             IsEachCorrect[2] = true;
+            //Debug.Log("third true");
         }
     }
 }
+ 

@@ -10,8 +10,7 @@ public class CharacterControll : MonoBehaviour {
     bool isCarryingItem;
     Vector2 mouseLook;
     Vector2 smoothV;
-    float sensitivity = 2.0f;
-    float smoothing = 2.0f;
+
 
     // Use this for initialization
     void Start () {
@@ -47,9 +46,11 @@ public class CharacterControll : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.gameObject.CompareTag("ConstructionModule"))
+        //Debug.Log("other.parent = " + other.transform.parent);
+        //Debug.Log("other = " + other.gameObject);
+        if (other.gameObject.CompareTag("ConstructionModule"))
         {
-            Destroy(other.transform.parent.gameObject);
+            Destroy(other.gameObject);
             PressEToInteract.currentCount++;
             PressEToInteract.constructionCounterTooltip = "Construction modules: " + PressEToInteract.currentCount + "/5";
         }

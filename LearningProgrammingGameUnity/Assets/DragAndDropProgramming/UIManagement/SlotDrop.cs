@@ -33,7 +33,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
             //Tries to create a 3D component (left,right,condition)
             try
             {
-                Debug.Log("trying to create 3d component...");
+                //Debug.Log("trying to create 3d component...");
 
                 var left = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                 var right = DragHandler.itemBeingDragged.transform.GetChild(3).GetComponent<TextChangeListener>().number;
@@ -47,7 +47,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
 //                Debug.Log("Failed!");
                 try
                 {
-					Debug.Log("trying to create 2d component...");
+					//Debug.Log("trying to create 2d component...");
 					if (DragHandler.itemBeingDragged.transform.gameObject.tag == "TwoInputBut")
 					{
                         //Debug.Log("DragHandler.itemBeingDragged.transform.gameObject.tag == TwoInputBut");
@@ -63,7 +63,7 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                 }
                 catch (Exception e2)
                 {
-                    Debug.Log("Failed! Reason: " + e2.StackTrace);
+                    //Debug.Log("Failed! Reason: " + e2.StackTrace);
                     log = e2.StackTrace;
                     //try to create variable
                     try
@@ -106,8 +106,16 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                             var number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                             AddComponentToQueue(number);
                         }
-                        else
+                        try
+                        {
+                            //Debug.Log("Trying to create equation...");
+                            AddComponentToQueue();
+                        }
+                        catch (Exception e4)
+                        {
+                            log += e4.StackTrace;
                             throw new Exception();
+                        }
                     }
                 }
             }
@@ -201,6 +209,21 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
 			InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
             Debug.Log("added number varible to queue in index " + indexBeingDroppedOn);
+        }
+    }
+
+    //Adds 0D component to queue
+    private void AddComponentToQueue()
+    {
+        //Equation
+        if (DragHandler.itemBeingDragged.CompareTag("NoInputBut"))
+        {
+            InstantiateGameObject();
+            //Debug.Log("added for equation to queue in index " + indexBeingDroppedOn);
+            String textt = DragHandler.itemBeingDragged.transform.GetChild(1).GetComponent<Text>().text;
+            //Debug.Log("added for equation to queue in index " + indexBeingDroppedOn);
+            new Equation(textt).AddToQueue(indexBeingDroppedOn);
+            //Debug.Log("added for equation to queue in index " + indexBeingDroppedOn);
         }
     }
 
