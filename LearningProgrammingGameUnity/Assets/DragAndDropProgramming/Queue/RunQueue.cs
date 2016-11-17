@@ -106,6 +106,7 @@ public class RunQueue {
                 if (room6AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
+                    GameObject.Find("DoorAnimationFixerMain").GetComponent<DoorAnimation>().ChangeState();
                 }
                 else
                 {

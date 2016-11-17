@@ -50,6 +50,12 @@ public class CharacterControll : MonoBehaviour {
         //Debug.Log("other = " + other.gameObject);
         if (other.gameObject.CompareTag("ConstructionModule"))
         {
+            if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
+            {
+                //Debug.Log("metal plates picked up");
+                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().ChangeState();
+                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().ChangeState();
+            }
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;
             PressEToInteract.constructionCounterTooltip = "Construction modules: " + PressEToInteract.currentCount + "/5";

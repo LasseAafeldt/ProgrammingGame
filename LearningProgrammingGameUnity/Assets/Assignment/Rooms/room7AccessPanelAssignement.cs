@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 #pragma warning disable 
 public class room7AccessPanelAssignement : Assignment {
+
     public room7AccessPanelAssignement()
     {
         description = "Change all the damaged fuses.";

@@ -12,6 +12,9 @@ TagManager:
   - ConstructionModule
   - room5
   - NoInputBut
+  - book
+  - MetalPlates
+  - OpenDoor
   layers:
   - Default
   - TransparentFX
