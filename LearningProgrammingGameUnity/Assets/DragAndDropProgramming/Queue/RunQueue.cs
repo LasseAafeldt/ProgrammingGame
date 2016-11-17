@@ -5,6 +5,7 @@ using System.Collections;
 public class RunQueue {
     private static ArrayList runQueue = new ArrayList();
     private static int iterator = 0;
+    public static int numberOfRuns = 0;
     /*public static void AddToQueue(ControlStatements statement)
     {
         runQueue.Add(statement);
@@ -57,14 +58,17 @@ public class RunQueue {
 
     public static void run()
     {
+        numberOfRuns = 0;
         ConsoleUI.ResetText();   
         for (iterator = 0; iterator < runQueue.Count;iterator++)
         {
             if(GetAt(iterator) != null)
             {
                 GetAt(iterator).RunThis();
+                numberOfRuns++;
             }
         }
+        Debug.Log(numberOfRuns);
         switch (ManagerScript.ActiveID)
         {
             case 1: 
@@ -97,7 +101,32 @@ public class RunQueue {
                     //Debug.Log("Wrong");
                 }
                 break;
-                
+            case 6:
+                room6AccessPanelAssignement.IsEachResultCorrect();
+                if (room6AccessPanelAssignement.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect code...");
+                }
+                else
+                {
+                    //Error sound
+                    ConsoleUI.AddText("\nWrong code! Please try again...");
+                    //Debug.Log("Wrong");
+                }
+                break;
+            case 7:
+                room7AccessPanelAssignement.IsEachResultCorrect();
+                if (room7AccessPanelAssignement.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect code...");
+                }
+                else
+                {
+                    //Error sound
+                    ConsoleUI.AddText("\nWrong code! Please try again...");
+                    //Debug.Log("Wrong");
+                }
+                break;
         }
     }
 

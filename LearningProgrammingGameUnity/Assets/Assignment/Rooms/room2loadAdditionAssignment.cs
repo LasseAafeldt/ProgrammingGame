@@ -83,8 +83,6 @@ public class room2loadAdditionAssignment : MonoBehaviour{
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
 
-
-
         GameObject emptyGameobj = new GameObject();
         emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(0).transform.GetChild(0));
         emptyGameobj.transform.SetSiblingIndex(2);

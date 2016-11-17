@@ -43,11 +43,11 @@ public class CanvasHandler : MonoBehaviour {
 
     public static void ResetCanvas()
     {
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < DragPanel.transform.childCount; i++)
         {
             DragPanel.transform.GetChild(i).gameObject.SetActive(true);
         }
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < DropPanel.transform.childCount; i++)
         {
             DropPanel.transform.GetChild(i).gameObject.SetActive(true);
             if (DropPanel.transform.GetChild(i).transform.childCount > 0)

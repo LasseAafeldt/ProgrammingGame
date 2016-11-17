@@ -44,6 +44,8 @@ public class PressEToInteract : MonoBehaviour {
                 room2loadAdditionAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance ||
                 room3loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance
                )
+                room6loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance ||
+                room7loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
             {
                 PressEToInteract.currentToolTipText = "Press E to interact";
                 x = Screen.width / 2;

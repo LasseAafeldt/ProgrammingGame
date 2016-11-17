@@ -11,8 +11,7 @@ TagManager:
   - LoopsBut
   - ConstructionModule
   - room5
-  - book
-  - bookArea
+  - NoInputBut
   layers:
   - Default
   - TransparentFX

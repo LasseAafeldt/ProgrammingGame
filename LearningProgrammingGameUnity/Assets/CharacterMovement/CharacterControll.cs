@@ -10,8 +10,7 @@ public class CharacterControll : MonoBehaviour {
     bool isCarryingItem;
     Vector2 mouseLook;
     Vector2 smoothV;
-    float sensitivity = 2.0f;
-    float smoothing = 2.0f;
+
 
     // Use this for initialization
     void Start () {
@@ -47,21 +46,24 @@ public class CharacterControll : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.gameObject.CompareTag("ConstructionModule"))
+        //Debug.Log("other.parent = " + other.transform.parent);
+        //Debug.Log("other = " + other.gameObject);
+        if (other.gameObject.CompareTag("ConstructionModule"))
         {
-            Destroy(other.transform.parent.gameObject);
+            Destroy(other.gameObject);
             PressEToInteract.currentCount++;
             PressEToInteract.constructionCounterTooltip = "Construction modules: " + PressEToInteract.currentCount + "/5";
         }
-        if (other.transform.parent.gameObject.CompareTag("room5"))
+        if (other.transform.parent.gameObject.CompareTag("room5") && !isCarryingItem)
         {
             isCarryingItem = true;
             Parent = GameObject.Find("ItemBeingCarriedParent");
             transformBeingCarried = other.transform.parent;
             transformBeingCarried.GetComponent<Rigidbody>().isKinematic = true;
             transformBeingCarried.SetParent(GameObject.Find("ItemBeingCarriedParent").transform);
-            transformBeingCarried.transform.localPosition = new Vector3(0, 0, 2.5f);
+            transformBeingCarried.transform.localPosition = new Vector3(0,0, 2f);
             transformBeingCarried.localRotation = Quaternion.identity;
+            transformBeingCarried.localScale = new Vector3(1, 0.5f, 1);
         }
         if (other.transform.parent.gameObject.CompareTag("book"))
         {
