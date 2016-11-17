@@ -12,6 +12,7 @@ TagManager:
   - ConstructionModule
   - room5
   - book
+  - bookArea
   layers:
   - Default
   - TransparentFX

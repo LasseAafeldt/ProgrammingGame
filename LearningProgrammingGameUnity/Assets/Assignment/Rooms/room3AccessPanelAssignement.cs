@@ -5,6 +5,7 @@ using System;
 #pragma warning disable 
 public class room3AccessPanelAssignement : Assignment {
     public static int maxBooks = 5;
+    public static bool isInsideArea = false;
     public room3AccessPanelAssignement()
     {
         description = "Find every book in this office and enter how many you found.";
