@@ -5,7 +5,7 @@ using System.Collections;
 public class room3loadAccessPanelAssignment : MonoBehaviour {
     protected GameObject obj;
     protected int activeChildCount;
-    public static float distanceToObj;
+    public static float distanceToObj = 5;
     private static int ID = 3;
     // Use this for initialization
     void Start()
