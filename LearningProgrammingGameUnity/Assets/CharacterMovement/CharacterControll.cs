@@ -19,7 +19,7 @@ public class CharacterControll : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (canMove)
         {
             float translation = Input.GetAxis("Vertical") * speed;
@@ -53,8 +53,8 @@ public class CharacterControll : MonoBehaviour {
             if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
             {
                 //Debug.Log("metal plates picked up");
-                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().ChangeState();
-                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().ChangeState();
+                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();
+                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
             }
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;
@@ -74,16 +74,16 @@ public class CharacterControll : MonoBehaviour {
         if (other.transform.parent.gameObject.CompareTag("book"))
         {
             Destroy(other.transform.parent.gameObject);
-            PressEToInteract.bookCount++;
+            room3AccessPanelAssignement.bookCount++;
         }
         if (other.transform.parent.gameObject.CompareTag("bookArea"))
         {
-            Debug.Log("i set bool to true");
+            //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = true;
         }
         else
         {
-            Debug.Log("i set bool to false.    Actual value =" + room3AccessPanelAssignement.isInsideArea);
+            //Debug.Log("i set bool to false.    Actual value =" + room3AccessPanelAssignement.isInsideArea);
             room3AccessPanelAssignement.isInsideArea = false;
         }
     }

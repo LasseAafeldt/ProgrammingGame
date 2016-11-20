@@ -49,20 +49,20 @@ public class room6loadAccessPanelAssignment : MonoBehaviour{
         activeChildCount = 0;
         //set drag panel active
         for (int i = 0; i < CanvasHandler.DragPanel.transform.childCount; i++){
-            if (i == GameObject.Find("DragSlot5").transform.GetSiblingIndex() ||
+            /*if (i == GameObject.Find("DragSlot5").transform.GetSiblingIndex() ||
                 i == GameObject.Find("DragSlot1").transform.GetSiblingIndex() ||
                 i == GameObject.Find("DragSlot3").transform.GetSiblingIndex() ||
                 i == GameObject.Find("DragSlot2").transform.GetSiblingIndex())
             {
                 activeChildCount++;
             }
-            else
-                CanvasHandler.DragPanel.transform.GetChild(i).gameObject.SetActive(false); 
+            else*/
+            CanvasHandler.DragPanel.transform.GetChild(i).gameObject.SetActive(false); 
 		}
         CanvasHandler.scaleDragPanel(activeChildCount);
 		CanvasHandler.HeaderText.GetComponent<Text> ().text = new room6AccessPanelAssignement ().GetDescription ();
         //set drop panel slots active
-        int numberOfActiveInDropPanel = activeChildCount;
+        int numberOfActiveInDropPanel = 4;
         for (int i = numberOfActiveInDropPanel; i < CanvasHandler.DropPanel.transform.childCount; i++)
         {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
@@ -72,5 +72,71 @@ public class room6loadAccessPanelAssignment : MonoBehaviour{
         {
             CanvasHandler.arrowDragPanel.transform.GetChild(i).gameObject.SetActive(false);
         }
+
+        // j variable button
+        GameObject copyObject = Instantiate(
+            CanvasHandler.VariableButton,
+            CanvasHandler.DropPanel.transform.GetChild(0))
+            as GameObject;
+        copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition = new Vector3(
+             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
+        Destroy(copyObject.GetComponent<DragHandler>());
+        Destroy(copyObject.transform.GetChild(2).gameObject);
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "j = ";
+        copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
+        //1,3
+        copyObject.transform.GetChild(1).Translate(
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 20,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
+
+        GameObject emptyGameobj = new GameObject();
+        emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(0).transform.GetChild(0));
+        emptyGameobj.transform.SetSiblingIndex(2);
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+
+        //i variable button
+        copyObject = Instantiate(
+            CanvasHandler.VariableButton,
+            CanvasHandler.DropPanel.transform.GetChild(1))
+            as GameObject;
+        copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition = new Vector3(
+            copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
+        Destroy(copyObject.GetComponent<DragHandler>());
+        Destroy(copyObject.transform.GetChild(2).gameObject);
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "i = ";
+        copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
+        copyObject.transform.GetChild(1).Translate(
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 20,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
+            copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
+        emptyGameobj = new GameObject();
+        emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(1).transform.GetChild(0));
+        emptyGameobj.transform.SetSiblingIndex(2);
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+
+        //equation text (if)
+        copyObject = Instantiate(
+            CanvasHandler.EquationButton,
+            CanvasHandler.DropPanel.transform.GetChild(2))
+            as GameObject;
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "if i + j > 20";
+        Destroy(copyObject.GetComponent<DragHandler>());
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+
+        //equation text (if)
+        copyObject = Instantiate(
+            CanvasHandler.EquationButton,
+            CanvasHandler.DropPanel.transform.GetChild(3))
+            as GameObject;
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "Bad Stuff will happen";
+        Destroy(copyObject.GetComponent<DragHandler>());
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+        new Variables("j", (string)null).AddToQueue(1);
+        new Variables("i", (string)null).AddToQueue(0);
     }
 }

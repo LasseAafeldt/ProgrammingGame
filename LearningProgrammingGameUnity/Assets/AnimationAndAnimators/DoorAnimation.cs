@@ -36,7 +36,7 @@ public class DoorAnimation : MonoBehaviour {
         yield return null;
     }
 
-    public void ChangeState()
+    public void ChangeState1()
     {
         //Debug.Log(this.gameObject + " changing state ");
         //Debug.Log(this.gameObject + " " + doorChangingState);
@@ -66,6 +66,21 @@ public class DoorAnimation : MonoBehaviour {
             if (isOpen)
             { //close door
                 StartCoroutine(this.moveDoor(doorClose));
+                this.isOpen = false;
+            }
+        }
+    }
+
+    public void Open()
+    {
+        //Debug.Log(this.gameObject + " changing state ");
+        //Debug.Log(this.gameObject + " " + doorChangingState);
+        //Debug.Log(this.gameObject + " " + doorStatus);
+        if (!doorChangingState)
+        {
+            if (!isOpen)
+            { //close door
+                StartCoroutine(this.moveDoor(doorOpen));
                 this.isOpen = true;
             }
         }

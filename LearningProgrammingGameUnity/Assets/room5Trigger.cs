@@ -14,27 +14,29 @@ public class room5Trigger : MonoBehaviour {
 
     void OnTriggerStay(Collider other)
     {
-        if (!TriggerList.Contains(other) && 
+        if (this.CompareTag("StackRoom5") &&
+            !TriggerList.Contains(other) && 
             other.CompareTag("room5") && 
             other.GetComponent<Rigidbody>().isKinematic == false)
         {
             TriggerList.Add(other);
-            //Debug.Log("TriggerList size = " + TriggerList.Count + " Added " + other);
+            Debug.Log("TriggerList size = " + TriggerList.Count + " Added " + other);
             if (TriggerList.Count >= 3)
             {
-                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().ChangeState();
-                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().ChangeState();
+                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Open();
+                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Open();
                 //Debug.Log("door open!");
                 //Add sound here
             }
         }
     }
+
     void OnTriggerExit(Collider other)
     {
         if (TriggerList.Contains(other))
         {
             TriggerList.Remove(other);
-            //Debug.Log("TriggerList size = " + TriggerList.Count + " removed " + other);
+            Debug.Log("TriggerList size = " + TriggerList.Count + " removed " + other);
             if (TriggerList.Count < 3)
             {
                 GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();

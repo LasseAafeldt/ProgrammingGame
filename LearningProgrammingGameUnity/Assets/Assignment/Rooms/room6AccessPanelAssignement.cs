@@ -6,23 +6,29 @@ using System;
 public class room6AccessPanelAssignement : Assignment {
     public room6AccessPanelAssignement()
     {
-        description = "Fill the drop panel with code. You may only use one if-statement. The code should only output 2 lines in the console.";
+        description = "Prevent the Bad Stuff from happening!";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
 
-        hints = new Hint("You can drag items from the drag panel to the drop panel.",
+        hints = new Hint(".",
             ".", 
-            "Add more hints here...");
+            ".");
         ConsoleUI.AddText(hints.GetNextHint());
     }
 
     public static void IsEachResultCorrect()
     {
         IsEachCorrect.Clear();
-        if(RunQueue.numberOfRuns == 3)
+        //should be less than 20 to be correct
+        Debug.Log(RunQueue.GetAt(0).GetRight());
+        Debug.Log(RunQueue.GetAt(1).GetRight());
+        Debug.Log(RunQueue.GetAt(0).GetRight() + RunQueue.GetAt(1).GetRight());
+        if (RunQueue.GetAt(0).GetRight() + RunQueue.GetAt(1).GetRight() >= 20)
         {
-            IsEachCorrect.Add(true);
+            IsEachCorrect.Add(false);
         }
+        else
+            IsEachCorrect.Add(true);
     }
 }
  

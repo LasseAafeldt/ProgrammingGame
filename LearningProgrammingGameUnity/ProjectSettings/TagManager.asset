@@ -15,6 +15,8 @@ TagManager:
   - book
   - MetalPlates
   - OpenDoor
+  - bookArea
+  - StackRoom5
   layers:
   - Default
   - TransparentFX

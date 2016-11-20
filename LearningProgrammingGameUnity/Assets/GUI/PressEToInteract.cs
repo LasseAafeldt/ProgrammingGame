@@ -7,10 +7,9 @@ public class PressEToInteract : MonoBehaviour {
     public static bool active = false;
 
     public static String currentToolTipText = "";
-    public static int currentCount = 0;
-    public static int bookCount = 0;
+    public static int currentCount;
     public static String constructionCounterTooltip = "Construction modules: " + currentCount + "/5";
-    public static String bookCounterTooltip = "Books collected: " + currentCount + "/5";
+    public static String bookCounterTooltip = "Books collected modules: " + room3AccessPanelAssignement.bookCount + "/5";
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
  
@@ -18,6 +17,7 @@ public class PressEToInteract : MonoBehaviour {
     {
         guiStyleFore = new GUIStyle();
         guiStyleFore.normal.textColor = Color.white;
+        currentCount = 0;
         guiStyleFore.alignment = TextAnchor.UpperCenter;
         guiStyleFore.wordWrap = true;
         guiStyleFore.fontSize = 20;
@@ -26,7 +26,6 @@ public class PressEToInteract : MonoBehaviour {
         guiStyleBack.alignment = TextAnchor.UpperCenter;
         guiStyleBack.wordWrap = true;
         guiStyleBack.fontSize = 20;
-
         //Debug.Log("fore = " + guiStyleFore + " back = " + guiStyleBack);
     }
     void Update()

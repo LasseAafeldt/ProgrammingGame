@@ -68,7 +68,7 @@ public class RunQueue {
                 numberOfRuns++;
             }
         }
-        Debug.Log(numberOfRuns);
+        //Debug.Log(numberOfRuns);
         switch (ManagerScript.ActiveID)
         {
             case 1: 
@@ -78,7 +78,9 @@ public class RunQueue {
                 if (room1AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().ChangeState();
+                    GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().Open();
+                    if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+                        CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookmodule5Editet);
                 }
                 else
                 {
@@ -92,7 +94,7 @@ public class RunQueue {
                 if (room2_AdditionAssignment.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    GameObject.Find("DoorAnimationFixerOfficeHallway").GetComponent<DoorAnimation>().ChangeState();
+                    GameObject.Find("DoorAnimationFixerOfficeHallway").GetComponent<DoorAnimation>().Open();
                 }
                 else
                 {
@@ -106,7 +108,7 @@ public class RunQueue {
                 if (room6AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect code...");
-                    GameObject.Find("DoorAnimationFixerMain").GetComponent<DoorAnimation>().ChangeState();
+                    GameObject.Find("DoorAnimationFixerMain").GetComponent<DoorAnimation>().Open();
                 }
                 else
                 {

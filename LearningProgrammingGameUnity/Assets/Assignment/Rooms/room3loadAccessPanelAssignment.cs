@@ -17,7 +17,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
     {
         distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
 
-        Debug.Log(distanceToObj);
+        //Debug.Log(distanceToObj);
         if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
