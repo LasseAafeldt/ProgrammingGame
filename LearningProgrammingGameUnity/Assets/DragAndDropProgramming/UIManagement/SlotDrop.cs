@@ -101,8 +101,8 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                         if (DragHandler.itemBeingDragged.transform.gameObject.tag == "LoopsBut")
                         {
                             log = e3.StackTrace;
-                            Debug.Log("Failed!");
-                            Debug.Log("trying to create for loop...");
+                            //Debug.Log("Failed!");
+                            //Debug.Log("trying to create for loop...");
                             var number = DragHandler.itemBeingDragged.transform.GetChild(2).GetComponent<TextChangeListener>().number;
                             AddComponentToQueue(number);
                         }
@@ -114,7 +114,6 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
                         catch (Exception e4)
                         {
                             log += e4.StackTrace;
-                            throw new Exception();
                         }
                     }
                 }
@@ -234,6 +233,20 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         copyObject.transform.SetParent(transform);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+        if (DragHandler.itemBeingDragged != GameObject.Find("AdditionButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("SubtractionButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("DivisionButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("IfStatementButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("MultiplicationButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("IfElseStatementButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("ForLoopButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("WhileLoopButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("VariableButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("EquationButton"))
+        {
+            RunQueue.RemoveFromQueue(DragHandler.index);
+            Destroy(DragHandler.itemBeingDragged);
+        }
     }
     private void PrintLog() { Debug.Log(log);}
 }

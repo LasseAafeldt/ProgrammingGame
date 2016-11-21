@@ -34,7 +34,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
@@ -43,6 +43,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
             CharacterControll.canMove = true;
             CameraMousePan.canMove = true;
             CanvasHandler.ResetCanvas();
+            RunQueue.ResetQueue();
         }
     }
     
@@ -121,8 +122,8 @@ public class room2loadAdditionAssignment : MonoBehaviour{
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
         //Add the things to the queue
-		new Variables("j", (string) null).AddToQueue(1);
-		new Variables("i", (string) null).AddToQueue(0);
+		new Variables("i", (string) null).AddToQueue(1);
+		new Variables("j", (string) null).AddToQueue(0);
         new Equation("i + j = 20").AddToQueue(2);
     }
 

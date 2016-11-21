@@ -33,7 +33,7 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;

@@ -32,7 +32,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
@@ -90,5 +90,6 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
         {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
         }
+        new
     }
 }
