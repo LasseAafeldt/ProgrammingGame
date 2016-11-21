@@ -16,7 +16,8 @@ public class DestroyObjectScript : MonoBehaviour, IDropHandler
             DragHandler.itemBeingDragged != GameObject.Find("IfElseStatementButton") &&
             DragHandler.itemBeingDragged != GameObject.Find("ForLoopButton") &&
             DragHandler.itemBeingDragged != GameObject.Find("WhileLoopButton") &&
-            DragHandler.itemBeingDragged != GameObject.Find("VariableButton"))
+            DragHandler.itemBeingDragged != GameObject.Find("VariableButton") &&
+            DragHandler.itemBeingDragged != GameObject.Find("EquationButton"))
         {
             //Debug.Log("Destroying object : " + DragHandler.itemBeingDragged);
             //Debug.Log("Removing " + DragHandler.index);

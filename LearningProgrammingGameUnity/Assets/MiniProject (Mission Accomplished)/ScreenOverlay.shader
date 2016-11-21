@@ -1,15 +1,15 @@
 ﻿Shader "Custom/ScreenOverlayMissionAccomplishedMiniProject" {
-
 	Properties{
-
 		_MainTex("Texture", Rect) = "white" {}
-		_Color("Color", Color) = (1.0, 1.0, 1.0, 1.0)
+		_Color("Color", Color) = (1.0, 1.0, 1.0, 1.0) //background color
 	}
 		SubShader{
 			Tags{ "Queue" = "Overlay" }
 			Pass {
-				//Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
+				Blend SrcAlpha OneMinusSrcAlpha // use alpha blending
 				ZTest Always // deactivate depth test
+
+ 
 
 				CGPROGRAM
 
@@ -47,11 +47,10 @@
 					output.pos = float4(
 						rasterPosition.x / _ScreenParams.x - 1.0,
 						_ProjectionParams.x * (rasterPosition.y / _ScreenParams.y - 1.0),
-						0, // near plane is at -1.0 or at 0.0
-						1);
+						0,1);
 
 					output.tex = float4(input.vertex.x + 0.5,
-						input.vertex.y + 0.5, 0, 0.0);
+						input.vertex.y + 0.45, 0, 0.0);
 					// for a cube, vertex.x and vertex.y 
 					// are -0.5 or 0.5
 					return output;
