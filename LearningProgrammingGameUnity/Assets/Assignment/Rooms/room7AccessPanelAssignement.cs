@@ -12,9 +12,9 @@ public class room7AccessPanelAssignement : Assignment {
 		IsEachCorrect = new ArrayList ();
 
         hints = new Hint("You can drag items from the drag panel to the drop panel.",
-            ".", 
-            "Add more hints here...");
-        ConsoleUI.AddText(hints.GetNextHint());
+            "You have to check all fuses to see which fuses are damaged.",
+			"The damaged fuses should then be changed");
+        //ConsoleUI.AddText(hints.GetNextHint());
     }
 
     public static void IsEachResultCorrect()

@@ -90,6 +90,6 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
         {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
         }
-        new
+        
     }
 }

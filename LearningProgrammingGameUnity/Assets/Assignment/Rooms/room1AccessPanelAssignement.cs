@@ -16,7 +16,7 @@ public class room1AccessPanelAssignement : Assignment {
 
         hints = new Hint("You can drag items from the drag panel to the drop panel.",
             "The password code is hidden inside the room.", 
-            "Add more hints here...");
+            "Remember all four digits in the room before hitting play.");
         ConsoleUI.AddText(hints.GetNextHint());
     }
 

@@ -10,10 +10,9 @@ public class room6AccessPanelAssignement : Assignment {
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
 
-        hints = new Hint(".",
-            ".", 
-            ".");
-        ConsoleUI.AddText(hints.GetNextHint());
+        hints = new Hint("Assign values to both j and i.",
+            "j and i added together should be smaller than 20.");
+        //ConsoleUI.AddText(hints.GetNextHint());
     }
 
     public static void IsEachResultCorrect()

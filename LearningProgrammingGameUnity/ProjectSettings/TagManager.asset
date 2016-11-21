@@ -17,6 +17,7 @@ TagManager:
   - OpenDoor
   - bookArea
   - StackRoom5
+  - PlaySound
   layers:
   - Default
   - TransparentFX
