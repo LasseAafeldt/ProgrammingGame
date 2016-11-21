@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class room3loadAccessPanelAssignment : MonoBehaviour {
+public class room4loadAccessPanelAssignment : MonoBehaviour {
     protected GameObject obj;
     protected int activeChildCount;
     public static float distanceToObj = 5;

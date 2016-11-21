@@ -8,7 +8,7 @@ public abstract class Assignment{
     protected String description;
     protected int currentTestPosition;
     protected static ArrayList correctionList;
-    protected static ArrayList IsEachCorrect;
+    public static ArrayList IsEachCorrect;
     public String GetDescription() { return description; }
 
     public static bool IsFinalResultTrue()

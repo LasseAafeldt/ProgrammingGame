@@ -77,7 +77,7 @@ public class RunQueue {
                 //open door
                 if (room1AccessPanelAssignement.IsFinalResultTrue())
                 {
-                    ConsoleUI.AddText("\nCorrect code...");
+                    ConsoleUI.AddText("\nCorrect code!");
                     GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().Open();
                     if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
                         CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookmodule5Editet);
@@ -93,8 +93,8 @@ public class RunQueue {
                 room2_AdditionAssignment.IsEachResultCorrect();
                 if (room2_AdditionAssignment.IsFinalResultTrue())
                 {
-                    ConsoleUI.AddText("\nCorrect code...");
-                    GameObject.Find("DoorAnimationFixerOfficeHallway").GetComponent<DoorAnimation>().Open();
+                    ConsoleUI.AddText("\nCorrect code! Door opened");
+                    GameObject.Find("OfficeHallwayDoorFixer").GetComponent<DoorAnimation>().Open();
                 }
                 else
                 {
@@ -103,11 +103,31 @@ public class RunQueue {
                     //Debug.Log("Wrong");
                 }
                 break;
+            case 3:
+                room3AccessPanelAssignement.IsEachResultCorrect();
+                if (room3AccessPanelAssignement.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect!");
+                }
+                else
+                {
+                    //Error sound
+                    if(!(bool)room3AccessPanelAssignement.IsEachCorrect[0])
+                    {
+                        ConsoleUI.AddText("\nYou didnt collect all of the books! Please collect the last books");
+                    }
+                    else if (!(bool)room3AccessPanelAssignement.IsEachCorrect[1])
+                    {
+                        ConsoleUI.AddText("\nThe number you entered is not the number of books you collected. Please enter the correct number.");
+                    }
+                    //Debug.Log("Wrong");
+                }
+                break;
             case 6:
                 room6AccessPanelAssignement.IsEachResultCorrect();
                 if (room6AccessPanelAssignement.IsFinalResultTrue())
                 {
-                    ConsoleUI.AddText("\nCorrect code...");
+                    ConsoleUI.AddText("\nCorrect code!");
                     GameObject.Find("DoorAnimationFixerMain").GetComponent<DoorAnimation>().Open();
                 }
                 else
@@ -121,7 +141,7 @@ public class RunQueue {
                 room7AccessPanelAssignement.IsEachResultCorrect();
                 if (room7AccessPanelAssignement.IsFinalResultTrue())
                 {
-                    ConsoleUI.AddText("\nCorrect code...");
+                    ConsoleUI.AddText("\nCorrect code!");
                 }
                 else
                 {

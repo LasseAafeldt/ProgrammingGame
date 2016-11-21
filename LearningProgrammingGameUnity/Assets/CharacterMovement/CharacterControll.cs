@@ -75,15 +75,19 @@ public class CharacterControll : MonoBehaviour {
         {
             Destroy(other.transform.parent.gameObject);
             room3AccessPanelAssignement.bookCount++;
+            PressEToInteract.bookCounterTooltip = "Books collected: " + room3AccessPanelAssignement.bookCount;
         }
-        if (other.transform.parent.gameObject.CompareTag("bookArea"))
+        if (other.gameObject.CompareTag("bookArea"))
         {
             //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = true;
         }
-        else
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("bookArea"))
         {
-            //Debug.Log("i set bool to false.    Actual value =" + room3AccessPanelAssignement.isInsideArea);
+            //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = false;
         }
     }

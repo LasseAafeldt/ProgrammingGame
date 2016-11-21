@@ -3,11 +3,9 @@ using UnityEngine.UI;
 using System.Collections;
 using System;
 #pragma warning disable 
-public class room3AccessPanelAssignement : Assignment {
-    public static int maxBooks = 12;
-    public static int bookCount = 0;
-    public static bool isInsideArea = false;
-    public room3AccessPanelAssignement()
+public class room4AccessPanelAssignement : Assignment {
+    public float temperature = 0.0f;
+    public room4AccessPanelAssignement()
     {
         description = "Find every book in this office and enter how many you found.";
 		correctionList = new ArrayList ();
@@ -22,13 +20,5 @@ public class room3AccessPanelAssignement : Assignment {
         IsEachCorrect.Clear();
         IsEachCorrect.Add(false);
         IsEachCorrect.Add(false);
-        if (bookCount == maxBooks)
-        {
-            IsEachCorrect[0] = true;
-        }
-        if (RunQueue.GetAt(0).GetRight() == maxBooks)
-        {
-            IsEachCorrect[1] = true;
-        }
     }
 }

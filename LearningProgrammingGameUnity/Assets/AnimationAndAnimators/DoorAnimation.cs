@@ -79,7 +79,8 @@ public class DoorAnimation : MonoBehaviour {
         if (!doorChangingState)
         {
             if (!isOpen)
-            { //close door
+            {
+
                 StartCoroutine(this.moveDoor(doorOpen));
                 this.isOpen = true;
             }

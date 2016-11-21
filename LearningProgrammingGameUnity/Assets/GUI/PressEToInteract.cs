@@ -9,7 +9,8 @@ public class PressEToInteract : MonoBehaviour {
     public static String currentToolTipText = "";
     public static int currentCount;
     public static String constructionCounterTooltip = "Construction modules: " + currentCount + "/5";
-    public static String bookCounterTooltip = "Books collected modules: " + room3AccessPanelAssignement.bookCount + "/5";
+    public static String bookCounterTooltip = "Books collected: " +
+        room3AccessPanelAssignement.bookCount;
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
  
@@ -18,15 +19,14 @@ public class PressEToInteract : MonoBehaviour {
         guiStyleFore = new GUIStyle();
         guiStyleFore.normal.textColor = Color.white;
         currentCount = 0;
-        guiStyleFore.alignment = TextAnchor.UpperCenter;
+        guiStyleFore.alignment = TextAnchor.UpperLeft;
         guiStyleFore.wordWrap = true;
         guiStyleFore.fontSize = 20;
         guiStyleBack = new GUIStyle();
         guiStyleBack.normal.textColor = Color.black;
-        guiStyleBack.alignment = TextAnchor.UpperCenter;
+        guiStyleBack.alignment = TextAnchor.UpperLeft;
         guiStyleBack.wordWrap = true;
         guiStyleBack.fontSize = 20;
-        //Debug.Log("fore = " + guiStyleFore + " back = " + guiStyleBack);
     }
     void Update()
     {
@@ -39,12 +39,8 @@ public class PressEToInteract : MonoBehaviour {
         float y;
         if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
         {
-
-            if (room1loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance|| 
-                room2loadAdditionAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance ||
-                room3loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance||
-                room6loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance ||
-                room7loadAccessPanelAssignment.distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
+            float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
+            if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
             {
                 PressEToInteract.currentToolTipText = "Press E to interact";
                 x = Screen.width / 2;
@@ -61,11 +57,12 @@ public class PressEToInteract : MonoBehaviour {
 
             if(room3AccessPanelAssignement.isInsideArea == true)
             {
-                Debug.Log("i made book counter");
+                //Debug.Log("i made book counter");
                 x = 60;
-                y = 60;
+                y = 100;
                 GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleBack);
                 GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleFore);
+                //bookCounterTooltip
             }
         }
     }
