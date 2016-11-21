@@ -55,6 +55,11 @@ public class CharacterControll : MonoBehaviour {
                 //Debug.Log("metal plates picked up");
                 GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();
                 GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
+
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop;
+				
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
             }
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;
@@ -90,5 +95,51 @@ public class CharacterControll : MonoBehaviour {
             //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = false;
         }
+		if (other.gameObject.CompareTag ("PlaySound")) {
+			if (other.gameObject == GameObject.Find ("leaveStartRoomTrigger") &&
+			    !AudioHandler.isLookamodule1Editet) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.lookamodule1Editet);
+					AudioHandler.isLookamodule1Editet = !AudioHandler.isLookamodule1Editet;
+				}
+			}
+			if (other.gameObject == GameObject.Find("hallwayTrigger") &&
+				!AudioHandler.isHallEdited) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.hallEdited);
+			}
+			if (other.gameObject == GameObject.Find("bookAssignmentTrigger") &&
+				!AudioHandler.isBooks) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.books);
+			}
+			if (other.gameObject == GameObject.Find("thermometerColdTrigger") &&
+				!AudioHandler.isItIsCold) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.itIsCold);
+			}
+			if (other.gameObject == GameObject.Find("officeStoryTrigger") &&
+				!AudioHandler.isOfficeFourStory) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.officeFourStory);
+			}
+			if (other.gameObject == GameObject.Find("bigRedButtonTrigger") &&
+				!AudioHandler.isBigRedButton) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.bigRedButton);
+			}
+			if (other.gameObject == GameObject.Find("rememberModuleConveyrTrigger") &&
+				!AudioHandler.isRememberModule) {
+				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.rememberModule);
+			}
+
+
+		
+
+
+
+
+		}
     }
 }

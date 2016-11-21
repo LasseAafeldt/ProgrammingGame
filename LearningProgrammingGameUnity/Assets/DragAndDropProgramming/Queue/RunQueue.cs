@@ -79,8 +79,7 @@ public class RunQueue {
                 {
                     ConsoleUI.AddText("\nCorrect code!");
                     GameObject.Find("DoorAnimationFixer").GetComponent<DoorAnimation>().Open();
-                    if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-                        CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookmodule5Editet);
+
                 }
                 else
                 {

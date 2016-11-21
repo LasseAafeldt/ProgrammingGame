@@ -1,0 +1,9 @@
+diff a/LearningProgrammingGameUnity/Assets/Assignment/Rooms/room3loadAccessPanelAssignment.cs b/LearningProgrammingGameUnity/Assets/Assignment/Rooms/room3loadAccessPanelAssignment.cs	(rejected hunks)
+@@ -93,6 +93,7 @@
+ <<<<<<< HEAD
+ 
+         new Variables("Number of books", (string)null).AddToQueue(0);
++=======
+         for (int i = 4; i < CanvasHandler.DropPanel.transform.childCount; i++)
+         {
+             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
