@@ -54,10 +54,14 @@ public class CharacterControll : MonoBehaviour {
             {
                 ManagerScript.ConstructionModulesCollected[0] = true;
             }
+            if (other.gameObject.transform.GetChild(0).CompareTag("Manual"))
+            {
+                ManagerScript.ConstructionModulesCollected[1] = true;
+            }
             if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
             {
                 //Debug.Log("metal plates picked up");
-                ManagerScript.ConstructionModulesCollected[2] = true;
+                ManagerScript.ConstructionModulesCollected[3] = true;
                 GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();
                 GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
 

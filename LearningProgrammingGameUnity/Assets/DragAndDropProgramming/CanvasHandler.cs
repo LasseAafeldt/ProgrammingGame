@@ -18,6 +18,7 @@ public class CanvasHandler : MonoBehaviour {
     public static GameObject ScreenOverlay;
 	public static GameObject arrowDragPanel;
     public static GameObject Wires;
+    public static GameObject Manual;
     // Use this for initialization
     void Start () {
         ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
@@ -33,12 +34,14 @@ public class CanvasHandler : MonoBehaviour {
         EquationButton = GameObject.Find("EquationButton");
 		arrowDragPanel = GameObject.Find ("arrowDragPanel");
         Wires = GameObject.Find("WirePile");
+        Manual = GameObject.Find("Manuel");
         //SDebug.Log("player = " + ScreenOverlay + "\n DropPanel = " + DropPanel) ;
         RunQueue.InitializeQueue();
         ScreenOverlay.SetActive(false);
         IsInRange = false;
         DragAndDropCanvas.SetActive(false);
         Wires.SetActive(false);
+        Manual.SetActive(false);
     }
 	
 	// Update is called once per frame

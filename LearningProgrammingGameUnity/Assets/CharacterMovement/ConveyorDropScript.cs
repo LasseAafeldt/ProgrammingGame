@@ -7,9 +7,9 @@ public class ConveyorDropScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ConstructionModule[0] = (GameObject) Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
-        ConstructionModule[1] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
-        ConstructionModule[2] = (GameObject)Resources.Load<GameObject>("Gameobjects/MetalPlates") as GameObject;
-        ConstructionModule[3] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
+        ConstructionModule[1] = (GameObject)Resources.Load<GameObject>("Gameobjects/Manual") as GameObject;
+        ConstructionModule[2] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
+        ConstructionModule[3] = (GameObject)Resources.Load<GameObject>("Gameobjects/MetalPlates") as GameObject;
         ConstructionModule[4] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
         dropPosition = GameObject.Find("Conveyor").transform.position;
     }
@@ -36,8 +36,15 @@ public class ConveyorDropScript : MonoBehaviour {
                             a.AddComponent<BoxCollider>();
                             a.GetComponent<BoxCollider>().size = new Vector3(0.06f, 0.06f, 0.06f);
                         }
-                        if (i == 2)
+                        if (i == 1)
                         {
+                            a.transform.localScale = new Vector3(50f, 50f, 50f);
+                            a.AddComponent<BoxCollider>();
+                            a.GetComponent<BoxCollider>().size = new Vector3(0.01f, 0.04f, 0.03f);
+                        }
+                        if (i == 3)
+                        {
+                            a.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
                         }
                         return;
                     }
