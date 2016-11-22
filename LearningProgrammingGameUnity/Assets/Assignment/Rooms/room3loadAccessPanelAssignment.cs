@@ -32,19 +32,26 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q))
         {
-            ManagerScript.ResetID();
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            CanvasHandler.DragAndDropCanvas.SetActive(false);
-            CharacterControll.canMove = true;
-            CameraMousePan.canMove = true;
-            CanvasHandler.ResetCanvas();
-            if (room3AccessPanelAssignement.IsFinalResultTrue())
-            {
-                //play sound
-            }
+			Debug.Log ("Active id: " + ManagerScript.ActiveID);
+			if (ManagerScript.ActiveID == 3) {
+				if (room3AccessPanelAssignement.IsFinalResultTrue ()) {
+					//play sound after player solves the assignment and presses Q
+					if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+						CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+					}
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOffice);
+					AudioHandler.isWellDoneInOffice = !AudioHandler.isWellDoneInOffice;
+				}
+			}
+				//ManagerScript.ResetID ();
+				Cursor.lockState = CursorLockMode.Locked;
+				Cursor.visible = false;
+				CanvasHandler.DragAndDropCanvas.SetActive (false);
+				CharacterControll.canMove = true;
+				CameraMousePan.canMove = true;
+				CanvasHandler.ResetCanvas ();	
         }
     }
 
