@@ -89,8 +89,11 @@ public class CharacterControll : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("bookArea"))
         {
-            //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = true;
+        }
+        if (other.gameObject.CompareTag("Conveyor"))
+        {
+
         }
     }
     void OnTriggerExit(Collider other)

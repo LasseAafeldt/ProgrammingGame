@@ -19,6 +19,7 @@ TagManager:
   - StackRoom5
   - PlaySound
   - GasTank
+  - Conveyor
   layers:
   - Default
   - TransparentFX
