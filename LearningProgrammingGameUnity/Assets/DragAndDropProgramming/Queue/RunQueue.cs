@@ -129,7 +129,7 @@ public class RunQueue {
                 if (room4AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect! Now the temperature is fixed");
-                    //spawn construction module.
+                    CanvasHandler.Wires.SetActive(true);
                 }
                 else
                 {
