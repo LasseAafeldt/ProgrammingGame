@@ -57,7 +57,7 @@ public class CharacterControll : MonoBehaviour {
                 GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
 
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource> ().Stop;
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
             }
@@ -98,47 +98,60 @@ public class CharacterControll : MonoBehaviour {
 		if (other.gameObject.CompareTag ("PlaySound")) {
 			if (other.gameObject == GameObject.Find ("leaveStartRoomTrigger") &&
 			    !AudioHandler.isLookamodule1Editet) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
-					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.lookamodule1Editet);
-					AudioHandler.isLookamodule1Editet = !AudioHandler.isLookamodule1Editet;
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.lookamodule1Editet);
+				AudioHandler.isLookamodule1Editet = !AudioHandler.isLookamodule1Editet;
 			}
 			if (other.gameObject == GameObject.Find("hallwayTrigger") &&
 				!AudioHandler.isHallEdited) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.hallEdited);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
+				AudioHandler.isHallEdited = !AudioHandler.isHallEdited;
 			}
 			if (other.gameObject == GameObject.Find("bookAssignmentTrigger") &&
 				!AudioHandler.isBooks) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.books);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.books);
+				AudioHandler.isBooks = !AudioHandler.isBooks;
 			}
 			if (other.gameObject == GameObject.Find("thermometerColdTrigger") &&
 				!AudioHandler.isItIsCold) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.itIsCold);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.itIsCold);
+				AudioHandler.isItIsCold = !AudioHandler.isItIsCold;
 			}
 			if (other.gameObject == GameObject.Find("officeStoryTrigger") &&
 				!AudioHandler.isOfficeFourStory) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.officeFourStory);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.officeFourStory);
+				AudioHandler.isOfficeFourStory = !AudioHandler.isOfficeFourStory;
 			}
 			if (other.gameObject == GameObject.Find("bigRedButtonTrigger") &&
 				!AudioHandler.isBigRedButton) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.bigRedButton);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.bigRedButton);
+				AudioHandler.isBigRedButton = !AudioHandler.isBigRedButton;
 			}
 			if (other.gameObject == GameObject.Find("rememberModuleConveyrTrigger") &&
 				!AudioHandler.isRememberModule) {
-				if (!CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.rememberModule);
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.rememberModule);
+				AudioHandler.isRememberModule = !AudioHandler.isRememberModule;
 			}
-
-
-		
-
-
-
 
 		}
     }

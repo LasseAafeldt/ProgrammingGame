@@ -36,7 +36,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ManagerScript.ResetID();
+            //ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);

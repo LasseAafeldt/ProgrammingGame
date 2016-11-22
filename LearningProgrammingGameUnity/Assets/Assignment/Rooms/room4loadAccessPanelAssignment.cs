@@ -6,7 +6,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
     protected GameObject obj;
     protected int activeChildCount;
     public static float distanceToObj = 5;
-    private static int ID = 3;
+    private static int ID = 4;
     // Use this for initialization
     void Start()
     {
@@ -22,7 +22,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-                ManagerScript.ActiveID = ID;
+               	ManagerScript.ActiveID = ID;
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
@@ -34,17 +34,25 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ManagerScript.ResetID();
+			Debug.Log ("Active id: " + ManagerScript.ActiveID);
+			if (ManagerScript.ActiveID == 4) {
+				if (room3AccessPanelAssignement.IsFinalResultTrue ()) {
+					//play sound after player solves the assignment and presses Q
+					if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+						CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+					}
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOffice);
+					AudioHandler.isWellDoneInOffice = !AudioHandler.isWellDoneInOffice;
+				}
+			}
+            //ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
             CharacterControll.canMove = true;
             CameraMousePan.canMove = true;
             CanvasHandler.ResetCanvas();
-            if (room3AccessPanelAssignement.IsFinalResultTrue())
-            {
-                //play sound
-            }
+            
         }
     }
 
