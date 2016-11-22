@@ -4,21 +4,24 @@ using System.Collections;
 using System;
 #pragma warning disable 
 public class room4AccessPanelAssignement : Assignment {
-    public float temperature = 0.0f;
+    public static float temperature = 38.1f - 5.3f;
     public room4AccessPanelAssignement()
     {
-        description = "Find every book in this office and enter how many you found.";
+        description = "Set the temperature to the Out - In";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
-        hints = new Hint("You can drag items from the drag panel to the drop panel.",
+        hints = new Hint("You can see the In and Out temperature on the Thermometer", 
             "Add more hints here...");
         ConsoleUI.AddText(hints.GetNextHint());
     }
 
     public static void IsEachResultCorrect()
     {
+        
         IsEachCorrect.Clear();
-        IsEachCorrect.Add(false);
-        IsEachCorrect.Add(false);
+        if(RunQueue.GetAt(0).GetRight() == temperature)
+            IsEachCorrect.Add(true);
+        else
+            IsEachCorrect.Add(false);
     }
 }
