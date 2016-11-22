@@ -4,6 +4,7 @@ using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
     public static int ActiveID;
+    public static bool[] ConstructionModulesCollected = new bool[5];
     //this for initialization
     void Start () {
         ActiveID = 0;
