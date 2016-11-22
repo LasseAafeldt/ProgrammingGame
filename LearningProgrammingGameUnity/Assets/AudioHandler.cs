@@ -8,6 +8,7 @@ public class AudioHandler : MonoBehaviour {
 	public static AudioClip hallEdited;
 	public static AudioClip books;
 	public static AudioClip wellDoneInOffice;
+	public static AudioClip wellDoneInOfficeThermo;
 	public static AudioClip itIsCold;
 	public static AudioClip didYouSeeThermometer;
 	public static AudioClip bigRedButton;
@@ -26,6 +27,7 @@ public class AudioHandler : MonoBehaviour {
 	public static bool isHallEdited = false;
 	public static bool isBooks = false;
 	public static bool isWellDoneInOffice = false;
+	public static bool isWellDoneInOfficeThermo = false;
 	public static bool isItIsCold = false;
 	public static bool isDidYouSeeThermometer = false;
 	public static bool isBigRedButton = false;
@@ -47,6 +49,7 @@ public class AudioHandler : MonoBehaviour {
 		hallEdited = Resources.Load<AudioClip> ("Audio/hallEdited");
 		books =  Resources.Load<AudioClip>("Audio/booksEdited");
 		wellDoneInOffice =  Resources.Load<AudioClip>("Audio/welldoneinofficeEdited");
+		wellDoneInOfficeThermo =  Resources.Load<AudioClip>("Audio/welldoneinofficeThermoEdited");
 		itIsCold =  Resources.Load<AudioClip>("Audio/isitcoldEdited");
 		didYouSeeThermometer =  Resources.Load<AudioClip>("Audio/didyouseethermometerEdited");
 		bigRedButton =  Resources.Load<AudioClip>("Audio/bigredbuttonEdited");

@@ -69,7 +69,7 @@ public class RunQueue {
             }
         }
         //Debug.Log(numberOfRuns);
-        switch (ManagerScript.ActiveID)
+		switch (ManagerScript.GetActiveID())
         {
             case 1: 
                 Debug.Log("Room one is active! Checking results...");

@@ -23,7 +23,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-                ManagerScript.ActiveID = ID;
+				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
@@ -35,7 +35,7 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            //ManagerScript.ResetID();
+            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);

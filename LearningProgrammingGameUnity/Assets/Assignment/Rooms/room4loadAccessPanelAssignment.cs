@@ -22,7 +22,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-               	ManagerScript.ActiveID = ID;
+				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
@@ -32,20 +32,25 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 4)
         {
-			Debug.Log ("Active id: " + ManagerScript.ActiveID);
-			if (ManagerScript.ActiveID == 4) {
-				if (room3AccessPanelAssignement.IsFinalResultTrue ()) {
-					//play sound after player solves the assignment and presses Q
-					if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
-						CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
-					}
-					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOffice);
-					AudioHandler.isWellDoneInOffice = !AudioHandler.isWellDoneInOffice;
+			Debug.Log ("Active id: " + ManagerScript.GetActiveID());
+			if (room4AccessPanelAssignement.IsFinalResultTrue ()) {
+				//play sound after player solves the assignment and presses Q
+
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+				}
+				Debug.Log ("Active id: " + ManagerScript.GetActiveID());
+				if(!AudioHandler.isWellDoneInOffice){
+					Debug.Log ("Audio source: " + CanvasHandler.Player.GetComponent<AudioSource> ());
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOfficeThermo);
+					Debug.Log ("Audio source: " + AudioHandler.wellDoneInOfficeThermo);
+					AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
+					Debug.Log ("Sound: " + AudioHandler.wellDoneInOfficeThermo);
 				}
 			}
-            //ManagerScript.ResetID();
+            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);

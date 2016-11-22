@@ -20,6 +20,7 @@ public class CharacterControll : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		//Debug.Log ("assignment ID: " + ManagerScript.ActiveID);
         if (canMove)
         {
             float translation = Input.GetAxis("Vertical") * speed;

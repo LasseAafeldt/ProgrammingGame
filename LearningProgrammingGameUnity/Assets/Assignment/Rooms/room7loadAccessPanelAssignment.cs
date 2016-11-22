@@ -23,7 +23,7 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-                ManagerScript.ActiveID = ID;
+				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
@@ -33,9 +33,26 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 7)
         {
-           // ManagerScript.ResetID();
+			Debug.Log ("Active id: " + ManagerScript.GetActiveID());
+			//if (ID == 7) {
+				Debug.Log ("Active id = " + ID);
+				if (room7AccessPanelAssignement.IsFinalResultTrue ()) {
+					//play sound after player solves the assignment and presses Q
+					Debug.Log("IsFInalResult = " + room7AccessPanelAssignement.IsFinalResultTrue());
+					if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+						CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+					}
+					if (!AudioHandler.isPlayerSolvesLastTask) {
+						Debug.Log ("Sound source = " + AudioHandler.isPlayerSolvesLastTask );
+						CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.playerSolvesLastTask);
+						AudioHandler.isPlayerSolvesLastTask = !AudioHandler.isPlayerSolvesLastTask;
+						Debug.Log ("Room 7 sound played");
+					}
+				//}
+			}
+           	ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);

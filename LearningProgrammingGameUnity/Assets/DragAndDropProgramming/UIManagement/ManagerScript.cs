@@ -3,7 +3,15 @@ using System;
 using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
-    public static int ActiveID;
+    private static int ActiveID;
+
+	public static int GetActiveID(){
+		return ActiveID;
+	}
+	public static void SetActiveID(int newId){
+		Debug.Log (newId);
+		ActiveID = newId;
+	}
     //this for initialization
     void Start () {
         ActiveID = 0;

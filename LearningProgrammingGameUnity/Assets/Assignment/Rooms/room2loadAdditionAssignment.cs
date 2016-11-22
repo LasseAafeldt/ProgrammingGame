@@ -24,7 +24,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
         if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
             if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
-                ManagerScript.ActiveID = ID;
+				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.InitializeQueue();
                 Cursor.lockState = CursorLockMode.None;
@@ -36,7 +36,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            //ManagerScript.ResetID();
+            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
