@@ -57,7 +57,7 @@ public class CharacterControll : MonoBehaviour {
                 GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
 
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource> ().Stop;
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
             }

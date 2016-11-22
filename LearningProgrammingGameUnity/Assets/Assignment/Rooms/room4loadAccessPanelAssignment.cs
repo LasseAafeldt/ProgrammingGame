@@ -6,7 +6,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
     protected GameObject obj;
     protected int activeChildCount;
     public static float distanceToObj = 5;
-    private static int ID = 3;
+    private static int ID = 4;
     // Use this for initialization
     void Start()
     {
@@ -49,7 +49,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
     }
 
     public void load() {
-        Debug.Log("Room 3 load");
+        Debug.Log("Room 4 load");
         activeChildCount = 0;
 
 		//Sets the number of arrows shown in the drop panel to one. 
@@ -74,7 +74,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
         Destroy(copyObject.transform.GetChild(2).gameObject);
-        copyObject.transform.GetChild(1).GetComponent<Text>().text = "books = ";
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "temp = ";
         copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
         copyObject.transform.GetChild(1).Translate(
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 40,
@@ -87,9 +87,9 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
         //Debug.Log (new room1_AccessPanelAssignement ().GetDescription ());
-        CanvasHandler.HeaderText.GetComponent<Text> ().text = new room3AccessPanelAssignement().GetDescription ();
+        CanvasHandler.HeaderText.GetComponent<Text> ().text = new room4AccessPanelAssignement().GetDescription ();
 		CanvasHandler.scaleDragPanel (activeChildCount);
 
-        new Variables("Number of books", (string)null).AddToQueue(0);
+        new Variables("Temperature", (string)null).AddToQueue(0);
     }
 }
