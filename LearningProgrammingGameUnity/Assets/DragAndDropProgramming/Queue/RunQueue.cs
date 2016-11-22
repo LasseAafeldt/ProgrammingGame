@@ -114,11 +114,27 @@ public class RunQueue {
                     if(!(bool)room3AccessPanelAssignement.IsEachCorrect[0])
                     {
                         ConsoleUI.AddText("\nYou didnt collect all of the books! Please collect the last books");
+                        //spawn construction module.
                     }
                     else if (!(bool)room3AccessPanelAssignement.IsEachCorrect[1])
                     {
                         ConsoleUI.AddText("\nThe number you entered is not the number of books you collected. Please enter the correct number.");
                     }
+                    //Debug.Log("Wrong");
+                }
+                break;
+            case 4:
+
+                room4AccessPanelAssignement.IsEachResultCorrect();
+                if (room4AccessPanelAssignement.IsFinalResultTrue())
+                {
+                    ConsoleUI.AddText("\nCorrect! Now the temperature is fixed");
+                    //spawn construction module.
+                }
+                else
+                {
+                    //Error sound
+                    ConsoleUI.AddText("\nWrong temperature! Please try again...");
                     //Debug.Log("Wrong");
                 }
                 break;
