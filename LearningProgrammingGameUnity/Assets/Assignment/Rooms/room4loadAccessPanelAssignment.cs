@@ -41,7 +41,7 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
 				}
 				//Debug.Log ("Active id: " + ManagerScript.GetActiveID());
-				if(!AudioHandler.isWellDoneInOffice){
+				if(!AudioHandler.isWellDoneInOfficeThermo){
 					//Debug.Log ("Audio source: " + CanvasHandler.Player.GetComponent<AudioSource> ());
 					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOfficeThermo);
 					//Debug.Log ("Audio source: " + AudioHandler.wellDoneInOfficeThermo);

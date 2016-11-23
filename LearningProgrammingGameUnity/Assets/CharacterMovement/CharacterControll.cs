@@ -67,13 +67,6 @@ public class CharacterControll : MonoBehaviour {
             {
                 //Debug.Log("metal plates picked up");
                 ManagerScript.ConstructionModulesCollected[3] = true;
-                GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();
-                GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
-
-				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
-					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
-				
-				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Computer"))
             {
@@ -82,6 +75,7 @@ public class CharacterControll : MonoBehaviour {
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;
             PressEToInteract.constructionCounterTooltip = "Construction modules: " + PressEToInteract.currentCount + "/5";
+			AudioHandler.playSoundMissingLast ();
         }
         if (other.transform.parent.gameObject.CompareTag("room5") && !isCarryingItem)
         {
@@ -108,6 +102,15 @@ public class CharacterControll : MonoBehaviour {
         {
 
         }
+		if (other.gameObject.CompareTag ("awFredTrigger")) {
+			GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
+			GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
+
+			if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
+				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+
+			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
+		}
     }
     void OnTriggerExit(Collider other)
     {
@@ -184,6 +187,17 @@ public class CharacterControll : MonoBehaviour {
 					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.rememberModule);
 					AudioHandler.isRememberModule = !AudioHandler.isRememberModule;
 				}
+			}
+			//play sound after office - "Check out storage room" IF player has not collected the module in the storage room.
+			if (!ManagerScript.ConstructionModulesCollected [3] && //if the metal plates construction module is not collected
+				ManagerScript.ConstructionModulesHandedIn [1] && //if the book construction module is handed in
+				ManagerScript.ConstructionModulesHandedIn [2] && //if the wires construction module is handed in
+				!AudioHandler.isGoToStorage) {
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
+				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
 			}
 
 		}

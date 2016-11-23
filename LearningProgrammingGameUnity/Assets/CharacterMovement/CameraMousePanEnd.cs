@@ -21,7 +21,7 @@ public class CameraMousePanEnd : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         EndScene.targetDisplay = 1;
-        Display.displays[1].Activate();
+        
         
         if (canMove)
         {

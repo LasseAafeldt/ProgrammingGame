@@ -38,19 +38,19 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 3)
         {
 
-			Debug.Log ("Active id: " + ManagerScript.GetActiveID() + "Q pressed" + Input.GetKeyDown(KeyCode.Q));
+			//Debug.Log ("Active id: " + ManagerScript.GetActiveID() + "Q pressed" + Input.GetKeyDown(KeyCode.Q));
 			if (room3AccessPanelAssignement.IsFinalResultTrue()) {
-				Debug.Log ("isFinalResult = " + room3AccessPanelAssignement.IsFinalResultTrue ());
+				//Debug.Log ("isFinalResult = " + room3AccessPanelAssignement.IsFinalResultTrue ());
 				//play sound after player solves the assignment and presses Q
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
-					Debug.Log ("stopping other sound");
+					//Debug.Log ("stopping other sound");
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
 				if (!AudioHandler.isWellDoneInOffice) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOffice);
-					Debug.Log ("has gotten audiofile");
+					//Debug.Log ("has gotten audiofile");
 					AudioHandler.isWellDoneInOffice = !AudioHandler.isWellDoneInOffice;
-					Debug.Log ("bool =" + AudioHandler.isWellDoneInOffice);
+					//Debug.Log ("bool =" + AudioHandler.isWellDoneInOffice);
 				}
 			}
 			//ManagerScript.ResetID ();

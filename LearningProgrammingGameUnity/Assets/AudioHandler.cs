@@ -78,4 +78,41 @@ public class AudioHandler : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 	}
+
+	public static void playSoundMissingLast(){
+		//play sound when all construction modules are collected except one
+		if ((ManagerScript.ConstructionModulesCollected [0] || //if gasoline construction module is collected OR
+		   ManagerScript.ConstructionModulesHandedIn [0]) && //handed in
+
+		   (ManagerScript.ConstructionModulesCollected [1] || //if book construction module is collected OR 
+		   ManagerScript.ConstructionModulesHandedIn [1]) && //handed in
+
+		   (ManagerScript.ConstructionModulesCollected [2] || //if wire construction module is collected OR
+		   ManagerScript.ConstructionModulesHandedIn [2]) && //handed in
+
+		   (ManagerScript.ConstructionModulesCollected [3] || //if metal plates construction module is collected OR
+		   ManagerScript.ConstructionModulesHandedIn [3]) && //handed in
+
+		   (!ManagerScript.ConstructionModulesCollected [4] || //if computer construction module is NOT collected or 
+		   !ManagerScript.ConstructionModulesHandedIn [4]) && //NOT handed in
+		   !AudioHandler.isNeedOneMoreModule) {
+			if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+			}
+			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.needOneMoreModule);
+			AudioHandler.isNeedOneMoreModule = !AudioHandler.isNeedOneMoreModule;
+		}
+	}
+
+	public static void playSoundLastModuleConveyor() {
+		//Last module placed on conveyor - "Now, go push that big red button
+		if (ManagerScript.IsAllHandedIn () &&
+		   !AudioHandler.isLastModuleOnBelt) {
+			if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+			}
+			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.lastModuleOnBelt);
+			AudioHandler.isLastModuleOnBelt = !AudioHandler.isLastModuleOnBelt;
+		}
+	}
 }
