@@ -3,10 +3,19 @@ using System;
 using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
-    public static int ActiveID;
+    private static int ActiveID;
     public static bool[] ConstructionModulesCollected = new bool[5];
     public static bool[] ConstructionModulesHandedIn = new bool[5];
     //this for initialization
+
+    public static int GetActiveID()
+    {
+        return ActiveID;
+    }
+    public static void SetActiveID(int newID)
+    {
+        ActiveID = newID;
+    }
     void Start () {
         ActiveID = 0;
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());

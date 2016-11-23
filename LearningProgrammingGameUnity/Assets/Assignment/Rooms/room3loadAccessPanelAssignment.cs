@@ -33,7 +33,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 				Debug.Log ("Active id: " + ManagerScript.GetActiveID());
             }
         }
-		Debug.Log (Input.GetKeyDown(KeyCode.Q) + " " + ManagerScript.GetActiveID() == 3);
+		//Debug.Log (Input.GetKeyDown(KeyCode.Q) + " " + ManagerScript.GetActiveID() == 3);
 
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 3)
         {
