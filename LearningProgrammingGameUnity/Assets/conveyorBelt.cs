@@ -5,11 +5,7 @@ public class conveyorBelt : MonoBehaviour
 {
 
     float speed = 15f;
-    bool on = true;
     Vector2 offset = new Vector2(0f, 0f);
-
-
-
 
     void OnCollisionStay(Collision obj)
     {

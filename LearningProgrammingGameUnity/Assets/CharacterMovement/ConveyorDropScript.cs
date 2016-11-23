@@ -16,14 +16,14 @@ public class ConveyorDropScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, dropPosition);
+        float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
 
         if (Input.GetKeyUp(KeyCode.E))
         {
             if (distanceToObj < 3f)
             {
                 for(int i = 0; i < 5; i++) {
-                    //Debug.Log(i + " " + ManagerScript.ConstructionModulesCollected[i]);
+                    Debug.Log(i + " " + ManagerScript.ConstructionModulesCollected[i]);
                     if (ManagerScript.ConstructionModulesCollected[i])
                     {
                         GameObject a = Instantiate(ConstructionModule[i], dropPosition, Quaternion.identity) as GameObject;

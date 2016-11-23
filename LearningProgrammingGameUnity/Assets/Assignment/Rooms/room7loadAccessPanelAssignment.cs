@@ -28,8 +28,7 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                CharacterControll.canMove = false;
-                CameraMousePan.canMove = false;
+                ManagerScript.CanMove = false;
                 this.load();
             }
         }
@@ -56,8 +55,7 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
-            CharacterControll.canMove = true;
-            CameraMousePan.canMove = true;
+            ManagerScript.CanMove = true;
             CanvasHandler.ResetCanvas();
 
 
