@@ -33,19 +33,21 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         }
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 4)
         {
-			Debug.Log ("Active id: " + ManagerScript.GetActiveID());
+			Debug.Log ("Active id1: " + ManagerScript.GetActiveID());
 			if (room4AccessPanelAssignement.IsFinalResultTrue ()) {
+				Debug.Log ("Solved assignment 4: " + room4AccessPanelAssignement.IsFinalResultTrue ());
 				//play sound after player solves the assignment and presses Q
 
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
 				}
-				Debug.Log ("Active id: " + ManagerScript.GetActiveID());
-				if(!AudioHandler.isWellDoneInOffice){
+				Debug.Log ("Active id2: " + ManagerScript.GetActiveID());
+				if(!AudioHandler.isWellDoneInOfficeThermo){
 					Debug.Log ("Audio source: " + CanvasHandler.Player.GetComponent<AudioSource> ());
 					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOfficeThermo);
-					Debug.Log ("Audio source: " + AudioHandler.wellDoneInOfficeThermo);
-					AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
+					Debug.Log ("has gotten audiofile");
+					AudioHandler.isWellDoneInOfficeThermo = true;
+					//AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
 					Debug.Log ("Sound: " + AudioHandler.wellDoneInOfficeThermo);
 				}
 			}

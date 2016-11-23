@@ -15,6 +15,9 @@ public class room7AccessPanelAssignement : Assignment {
             "You have to check all fuses to see which fuses are damaged.",
 			"The damaged fuses should then be changed");
         //ConsoleUI.AddText(hints.GetNextHint());
+		IsEachCorrect.Clear();
+		IsEachCorrect.Add(false);
+
     }
 
     public static void IsEachResultCorrect()
