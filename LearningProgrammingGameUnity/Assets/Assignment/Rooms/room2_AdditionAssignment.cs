@@ -19,13 +19,12 @@ public class room2_AdditionAssignment : Assignment
     {
 
         IsEachCorrect.Clear();
+		IsEachCorrect.Add(false);
+
         if (RunQueue.GetAt(0).GetRight() + RunQueue.GetAt(1).GetRight() == 20)
         {
-            IsEachCorrect.Add(true);
+            IsEachCorrect[0] = true;
         }
-        else
-            IsEachCorrect.Add(false);
-
     }
     // i = ?;
     // j = ?;

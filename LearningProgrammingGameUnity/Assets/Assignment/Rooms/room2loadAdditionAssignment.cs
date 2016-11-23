@@ -34,7 +34,7 @@ public class room2loadAdditionAssignment : MonoBehaviour{
                 this.load();
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 2)
         {
             ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;

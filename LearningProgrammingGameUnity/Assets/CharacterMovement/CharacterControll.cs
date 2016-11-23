@@ -116,6 +116,7 @@ public class CharacterControll : MonoBehaviour {
             //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = false;
         }
+		//Solved the first assignment and enters the main room
 		if (other.gameObject.CompareTag ("PlaySound")) {
 			if (other.gameObject == GameObject.Find ("leaveStartRoomTrigger") &&
 			    !AudioHandler.isLookamodule1Editet) {
@@ -125,6 +126,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.lookamodule1Editet);
 				AudioHandler.isLookamodule1Editet = !AudioHandler.isLookamodule1Editet;
 			}
+			//Enters the office hallway
 			if (other.gameObject == GameObject.Find("hallwayTrigger") &&
 				!AudioHandler.isHallEdited) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
@@ -133,6 +135,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
 				AudioHandler.isHallEdited = !AudioHandler.isHallEdited;
 			}
+			//Office with book assignment
 			if (other.gameObject == GameObject.Find("bookAssignmentTrigger") &&
 				!AudioHandler.isBooks) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
@@ -141,6 +144,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.books);
 				AudioHandler.isBooks = !AudioHandler.isBooks;
 			}
+			//Office thermometer assignment
 			if (other.gameObject == GameObject.Find("thermometerColdTrigger") &&
 				!AudioHandler.isItIsCold) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
@@ -149,6 +153,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.itIsCold);
 				AudioHandler.isItIsCold = !AudioHandler.isItIsCold;
 			}
+			//Office story trigger
 			if (other.gameObject == GameObject.Find("officeStoryTrigger") &&
 				!AudioHandler.isOfficeFourStory) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
@@ -157,6 +162,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.officeFourStory);
 				AudioHandler.isOfficeFourStory = !AudioHandler.isOfficeFourStory;
 			}
+			//Office big red button trigger
 			if (other.gameObject == GameObject.Find("bigRedButtonTrigger") &&
 				!AudioHandler.isBigRedButton) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
@@ -165,13 +171,19 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.bigRedButton);
 				AudioHandler.isBigRedButton = !AudioHandler.isBigRedButton;
 			}
+			//Play sound when collected one or the two construction modules in the offices
 			if (other.gameObject == GameObject.Find("rememberModuleConveyrTrigger") &&
 				!AudioHandler.isRememberModule) {
-				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
-					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				if (ManagerScript.ConstructionModulesCollected [1] && //collected the book construction module but not handed it in
+				   !ManagerScript.ConstructionModulesHandedIn [1] ||
+				   ManagerScript.ConstructionModulesCollected [2] && //collected the wires construction module but not handed it in
+				   !ManagerScript.ConstructionModulesHandedIn [2]) {
+					if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+						CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+					}
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.rememberModule);
+					AudioHandler.isRememberModule = !AudioHandler.isRememberModule;
 				}
-				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.rememberModule);
-				AudioHandler.isRememberModule = !AudioHandler.isRememberModule;
 			}
 
 		}

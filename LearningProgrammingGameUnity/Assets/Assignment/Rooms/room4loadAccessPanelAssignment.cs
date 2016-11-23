@@ -47,6 +47,14 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
 					//Debug.Log ("Audio source: " + AudioHandler.wellDoneInOfficeThermo);
 					AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
 					//Debug.Log ("Sound: " + AudioHandler.wellDoneInOfficeThermo);
+				Debug.Log ("Active id2: " + ManagerScript.GetActiveID());
+				if(!AudioHandler.isWellDoneInOfficeThermo){
+					Debug.Log ("Audio source: " + CanvasHandler.Player.GetComponent<AudioSource> ());
+					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOfficeThermo);
+					Debug.Log ("has gotten audiofile");
+					AudioHandler.isWellDoneInOfficeThermo = true;
+					//AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
+					Debug.Log ("Sound: " + AudioHandler.wellDoneInOfficeThermo);
 				}
 			}
             ManagerScript.ResetID();

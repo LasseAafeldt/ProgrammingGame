@@ -38,7 +38,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 3)
         {
 
-			Debug.Log ("Active id: " + ManagerScript.GetActiveID());
+			Debug.Log ("Active id: " + ManagerScript.GetActiveID() + "Q pressed" + Input.GetKeyDown(KeyCode.Q));
 			if (room3AccessPanelAssignement.IsFinalResultTrue()) {
 				Debug.Log ("isFinalResult = " + room3AccessPanelAssignement.IsFinalResultTrue ());
 				//play sound after player solves the assignment and presses Q

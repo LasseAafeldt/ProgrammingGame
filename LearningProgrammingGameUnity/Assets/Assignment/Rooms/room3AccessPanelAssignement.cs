@@ -15,6 +15,9 @@ public class room3AccessPanelAssignement : Assignment {
         hints = new Hint("You can drag items from the drag panel to the drop panel.",
             "Add more hints here...");
         ConsoleUI.AddText(hints.GetNextHint());
+		IsEachCorrect.Clear();
+		IsEachCorrect.Add(false);
+		IsEachCorrect.Add(false);
     }
 
     public static void IsEachResultCorrect()
