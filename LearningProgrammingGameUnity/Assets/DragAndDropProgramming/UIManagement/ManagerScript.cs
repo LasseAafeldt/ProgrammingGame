@@ -3,19 +3,18 @@ using System;
 using System.Collections;
 
 public class ManagerScript : MonoBehaviour {
-    private static int ActiveID;
-
-	public static int GetActiveID(){
-		return ActiveID;
-	}
-	public static void SetActiveID(int newId){
-		Debug.Log (newId);
-		ActiveID = newId;
-	}
+    public static int ActiveID;
+    public static bool[] ConstructionModulesCollected = new bool[5];
+    public static bool[] ConstructionModulesHandedIn = new bool[5];
     //this for initialization
     void Start () {
         ActiveID = 0;
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());
+        for(int i = 0; i < 5; i++)
+        {
+            ConstructionModulesCollected[i] = false;
+            ConstructionModulesHandedIn[i] = false;
+        }
     }
 
 

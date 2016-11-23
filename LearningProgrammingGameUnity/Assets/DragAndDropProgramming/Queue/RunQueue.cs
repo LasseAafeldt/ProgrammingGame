@@ -107,6 +107,7 @@ public class RunQueue {
                 if (room3AccessPanelAssignement.IsFinalResultTrue())
                 {
                     ConsoleUI.AddText("\nCorrect!");
+                    CanvasHandler.Manual.SetActive(true);
                 }
                 else
                 {
@@ -114,7 +115,6 @@ public class RunQueue {
                     if(!(bool)room3AccessPanelAssignement.IsEachCorrect[0])
                     {
                         ConsoleUI.AddText("\nYou didnt collect all of the books! Please collect the last books");
-                        //spawn construction module.
                     }
                     else if (!(bool)room3AccessPanelAssignement.IsEachCorrect[1])
                     {

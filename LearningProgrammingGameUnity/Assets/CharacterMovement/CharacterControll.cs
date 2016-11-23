@@ -51,9 +51,18 @@ public class CharacterControll : MonoBehaviour {
         //Debug.Log("other = " + other.gameObject);
         if (other.gameObject.CompareTag("ConstructionModule"))
         {
+            if (other.gameObject.transform.GetChild(0).CompareTag("GasTank"))
+            {
+                ManagerScript.ConstructionModulesCollected[0] = true;
+            }
+            if (other.gameObject.transform.GetChild(0).CompareTag("Manual"))
+            {
+                ManagerScript.ConstructionModulesCollected[1] = true;
+            }
             if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
             {
                 //Debug.Log("metal plates picked up");
+                ManagerScript.ConstructionModulesCollected[3] = true;
                 GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Close();
                 GameObject.Find("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers>().Close();
 
@@ -85,8 +94,11 @@ public class CharacterControll : MonoBehaviour {
         }
         if (other.gameObject.CompareTag("bookArea"))
         {
-            //Debug.Log("i set bool to true");
             room3AccessPanelAssignement.isInsideArea = true;
+        }
+        if (other.gameObject.CompareTag("Conveyor"))
+        {
+
         }
     }
     void OnTriggerExit(Collider other)

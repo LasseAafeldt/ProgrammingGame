@@ -18,6 +18,9 @@ TagManager:
   - bookArea
   - StackRoom5
   - PlaySound
+  - GasTank
+  - Conveyor
+  - Manual
   layers:
   - Default
   - TransparentFX
