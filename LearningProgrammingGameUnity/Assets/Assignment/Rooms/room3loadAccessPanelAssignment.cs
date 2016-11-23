@@ -26,9 +26,8 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
                 RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
-                CharacterControll.canMove = false;
-                CameraMousePan.canMove = false;
-				ManagerScript.SetActiveID(ID);
+                ManagerScript.CanMove = false;
+                ManagerScript.SetActiveID(ID);
                 this.load();
 				Debug.Log ("Active id: " + ManagerScript.GetActiveID());
             }
@@ -57,9 +56,8 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
 			CanvasHandler.DragAndDropCanvas.SetActive (false);
-			CharacterControll.canMove = true;
-			CameraMousePan.canMove = true;
-			CanvasHandler.ResetCanvas ();
+            ManagerScript.CanMove = true;
+            CanvasHandler.ResetCanvas ();
         }
     }
 

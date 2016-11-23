@@ -26,9 +26,6 @@ public class RedButtonPushed : MonoBehaviour {
                 }
                 else
                 {
-                    //missing atleast one assignement
-                    //NYI
-
                     //play stoppush sound
                     if (playSoundIndex < 10)
                     {

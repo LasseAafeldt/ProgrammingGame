@@ -9,8 +9,6 @@ public class CameraMousePan : MonoBehaviour {
     public float sensitivity = 2.0f;
     public float smoothing = 2.0f;
     GameObject character;
-    public static bool canMove = true;
-
 	// Use this for initialization
 	void Start () {
         character = this.transform.parent.gameObject;
@@ -18,7 +16,7 @@ public class CameraMousePan : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (canMove)
+        if (ManagerScript.CanMove)
         {
             var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
             md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));

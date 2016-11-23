@@ -4,7 +4,6 @@ using System.Collections;
 public class CharacterControll : MonoBehaviour {
 
     public float speed = 10.0f;
-    public static bool canMove = true;
     Transform transformBeingCarried;
     GameObject Parent;
     bool isCarryingItem;
@@ -21,7 +20,7 @@ public class CharacterControll : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		//Debug.Log ("assignment ID: " + ManagerScript.ActiveID);
-        if (canMove)
+        if (ManagerScript.CanMove)
         {
             float translation = Input.GetAxis("Vertical") * speed;
             float straffe = Input.GetAxis("Horizontal") * speed;
