@@ -20,7 +20,7 @@ public class AudioHandler : MonoBehaviour {
 	public static AudioClip factoryControlRoom;
 	public static AudioClip playerSolvesLastTask;
 	public static AudioClip lastModuleOnBelt;
-	public static AudioClip stopPushing;
+	public static AudioClip[] stopPushing;
 
 	public static bool isWakeUpClip = false;
 	public static bool isLookamodule1Editet = false;
@@ -62,11 +62,17 @@ public class AudioHandler : MonoBehaviour {
 		playerSolvesLastTask =  Resources.Load<AudioClip>("Audio/playersolveslasttaskEdited");
 		lastModuleOnBelt =  Resources.Load<AudioClip>("Audio/lastmodulonbeltEdited");
 
-
-		stopPushing = Resources.Load<AudioClip>("Audio/stoppushing");
-
-
-
+        stopPushing = new AudioClip[10];
+        stopPushing[0] = Resources.Load<AudioClip>("Audio/stoppushing");
+        stopPushing[1] = Resources.Load<AudioClip>("Audio/stoppushing1");
+        stopPushing[2] = Resources.Load<AudioClip>("Audio/stoppushing2");
+        stopPushing[3] = Resources.Load<AudioClip>("Audio/stoppushing3");
+        stopPushing[4] = Resources.Load<AudioClip>("Audio/stoppushing4");
+        stopPushing[5] = Resources.Load<AudioClip>("Audio/stoppushing5");
+        stopPushing[6] = Resources.Load<AudioClip>("Audio/stoppushing6");
+        stopPushing[7] = Resources.Load<AudioClip>("Audio/stoppushing7");
+        stopPushing[8] = Resources.Load<AudioClip>("Audio/stoppushing8");
+        stopPushing[9] = Resources.Load<AudioClip>("Audio/stoppushing9");
     }
 
     // Update is called once per frame

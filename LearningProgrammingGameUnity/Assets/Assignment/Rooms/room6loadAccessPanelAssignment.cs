@@ -62,7 +62,7 @@ public class room6loadAccessPanelAssignment : MonoBehaviour{
         CanvasHandler.scaleDragPanel(activeChildCount);
 		CanvasHandler.HeaderText.GetComponent<Text> ().text = new room6AccessPanelAssignement ().GetDescription ();
         //set drop panel slots active
-        int numberOfActiveInDropPanel = 4;
+        int numberOfActiveInDropPanel = 6;
         for (int i = numberOfActiveInDropPanel; i < CanvasHandler.DropPanel.transform.childCount; i++)
         {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
@@ -127,12 +127,32 @@ public class room6loadAccessPanelAssignment : MonoBehaviour{
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 
-        //equation text (if)
+        //equation text 
         copyObject = Instantiate(
             CanvasHandler.EquationButton,
             CanvasHandler.DropPanel.transform.GetChild(3))
             as GameObject;
         copyObject.transform.GetChild(1).GetComponent<Text>().text = "Bad Stuff will happen";
+        Destroy(copyObject.GetComponent<DragHandler>());
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+
+        //equation text Else
+        copyObject = Instantiate(
+            CanvasHandler.EquationButton,
+            CanvasHandler.DropPanel.transform.GetChild(4))
+            as GameObject;
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "Else";
+        Destroy(copyObject.GetComponent<DragHandler>());
+        copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        copyObject.transform.localScale = new Vector3(1f, 1f, 0);
+
+        //equation text OpenDoor
+        copyObject = Instantiate(
+            CanvasHandler.EquationButton,
+            CanvasHandler.DropPanel.transform.GetChild(5))
+            as GameObject;
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "OpenDoor";
         Destroy(copyObject.GetComponent<DragHandler>());
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);

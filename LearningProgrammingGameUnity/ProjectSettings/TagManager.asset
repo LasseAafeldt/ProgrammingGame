@@ -21,6 +21,8 @@ TagManager:
   - GasTank
   - Conveyor
   - Manual
+  - Computer
+  - Wire
   layers:
   - Default
   - TransparentFX

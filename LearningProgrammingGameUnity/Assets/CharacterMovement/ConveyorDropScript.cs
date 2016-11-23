@@ -8,10 +8,10 @@ public class ConveyorDropScript : MonoBehaviour {
 	void Start () {
         ConstructionModule[0] = (GameObject) Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
         ConstructionModule[1] = (GameObject)Resources.Load<GameObject>("Gameobjects/Manual") as GameObject;
-        ConstructionModule[2] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
+        ConstructionModule[2] = (GameObject)Resources.Load<GameObject>("Gameobjects/Wires") as GameObject;
         ConstructionModule[3] = (GameObject)Resources.Load<GameObject>("Gameobjects/MetalPlates") as GameObject;
-        ConstructionModule[4] = (GameObject)Resources.Load<GameObject>("Gameobjects/gasolineContainer") as GameObject;
-        dropPosition = GameObject.Find("Conveyor").transform.position;
+        ConstructionModule[4] = (GameObject)Resources.Load<GameObject>("Gameobjects/Computer") as GameObject;
+        dropPosition = GameObject.Find("ConveyorDrop").transform.position;
     }
 	
 	// Update is called once per frame
@@ -20,7 +20,7 @@ public class ConveyorDropScript : MonoBehaviour {
 
         if (Input.GetKeyUp(KeyCode.E))
         {
-            if (distanceToObj < 10)
+            if (distanceToObj < 3f)
             {
                 for(int i = 0; i < 5; i++) {
                     //Debug.Log(i + " " + ManagerScript.ConstructionModulesCollected[i]);
@@ -42,9 +42,21 @@ public class ConveyorDropScript : MonoBehaviour {
                             a.AddComponent<BoxCollider>();
                             a.GetComponent<BoxCollider>().size = new Vector3(0.01f, 0.04f, 0.03f);
                         }
+                        if (i == 2)
+                        {
+                            a.transform.localScale = new Vector3(1f, 1f, 1f);
+                            a.AddComponent<BoxCollider>();
+                            a.GetComponent<BoxCollider>().size = new Vector3(0.01f, 0.04f, 0.03f);
+                        }
                         if (i == 3)
                         {
                             a.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                        }
+                        if (i == 4)
+                        {
+                            a.transform.localScale = new Vector3(1f, 1f, 1f);
+                            a.AddComponent<BoxCollider>();
+                            a.GetComponent<BoxCollider>().size = new Vector3(1f, 1f, 1f);
                         }
                         return;
                     }

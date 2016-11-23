@@ -59,6 +59,10 @@ public class CharacterControll : MonoBehaviour {
             {
                 ManagerScript.ConstructionModulesCollected[1] = true;
             }
+            if (other.gameObject.transform.GetChild(0).CompareTag("Wire"))
+            {
+                ManagerScript.ConstructionModulesCollected[2] = true;
+            }
             if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
             {
                 //Debug.Log("metal plates picked up");
@@ -70,6 +74,10 @@ public class CharacterControll : MonoBehaviour {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
+            }
+            if (other.gameObject.transform.GetChild(0).CompareTag("Computer"))
+            {
+                ManagerScript.ConstructionModulesCollected[4] = true;
             }
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;

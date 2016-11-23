@@ -16,6 +16,17 @@ public class ManagerScript : MonoBehaviour {
     {
         ActiveID = newID;
     }
+    public static bool IsAllHandedIn()
+    {
+        for(int i = 0; i < ConstructionModulesHandedIn.Length; i++)
+        {
+            if(ConstructionModulesHandedIn[i] == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     void Start () {
         ActiveID = 0;
         //Debug.Log("RunQueueSize: " + RunQueue.GetSize());
