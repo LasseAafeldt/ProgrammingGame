@@ -58,7 +58,7 @@ public class AudioHandler : MonoBehaviour {
 		goToStorage =  Resources.Load<AudioClip>("Audio/gotostorageEdited");
 		awFred =  Resources.Load<AudioClip>("Audio/awFredEdited");
 		needOneMoreModule =  Resources.Load<AudioClip>("Audio/needonemoremoduleEdited");
-		factoryControlRoom =  Resources.Load<AudioClip>("Audio/factory_controlroomEdited");
+		factoryControlRoom =  Resources.Load<AudioClip>("Audio/LastModuleFixBoxEdited");
 		playerSolvesLastTask =  Resources.Load<AudioClip>("Audio/playersolveslasttaskEdited");
 		lastModuleOnBelt =  Resources.Load<AudioClip>("Audio/lastmodulonbeltEdited");
 

@@ -155,6 +155,15 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.itIsCold);
 				AudioHandler.isItIsCold = !AudioHandler.isItIsCold;
 			}
+			//Office remember thermometer
+			if (other.gameObject == GameObject.Find("thermometerTrigger") &&
+				!AudioHandler.isItIsCold) {
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.didYouSeeThermometer);
+				AudioHandler.isDidYouSeeThermometer = !AudioHandler.isDidYouSeeThermometer;
+			}
 			//Office story trigger
 			if (other.gameObject == GameObject.Find("officeStoryTrigger") &&
 				!AudioHandler.isOfficeFourStory) {
@@ -197,6 +206,27 @@ public class CharacterControll : MonoBehaviour {
 				}
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
 				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
+			}
+
+			//control room trigger - explanation of assignment... something
+			if (other.gameObject == GameObject.Find("awFredTrigger") &&
+				ManagerScript.ConstructionModulesCollected[3] &&
+				!AudioHandler.isOfficeFourStory) {
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.factoryControlRoom);
+				AudioHandler.isFactoryControlRoom = !AudioHandler.isFactoryControlRoom;
+			}
+
+			//control room trigger - explanation of assignment... something
+			if (other.gameObject == GameObject.Find("controlRoomTrigger") &&
+				!AudioHandler.isOfficeFourStory) {
+				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
+					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
+				}
+				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.factoryControlRoom);
+				AudioHandler.isFactoryControlRoom = !AudioHandler.isFactoryControlRoom;
 			}
 
 		}
