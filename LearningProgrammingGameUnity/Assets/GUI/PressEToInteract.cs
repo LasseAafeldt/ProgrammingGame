@@ -1,32 +1,35 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections;
+using System.Collections; 
 
 public class PressEToInteract : MonoBehaviour {
 
     public static bool active = false;
 
     public static String currentToolTipText = "";
+
     public static int currentCount;
     public static String constructionCounterTooltip = "Construction modules: " + currentCount + "/5";
     public static String bookCounterTooltip = "Books collected: " +
         room3AccessPanelAssignement.bookCount;
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
+
  
     void Start()
     {
+		
         guiStyleFore = new GUIStyle();
         guiStyleFore.normal.textColor = Color.white;
         currentCount = 0;
         guiStyleFore.alignment = TextAnchor.UpperLeft;
         guiStyleFore.wordWrap = true;
-        guiStyleFore.fontSize = 20;
+        guiStyleFore.fontSize = 22;
         guiStyleBack = new GUIStyle();
         guiStyleBack.normal.textColor = Color.black;
         guiStyleBack.alignment = TextAnchor.UpperLeft;
         guiStyleBack.wordWrap = true;
-        guiStyleBack.fontSize = 20;
+        guiStyleBack.fontSize = 22;
     }
     void Update()
     {
@@ -42,6 +45,7 @@ public class PressEToInteract : MonoBehaviour {
             float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
             if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
             {
+				
                 PressEToInteract.currentToolTipText = "Press E to interact";
                 x = Screen.width / 2;
                 y = Screen.height - 150;
