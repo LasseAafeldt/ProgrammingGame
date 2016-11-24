@@ -101,7 +101,10 @@ public class CharacterControll : MonoBehaviour {
         {
 
         }
-		/*if (other.gameObject.CompareTag ("awFredTrigger")) {
+		if (other.gameObject.CompareTag ("PlaySound")) {
+			if(other.gameObject == GameObject.Find("awFredTrigger") &&
+				ManagerScript.ConstructionModulesCollected[3] &&
+				!AudioHandler.isAwFred){
 			GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
 			GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
 
@@ -109,7 +112,8 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
 
 			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
-		}*/
+			}
+		}
     }
     void OnTriggerExit(Collider other)
     {
@@ -157,7 +161,7 @@ public class CharacterControll : MonoBehaviour {
 			}
 			//Office remember thermometer
 			if (other.gameObject == GameObject.Find("thermometerTrigger") &&
-				!AudioHandler.isItIsCold) {
+				!AudioHandler.isDidYouSeeThermometer) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
@@ -206,17 +210,6 @@ public class CharacterControll : MonoBehaviour {
 				}
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
 				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
-			}
-
-			//control room trigger - explanation of assignment... something
-			if (other.gameObject == GameObject.Find("awFredTrigger") &&
-				ManagerScript.ConstructionModulesCollected[3] &&
-				!AudioHandler.isOfficeFourStory) {
-				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
-					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
-				}
-				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.factoryControlRoom);
-				AudioHandler.isFactoryControlRoom = !AudioHandler.isFactoryControlRoom;
 			}
 
 			//control room trigger - explanation of assignment... something
