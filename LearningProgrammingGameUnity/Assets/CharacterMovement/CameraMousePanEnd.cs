@@ -8,11 +8,15 @@ public class CameraMousePanEnd : MonoBehaviour {
     Vector2 smoothV;
     public float sensitivity = 2.0f;
     public float smoothing = 2.0f;
-    Camera EndScene;
+    static Camera EndScene;
     public static bool canMove = true;
+    public float maxDistLowerY = -10;
+    public float maxDistUpperY = 0;
+    public float maxDistLowerX = -30;
+    public float maxDistUpperX = -10;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         EndScene = gameObject.transform.GetChild(0).GetComponent<Camera>();
         //ManagerScript.CanMove = false;
     }
@@ -25,15 +29,15 @@ public class CameraMousePanEnd : MonoBehaviour {
         smoothV.x = Mathf.Lerp(smoothV.x, md.x, 1f / smoothing);
         smoothV.y = Mathf.Lerp(smoothV.y, md.y, 1f / smoothing);
         mouseLook += smoothV;
-        mouseLook.y = Mathf.Clamp(mouseLook.y,-15,10);
-        mouseLook.x = Mathf.Clamp(mouseLook.x,-20,20);
+        mouseLook.y = Mathf.Clamp(mouseLook.y, maxDistLowerY, maxDistUpperY);
+        mouseLook.x = Mathf.Clamp(mouseLook.x, maxDistLowerX, maxDistUpperX);
         transform.localRotation = Quaternion.Euler(-mouseLook.y,mouseLook.x,0);
     }
-    public void SetCameraToEndScene()
+    public static void SetCameraToEndScene()
     {
         EndScene.targetDisplay = 0;
     }
-    public void SetCameraToNormal()
+    public static void SetCameraToNormal()
     {
         EndScene.targetDisplay = 1;
     }

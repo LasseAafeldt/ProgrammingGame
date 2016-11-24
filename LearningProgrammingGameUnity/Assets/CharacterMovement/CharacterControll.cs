@@ -101,7 +101,7 @@ public class CharacterControll : MonoBehaviour {
         {
 
         }
-		if (other.gameObject.CompareTag ("awFredTrigger")) {
+		/*if (other.gameObject.CompareTag ("awFredTrigger")) {
 			GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
 			GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
 
@@ -109,7 +109,7 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
 
 			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
-		}
+		}*/
     }
     void OnTriggerExit(Collider other)
     {

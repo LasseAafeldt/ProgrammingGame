@@ -23,6 +23,7 @@ TagManager:
   - Manual
   - Computer
   - Wire
+  - Robot
   layers:
   - Default
   - TransparentFX

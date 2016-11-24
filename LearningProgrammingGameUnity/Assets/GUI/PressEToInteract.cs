@@ -13,6 +13,7 @@ public class PressEToInteract : MonoBehaviour {
         room3AccessPanelAssignement.bookCount;
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
+    private static bool ActiveGUI = true;
  
     void Start()
     {
@@ -33,36 +34,47 @@ public class PressEToInteract : MonoBehaviour {
         
     }
 
+    public static void DeactivateGUI()
+    {
+        ActiveGUI = false;
+    }
+    public static void ActivateGUI()
+    {
+        ActiveGUI = true;
+    }
     void OnGUI()
     {
-        float x;
-        float y;
-        if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
+        if (ActiveGUI)
         {
-            float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
-            if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
+            float y;
+            float x;
+            if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
             {
-                PressEToInteract.currentToolTipText = "Press E to interact";
-                x = Screen.width / 2;
-                y = Screen.height - 150;
-                GUI.Label(new Rect(x - 149, y + 40, 300, 60), currentToolTipText, guiStyleBack);
-                GUI.Label(new Rect(x - 150, y + 40, 300, 60), currentToolTipText, guiStyleFore);
-            }
-            else
-                PressEToInteract.currentToolTipText = "";
-            x = 60;
-            y = 60;
-            GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleBack);
-            GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleFore);
-
-            if(room3AccessPanelAssignement.isInsideArea == true)
-            {
-                //Debug.Log("i made book counter");
+                float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
+                if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
+                {
+                    PressEToInteract.currentToolTipText = "Press E to interact";
+                    x = Screen.width / 2;
+                    y = Screen.height - 150;
+                    GUI.Label(new Rect(x - 149, y + 40, 300, 60), currentToolTipText, guiStyleBack);
+                    GUI.Label(new Rect(x - 150, y + 40, 300, 60), currentToolTipText, guiStyleFore);
+                }
+                else
+                    PressEToInteract.currentToolTipText = "";
                 x = 60;
-                y = 100;
-                GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleBack);
-                GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleFore);
-                //bookCounterTooltip
+                y = 60;
+                GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleBack);
+                GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleFore);
+
+                if(room3AccessPanelAssignement.isInsideArea == true)
+                {
+                    //Debug.Log("i made book counter");
+                    x = 60;
+                    y = 100;
+                    GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleBack);
+                    GUI.Label(new Rect(x, y, 300, 60), bookCounterTooltip, guiStyleFore);
+                    //bookCounterTooltip
+                }
             }
         }
     }
