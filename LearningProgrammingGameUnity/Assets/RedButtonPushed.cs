@@ -43,6 +43,16 @@ public class RedButtonPushed : MonoBehaviour
             if (distanceToObj < 3f)
             {
                 //play push animation
+                if (wait[1])
+                {
+                    if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+                    {
+                        CanvasHandler.Player.GetComponent<AudioSource>().Stop();
+                    }
+                    CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookWindow);
+                    wait[3] = !wait[3];
+                    contiuneEndScene(5);
+                }
                 GameObject.Find("red_button").GetComponent<Animator>().SetTrigger("PushedButton");
                 if (ManagerScript.IsAllHandedIn() || true)
                 {
@@ -51,7 +61,7 @@ public class RedButtonPushed : MonoBehaviour
                     startedEndScene = true;
                     CameraMousePanEnd.SetCameraToEndScene();
                     ManagerScript.CanMove = false;
-                    PressEToInteract.DeactivateGUI();
+                    PressEToInteract.Deactivate();
                     Robot.SetActive(true);
                     Robot.transform.position =
                         new Vector3(Robot.transform.GetChild(0).transform.GetChild(0).transform.position.x,
@@ -103,12 +113,11 @@ public class RedButtonPushed : MonoBehaviour
             }
             if (parts[2])
             {
+
                 Robot.transform.position = Vector3.Lerp(
                       RobotTransform.position,
                       Markers[0].transform.position,
                       Time.deltaTime*0.5f);
-
-
             }
             if (parts[3])
             {
@@ -130,8 +139,11 @@ public class RedButtonPushed : MonoBehaviour
                 GameObject.Find("Main Camera").GetComponent<Camera>().targetDisplay = 3;
                 GameObject.Find("Camera").GetComponent<Camera>().targetDisplay = 0;
                 contiuneEndScene(4);
-
-                //change camera
+                if (wait[4])
+                {
+                    CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.option3);
+                    wait[4] = !wait[4];
+                }
             }
         }
     }
@@ -147,6 +159,8 @@ public class RedButtonPushed : MonoBehaviour
             StartCoroutine(WaitAfterExplosion());
         if(i == 4)
             StartCoroutine(WaitTwoSec());
+        if (i == 5)
+            StartCoroutine(WaitForSoundOne());
 
     }
     private IEnumerator Wait()
@@ -168,7 +182,7 @@ public class RedButtonPushed : MonoBehaviour
     }
     private IEnumerator WaitExplosion()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(9.5f);
         Explosion.SetActive(true);
         contiuneEndScene(3);
     }
@@ -176,5 +190,11 @@ public class RedButtonPushed : MonoBehaviour
     {
         yield return new WaitForSeconds(8.7f);
         parts[5] = true;
+    }
+    private IEnumerator WaitForSoundOne()
+    {
+        yield return new WaitForSeconds(AudioHandler.lookWindow.length);
+        CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.explosion);
+
     }
 }

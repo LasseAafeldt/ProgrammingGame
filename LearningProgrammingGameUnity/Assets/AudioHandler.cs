@@ -20,6 +20,9 @@ public class AudioHandler : MonoBehaviour {
 	public static AudioClip factoryControlRoom;
 	public static AudioClip playerSolvesLastTask;
 	public static AudioClip lastModuleOnBelt;
+    public static AudioClip explosion;
+    public static AudioClip option3;
+    public static AudioClip lookWindow;
 	public static AudioClip[] stopPushing;
 
 	public static bool isWakeUpClip = false;
@@ -44,6 +47,9 @@ public class AudioHandler : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        explosion = Resources.Load<AudioClip>("Audio/Explosion");
+        option3 = Resources.Load<AudioClip>("Audio/option3");
+        lookWindow = Resources.Load<AudioClip>("Audio/look");
         wakeUpClip =  Resources.Load<AudioClip>("Audio/Wakeup");
         lookamodule1Editet = Resources.Load<AudioClip>("Audio/lookamodule1Editet");
 		hallEdited = Resources.Load<AudioClip> ("Audio/hallEdited");
@@ -73,7 +79,8 @@ public class AudioHandler : MonoBehaviour {
         stopPushing[7] = Resources.Load<AudioClip>("Audio/stoppushing7");
         stopPushing[8] = Resources.Load<AudioClip>("Audio/stoppushing8");
         stopPushing[9] = Resources.Load<AudioClip>("Audio/stoppushing9");
-    }
+
+}
 
     // Update is called once per frame
     void Update () {
@@ -101,7 +108,7 @@ public class AudioHandler : MonoBehaviour {
 			}
 			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.needOneMoreModule);
 			AudioHandler.isNeedOneMoreModule = !AudioHandler.isNeedOneMoreModule;
-		}
+        }
 	}
 
 	public static void playSoundLastModuleConveyor() {
