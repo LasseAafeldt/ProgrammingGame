@@ -6,7 +6,7 @@ public class CharacterControll : MonoBehaviour {
     public float speed = 10.0f;
     Transform transformBeingCarried;
     GameObject Parent;
-    bool isCarryingItem;
+    public bool isCarryingItem;
     Vector2 mouseLook;
     Vector2 smoothV;
 
@@ -66,6 +66,7 @@ public class CharacterControll : MonoBehaviour {
             {
                 //Debug.Log("metal plates picked up");
                 ManagerScript.ConstructionModulesCollected[3] = true;
+				SaveTheBoxes.ActivateAssignment5 ();
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Computer"))
             {
@@ -211,7 +212,17 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
 				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
 			}
-
+			if (ManagerScript.ConstructionModulesCollected [1] && //collected the book construction module but not handed it in
+				!ManagerScript.ConstructionModulesHandedIn [1] ||
+				ManagerScript.ConstructionModulesCollected [2] && //collected the wires construction module but not handed it in
+				!ManagerScript.ConstructionModulesHandedIn [2] || 
+				ManagerScript.ConstructionModulesCollected [3] && //collected the book construction module but not handed it in
+				!ManagerScript.ConstructionModulesHandedIn [3] ||
+				ManagerScript.ConstructionModulesCollected [0] && //collected the wires construction module but not handed it in
+				!ManagerScript.ConstructionModulesHandedIn [0])
+			{
+				CanvasHandler.ControlRoomBlocker.SetActive (false);
+			}
 			//control room trigger - explanation of assignment... something
 			if (other.gameObject == GameObject.Find("controlRoomTrigger") &&
 				!AudioHandler.isFactoryControlRoom) {

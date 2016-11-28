@@ -19,7 +19,8 @@ public class CanvasHandler : MonoBehaviour {
 	public static GameObject arrowDragPanel;
     public static GameObject Wires;
     public static GameObject Manual;
-    // Use this for initialization
+	public static GameObject ControlRoomBlocker;
+	// Use this for initialization
     void Start () {
         ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
         DragAndDropCanvas = GameObject.Find("DragAndDropCanvas");
@@ -41,7 +42,8 @@ public class CanvasHandler : MonoBehaviour {
         IsInRange = false;
         DragAndDropCanvas.SetActive(false);
         Wires.SetActive(false);
-        Manual.SetActive(false);
+		Manual.SetActive(false);
+		ControlRoomBlocker = GameObject.Find ("ControlRoomBlocker");
     }
 	
 	// Update is called once per frame
