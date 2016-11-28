@@ -20,7 +20,7 @@ public class RedButtonPushed : MonoBehaviour
         Robot = GameObject.Find("RobotParent");
         RobotAnimator = Robot.transform.GetChild(0).GetComponent<Animator>();
         RobotTransform = Robot.transform;
-        //Robot.SetActive(false);
+        Robot.SetActive(false);
         parts = new bool[10];
         Markers = new GameObject[10];
         wait = new bool[10];

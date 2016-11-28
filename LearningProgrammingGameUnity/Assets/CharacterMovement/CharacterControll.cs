@@ -214,7 +214,7 @@ public class CharacterControll : MonoBehaviour {
 
 			//control room trigger - explanation of assignment... something
 			if (other.gameObject == GameObject.Find("controlRoomTrigger") &&
-				!AudioHandler.isOfficeFourStory) {
+				!AudioHandler.isFactoryControlRoom) {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
