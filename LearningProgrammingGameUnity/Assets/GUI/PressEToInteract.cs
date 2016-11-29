@@ -15,6 +15,7 @@ public class PressEToInteract : MonoBehaviour {
     private static GUIStyle guiStyleFore;
     private static GUIStyle guiStyleBack;
 
+
  
     void Start()
     {
@@ -30,6 +31,7 @@ public class PressEToInteract : MonoBehaviour {
         guiStyleBack.alignment = TextAnchor.UpperLeft;
         guiStyleBack.wordWrap = true;
         guiStyleBack.fontSize = 22;
+
     }
     void Update()
     {
@@ -52,21 +54,27 @@ public class PressEToInteract : MonoBehaviour {
             if (CanvasHandler.DragAndDropCanvas.activeInHierarchy == false)
             {
                 float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
-                if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance)
-                {
+				if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
 				
-                    PressEToInteract.currentToolTipText = "Press E to interact";
-                    x = Screen.width / 2;
-                    y = Screen.height - 150;
-                    GUI.Label(new Rect(x - 149, y + 40, 300, 60), currentToolTipText, guiStyleBack);
-                    GUI.Label(new Rect(x - 150, y + 40, 300, 60), currentToolTipText, guiStyleFore);
-                }
-                else
-                    PressEToInteract.currentToolTipText = "";
+					PressEToInteract.currentToolTipText = "Press E to interact";
+					//CanvasHandler.EInteract.SetActive (true);
+					//Debug.Log ("set to active");
+					x = Screen.width / 2;
+					y = Screen.height - 150;
+					GUI.Label (new Rect (x - 149, y + 40, 300, 60), currentToolTipText, guiStyleBack);
+					GUI.Label (new Rect (x - 150, y + 40, 300, 60), currentToolTipText, guiStyleFore);
+				} 
+				else{
+					PressEToInteract.currentToolTipText = "";
+					//CanvasHandler.EInteract.SetActive (false);
+					//Debug.Log ("set to false");
+				}
                 x = 60;
                 y = 60;
-                GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleBack);
-                GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleFore);
+
+				GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleBack);
+				GUI.Label(new Rect(x, y, 300, 60), constructionCounterTooltip, guiStyleFore);
+
 
                 if(room3AccessPanelAssignement.isInsideArea == true)
                 {

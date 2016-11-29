@@ -23,6 +23,8 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
+				//CanvasHandler.EInteract.SetActive(false);
+				Debug.Log ("Interaction started");
 				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 RunQueue.ResetQueue();

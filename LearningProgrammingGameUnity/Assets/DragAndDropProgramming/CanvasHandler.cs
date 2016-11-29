@@ -20,6 +20,11 @@ public class CanvasHandler : MonoBehaviour {
     public static GameObject Wires;
     public static GameObject Manual;
 	public static GameObject ControlRoomBlocker;
+
+	public static GameObject EInteract;
+	public static GameObject constructionModules;
+	public static GameObject booksCollected;
+
 	// Use this for initialization
     void Start () {
         ScreenOverlay = GameObject.Find("ScreenOverlayEnd");
@@ -36,7 +41,7 @@ public class CanvasHandler : MonoBehaviour {
 		arrowDragPanel = GameObject.Find ("arrowDragPanel");
         Wires = GameObject.Find("WirePile");
         Manual = GameObject.Find("Manuel");
-        //SDebug.Log("player = " + ScreenOverlay + "\n DropPanel = " + DropPanel) ;
+        //Debug.Log("player = " + ScreenOverlay + "\n DropPanel = " + DropPanel) ;
         RunQueue.InitializeQueue();
         ScreenOverlay.SetActive(false);
         IsInRange = false;
@@ -44,6 +49,13 @@ public class CanvasHandler : MonoBehaviour {
         Wires.SetActive(false);
 		Manual.SetActive(false);
 		ControlRoomBlocker = GameObject.Find ("ControlRoomBlocker");
+
+		EInteract = GameObject.Find ("EInteract");
+		EInteract.SetActive (false);
+		constructionModules = GameObject.Find ("ConstructionModules");
+		constructionModules.SetActive (false);
+		booksCollected = GameObject.Find ("BooksCollected");
+		booksCollected.SetActive (false);
     }
 	
 	// Update is called once per frame
