@@ -69,7 +69,6 @@ public class TextChangeListener : MonoBehaviour {
                 {
                     if (indexInParent == 3)
                     {
-                        //Debug.Log("4number = " + number2);
                         RunQueue.GetAt(indexQueue).SetRight(number.Value);
                     }
                 }

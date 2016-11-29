@@ -23,10 +23,10 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
             {
                 PressEToInteract.currentToolTipText = "";
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ManagerScript.CanMove = false;
+                ConsoleUI.ResetText();
                 ManagerScript.SetActiveID(ID);
                 this.load();
             }
@@ -55,8 +55,9 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
             ManagerScript.CanMove = true;
-            CanvasHandler.ResetCanvas ();
 			CanvasHandler.DragAndDropCanvas.SetActive (false);
+            RunQueue.ResetQueue();
+            CanvasHandler.ResetCanvas();
         }
     }
 
@@ -76,7 +77,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
             CanvasHandler.DropPanel.transform.GetChild(i).gameObject.SetActive(false);
         }
 
-        //i variable button
+        //books variable button
         GameObject emptyGameobj = new GameObject();
         GameObject copyObject = Instantiate(
             CanvasHandler.VariableButton,
@@ -86,7 +87,7 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
         Destroy(copyObject.transform.GetChild(2).gameObject);
-        copyObject.transform.GetChild(1).GetComponent<Text>().text = "books = ";
+        copyObject.transform.GetChild(1).GetComponent<Text>().text = "Books = ";
         copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
         copyObject.transform.GetChild(1).Translate(
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 40,

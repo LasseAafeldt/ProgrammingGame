@@ -151,7 +151,6 @@ public class CharacterControll : MonoBehaviour {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
-                Debug.Log("found offices");
                 ManagerScript.CanMove = false;
                 ManagerScript.CameraPan = true;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
@@ -267,9 +266,6 @@ public class CharacterControll : MonoBehaviour {
             StartCoroutine(WaitForSound(AudioHandler.hallEdited));
             //Debug.Log("hallway");
         }
-
-    
-
     }
 
     private IEnumerator WaitForHallway()

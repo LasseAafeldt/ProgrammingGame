@@ -42,7 +42,7 @@ public class CanvasHandler : MonoBehaviour {
         Wires = GameObject.Find("WirePile");
         Manual = GameObject.Find("Manuel");
         //Debug.Log("player = " + ScreenOverlay + "\n DropPanel = " + DropPanel) ;
-        RunQueue.InitializeQueue();
+        RunQueue.ResetQueue();
         ScreenOverlay.SetActive(false);
         IsInRange = false;
         DragAndDropCanvas.SetActive(false);

@@ -14,7 +14,7 @@ public class RunQueue {
     {
         return runQueue.Count;
     }
-    public static void InitializeQueue()
+    private static void InitializeQueue()
     {
         for (int i = 0; i < CanvasHandler.DropPanel.transform.childCount; i++)
         {

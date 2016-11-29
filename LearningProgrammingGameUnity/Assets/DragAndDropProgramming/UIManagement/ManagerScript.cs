@@ -57,8 +57,4 @@ public class ManagerScript : MonoBehaviour {
         ConsoleUI.ResetText();
         ConsoleUI.AddText(room1AccessPanelAssignement.hints.GetNextHint());
     }
-    public static void ResetID()
-    {
-        ActiveID = 0;
-    }
 }
