@@ -11,9 +11,8 @@ public class room7AccessPanelAssignement : Assignment {
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
 
-        hints = new Hint("You can drag items from the drag panel to the drop panel.",
-            "You have to check all fuses to see which fuses are damaged.",
-			"The damaged fuses should then be changed");
+        hints = new Hint("You have to check all fuses to see which fuses are damaged.",
+			"The damaged fuses should be changed.");
         //ConsoleUI.AddText(hints.GetNextHint());
 		IsEachCorrect.Clear();
 		IsEachCorrect.Add(false);

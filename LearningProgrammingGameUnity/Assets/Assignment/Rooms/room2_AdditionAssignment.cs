@@ -11,7 +11,7 @@ public class room2_AdditionAssignment : Assignment
         correctionList = new ArrayList();
         IsEachCorrect = new ArrayList();
 
-        hints = new Hint("You have to assign values to both j and i.");
+        hints = new Hint("You have to assign values to both j and i.", "To open the door, j + i should be equal to 20.");
     }
 
 

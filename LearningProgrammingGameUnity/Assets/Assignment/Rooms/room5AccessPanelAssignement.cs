@@ -6,13 +6,11 @@ using System;
 public class room5AccessPanelAssignement : Assignment {
     public room5AccessPanelAssignement()
     {
-        description = "Find every book in the office area and enter how many you found.";
+        description = "Solve the if-statement on the wall.";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
 
-        hints = new Hint("You can drag items from the drag panel to the drop panel.",
-            "The password code is hidden inside the room.", 
-            "Add more hints here...");
+        hints = new Hint("You have to use the green boxes.");
         ConsoleUI.AddText(hints.GetNextHint());
     }
 

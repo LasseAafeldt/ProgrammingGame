@@ -12,8 +12,8 @@ public class room3AccessPanelAssignement : Assignment {
         description = "Find every book in this office and enter how many you found.";
 		correctionList = new ArrayList ();
 		IsEachCorrect = new ArrayList ();
-        hints = new Hint("You can drag items from the drag panel to the drop panel.",
-            "Add more hints here...");
+        hints = new Hint("You have to collect all the books in the room.",
+            "Enter how many books you found.");
         ConsoleUI.AddText(hints.GetNextHint());
 		IsEachCorrect.Clear();
 		IsEachCorrect.Add(false);
