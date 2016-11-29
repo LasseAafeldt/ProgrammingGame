@@ -21,22 +21,22 @@ public class room5loadAccessPanelAssignment : MonoBehaviour {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ManagerScript.CanMove = false;
+                ConsoleUI.ResetText();
+                ManagerScript.SetActiveID(ID);
                 this.load();
             }
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
             ManagerScript.CanMove = true;
+            RunQueue.ResetQueue();
             CanvasHandler.ResetCanvas();
         }
     }

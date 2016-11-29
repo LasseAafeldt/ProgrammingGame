@@ -16,45 +16,36 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
     void Update()
     {
         distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, obj.transform.position);
-        //Debug.Log(distanceToObj);
         if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.ResetQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ManagerScript.CanMove = false;
+                ConsoleUI.ResetText();
+                ManagerScript.SetActiveID(ID);
                 this.load();
             }
         }
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 4)
         {
-			//Debug.Log ("Active id: " + ManagerScript.GetActiveID());
 			if (room4AccessPanelAssignement.IsFinalResultTrue ()) {
-				//play sound after player solves the assignment and presses Q
-
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
 				}
-				//Debug.Log ("Active id: " + ManagerScript.GetActiveID());
 				if(!AudioHandler.isWellDoneInOfficeThermo){
-					//Debug.Log ("Audio source: " + CanvasHandler.Player.GetComponent<AudioSource> ());
 					CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.wellDoneInOfficeThermo);
-					//Debug.Log ("Audio source: " + AudioHandler.wellDoneInOfficeThermo);
 					AudioHandler.isWellDoneInOfficeThermo = !AudioHandler.isWellDoneInOfficeThermo;
-					//Debug.Log ("Sound: " + AudioHandler.wellDoneInOfficeThermo);
 				}
 			}
-            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
             ManagerScript.CanMove = true;
+            RunQueue.ResetQueue();
             CanvasHandler.ResetCanvas();
-            
         }
     }
 
@@ -100,6 +91,6 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         CanvasHandler.HeaderText.GetComponent<Text> ().text = new room4AccessPanelAssignement().GetDescription ();
 		CanvasHandler.scaleDragPanel (activeChildCount);
 
-        new Variables("Temperature", (string)null).AddToQueue(0);
+        new Variables("Temperature", 0f).AddToQueue(0);
     }
 }

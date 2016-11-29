@@ -24,24 +24,23 @@ public class room2loadAdditionAssignment : MonoBehaviour{
         if (distanceToObj < room1loadAccessPanelAssignment.interactionDistance) {
             if (Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
-				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.InitializeQueue();
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                ConsoleUI.ResetText();
+                ManagerScript.SetActiveID(ID);
                 ManagerScript.CanMove = false;
                 this.load();
             }
         }
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 2)
         {
-            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
             ManagerScript.CanMove = true;
-            CanvasHandler.ResetCanvas();
             RunQueue.ResetQueue();
+            CanvasHandler.ResetCanvas();
         }
     }
     
