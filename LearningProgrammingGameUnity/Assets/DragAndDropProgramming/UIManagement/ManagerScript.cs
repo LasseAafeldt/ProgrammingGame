@@ -7,6 +7,7 @@ public class ManagerScript : MonoBehaviour {
     public static bool[] ConstructionModulesCollected = new bool[5];
     public static bool[] ConstructionModulesHandedIn = new bool[5];
     public static bool CanMove = true;
+    public static bool CameraPan = false;
     //this for initialization
 
     public static int GetActiveID()

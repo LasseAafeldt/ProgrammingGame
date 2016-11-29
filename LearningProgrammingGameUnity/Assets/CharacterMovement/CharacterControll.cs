@@ -6,6 +6,7 @@ public class CharacterControll : MonoBehaviour {
     public float speed = 10.0f;
     Transform transformBeingCarried;
     GameObject Parent;
+    public static Vector3 StartPos;
     public bool isCarryingItem;
     Vector2 mouseLook;
     Vector2 smoothV;
@@ -15,6 +16,8 @@ public class CharacterControll : MonoBehaviour {
     void Start () {
         Cursor.lockState = CursorLockMode.Locked;
         isCarryingItem = false;
+        StartPos = GameObject.Find("Player").transform.position;
+
 	}
 	
 	// Update is called once per frame
@@ -53,24 +56,31 @@ public class CharacterControll : MonoBehaviour {
             if (other.gameObject.transform.GetChild(0).CompareTag("GasTank"))
             {
                 ManagerScript.ConstructionModulesCollected[0] = true;
+                CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Manual"))
             {
                 ManagerScript.ConstructionModulesCollected[1] = true;
+                CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
+
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Wire"))
             {
                 ManagerScript.ConstructionModulesCollected[2] = true;
+                CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
+
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("MetalPlates"))
             {
                 //Debug.Log("metal plates picked up");
                 ManagerScript.ConstructionModulesCollected[3] = true;
-				SaveTheBoxes.ActivateAssignment5 ();
+                CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
+                SaveTheBoxes.ActivateAssignment5 ();
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Computer"))
             {
                 ManagerScript.ConstructionModulesCollected[4] = true;
+                CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
             }
             Destroy(other.gameObject);
             PressEToInteract.currentCount++;
@@ -93,6 +103,7 @@ public class CharacterControll : MonoBehaviour {
             Destroy(other.transform.parent.gameObject);
             room3AccessPanelAssignement.bookCount++;
             PressEToInteract.bookCounterTooltip = "Books collected: " + room3AccessPanelAssignement.bookCount;
+            CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpBook);
         }
         if (other.gameObject.CompareTag("bookArea"))
         {
@@ -144,6 +155,7 @@ public class CharacterControll : MonoBehaviour {
 				}
                 Debug.Log("found offices");
                 ManagerScript.CanMove = false;
+                ManagerScript.CameraPan = true;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
 				AudioHandler.isHallEdited = !AudioHandler.isHallEdited;
                 contiuneMove(1);
@@ -155,6 +167,7 @@ public class CharacterControll : MonoBehaviour {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
                 ManagerScript.CanMove = false;
+                ManagerScript.CameraPan = true;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.books);
 				AudioHandler.isBooks = !AudioHandler.isBooks;
                 contiuneMove(0);      
@@ -271,5 +284,6 @@ public class CharacterControll : MonoBehaviour {
     {
         yield return new WaitForSeconds(sound.length);
         ManagerScript.CanMove = true;
+        ManagerScript.CameraPan = false;
     }
 }
