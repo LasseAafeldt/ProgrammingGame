@@ -37,24 +37,17 @@ public class RedButtonPushed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log("wait 1 =" + wait[1]);
         if (Input.GetKeyDown(KeyCode.E))
         {
             float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
             if (distanceToObj < 3f)
             {
+                Debug.Log("play");
+
                 //play push animation
-                if (wait[1])
-                {
-                    if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
-                    {
-                        CanvasHandler.Player.GetComponent<AudioSource>().Stop();
-                    }
-                    CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookWindow);
-                    wait[3] = !wait[3];
-                    contiuneEndScene(5);
-                }
                 GameObject.Find("red_button").GetComponent<Animator>().SetTrigger("PushedButton");
-                if (ManagerScript.IsAllHandedIn() || true)
+                if (ManagerScript.IsAllHandedIn())
                 {
                     //All assignment solved
                     //end Scene started
@@ -68,6 +61,16 @@ public class RedButtonPushed : MonoBehaviour
                         Robot.transform.position.y,
                         Robot.transform.GetChild(0).transform.GetChild(0).transform.position.z);
                     parts[0] = false;
+                    if (wait[3])
+                    {
+                        if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+                        {
+                            CanvasHandler.Player.GetComponent<AudioSource>().Stop();
+                        }
+                        CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.lookWindow);
+                        wait[3] = !wait[3];
+                        contiuneEndScene(5);
+                    }
 
                 }
                 else
@@ -80,6 +83,7 @@ public class RedButtonPushed : MonoBehaviour
                             CanvasHandler.Player.GetComponent<AudioSource>().Stop();
                         }
                         CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.stopPushing[playSoundIndex]);
+                        Debug.Log("playing sound " + playSoundIndex);
                     }
                     playSoundIndex++;
                 }
@@ -87,6 +91,7 @@ public class RedButtonPushed : MonoBehaviour
         }
         if (startedEndScene)
         {
+            //Debug.Log("end scene started");
             if (wait[1])
             {
                 contiuneEndScene(1);
@@ -98,6 +103,7 @@ public class RedButtonPushed : MonoBehaviour
                 Robot.transform.Rotate(Vector3.up, Time.deltaTime * degreesPerSec, Space.World);
                 if (Robot.transform.localRotation.y > 0.7)
                 {
+                    //Debug.Log("robot has been rotated");
                     parts[0] = false;
                     parts[1] = true;
                 }
@@ -107,6 +113,7 @@ public class RedButtonPushed : MonoBehaviour
                 if (wait[0])
                 {
                     RobotAnimator.SetTrigger("StartWalk");
+                    //Debug.Log("start walk");
                     contiuneEndScene(0);
                     wait[0] = !wait[0];
                 }
@@ -118,10 +125,12 @@ public class RedButtonPushed : MonoBehaviour
                       RobotTransform.position,
                       Markers[0].transform.position,
                       Time.deltaTime*0.5f);
+                //Debug.Log("move robot");
             }
             if (parts[3])
             {
                 RobotAnimator.SetTrigger("StopWalk");
+                //Debug.Log("stop walk");
                 parts[3] = false;
                 //parts[4] = true;
             }
@@ -131,6 +140,7 @@ public class RedButtonPushed : MonoBehaviour
                     Camera.transform.position,
                     Markers[0].transform.position,
                     Time.deltaTime * 0.5f);
+                //Debug.Log("move camera");
                 contiuneEndScene(2);
             }
             if (parts[5])
@@ -153,6 +163,7 @@ public class RedButtonPushed : MonoBehaviour
             StartCoroutine(Wait());
         if(i == 1)
             StartCoroutine(Wait2());
+
         if (i == 2)
             StartCoroutine(WaitExplosion());
         if(i == 3)
