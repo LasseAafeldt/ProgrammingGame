@@ -13,7 +13,7 @@ public class SaveTheBoxes : MonoBehaviour {
 		box2 = GameObject.Find ("DropBox1");
 		box3 = GameObject.Find ("DropBox2");
 		resetBox = GameObject.Find ("ResetPos").transform;
-        AssignmentText = GameObject.Find("Assignment5");
+        AssignmentText = GameObject.Find("Assignment5Poster");
         AssignmentText.SetActive(false);
 		box1.SetActive (false);
 		box2.SetActive (false);
