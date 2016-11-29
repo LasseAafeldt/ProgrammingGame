@@ -109,11 +109,14 @@ public class CharacterControll : MonoBehaviour {
 			GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
 			GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
 
-			if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying)
-				CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+			if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+                {
+				    CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
+                }
+			    CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
+                AudioHandler.isAwFred = !AudioHandler.isAwFred;
 
-			CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
-			}
+            }
 		}
     }
     void OnTriggerExit(Collider other)
@@ -139,8 +142,11 @@ public class CharacterControll : MonoBehaviour {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
+                Debug.Log("found offices");
+                ManagerScript.CanMove = false;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
 				AudioHandler.isHallEdited = !AudioHandler.isHallEdited;
+                contiuneMove(1);
 			}
 			//Office with book assignment
 			if (other.gameObject == GameObject.Find("bookAssignmentTrigger") &&
@@ -148,8 +154,10 @@ public class CharacterControll : MonoBehaviour {
 				if (CanvasHandler.Player.GetComponent<AudioSource> ().isPlaying) {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
+                ManagerScript.CanMove = false;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.books);
 				AudioHandler.isBooks = !AudioHandler.isBooks;
+                contiuneMove(0);      
 			}
 			//Office thermometer assignment
 			if (other.gameObject == GameObject.Find("thermometerColdTrigger") &&
@@ -234,5 +242,34 @@ public class CharacterControll : MonoBehaviour {
 			}
 
 		}
+    }
+
+    void contiuneMove(int i)
+    {
+        if (i == 0)
+        {
+            StartCoroutine(WaitForSound(AudioHandler.books));
+            //Debug.Log("books");
+        }
+        if (i == 1)
+        {
+            StartCoroutine(WaitForSound(AudioHandler.hallEdited));
+            //Debug.Log("hallway");
+        }
+
+    
+
+    }
+
+    private IEnumerator WaitForHallway()
+    {
+        yield return new WaitForSeconds(AudioHandler.hallEdited.length);
+        ManagerScript.CanMove = true;
+    }
+
+    private IEnumerator WaitForSound(AudioClip sound)
+    {
+        yield return new WaitForSeconds(sound.length);
+        ManagerScript.CanMove = true;
     }
 }
