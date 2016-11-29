@@ -16,7 +16,7 @@ public class CameraMousePan : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (ManagerScript.CanMove)
+        if (ManagerScript.CanMove || ManagerScript.CameraPan)
         {
             var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
             md = Vector2.Scale(md, new Vector2(sensitivity * smoothing, sensitivity * smoothing));
