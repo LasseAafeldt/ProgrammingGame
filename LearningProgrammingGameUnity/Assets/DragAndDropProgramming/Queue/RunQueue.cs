@@ -149,6 +149,7 @@ public class RunQueue {
                 {
                     //Error sound
                     ConsoleUI.AddText("\nWrong code! Please try again...");
+                    CanvasHandler.Player.transform.position = CharacterControll.StartPos;
                     //Debug.Log("Wrong");
                 }
                 break;

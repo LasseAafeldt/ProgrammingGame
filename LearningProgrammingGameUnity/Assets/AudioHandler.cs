@@ -23,7 +23,9 @@ public class AudioHandler : MonoBehaviour {
     public static AudioClip explosion;
     public static AudioClip option3;
     public static AudioClip lookWindow;
-	public static AudioClip[] stopPushing;
+    public static AudioClip pickUpBook;
+    public static AudioClip pickUpModule;
+    public static AudioClip[] stopPushing;
 
 	public static bool isWakeUpClip = false;
 	public static bool isLookamodule1Editet = false;
@@ -79,8 +81,10 @@ public class AudioHandler : MonoBehaviour {
         stopPushing[7] = Resources.Load<AudioClip>("Audio/stoppushing7");
         stopPushing[8] = Resources.Load<AudioClip>("Audio/stoppushing8");
         stopPushing[9] = Resources.Load<AudioClip>("Audio/stoppushing9");
+        pickUpBook = Resources.Load<AudioClip>("Audio/click1");
+        pickUpModule = Resources.Load<AudioClip>("Audio/pickUpSound");
 
-}
+    }
 
     // Update is called once per frame
     void Update () {
