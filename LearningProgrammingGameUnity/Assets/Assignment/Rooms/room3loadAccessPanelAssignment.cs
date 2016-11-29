@@ -29,7 +29,6 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
                 ManagerScript.CanMove = false;
                 ManagerScript.SetActiveID(ID);
                 this.load();
-				Debug.Log ("Active id: " + ManagerScript.GetActiveID());
             }
         }
 		//Debug.Log (Input.GetKeyDown(KeyCode.Q) + " " + ManagerScript.GetActiveID() == 3);
@@ -55,9 +54,9 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
 			//ManagerScript.ResetID ();
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
-			CanvasHandler.DragAndDropCanvas.SetActive (false);
             ManagerScript.CanMove = true;
             CanvasHandler.ResetCanvas ();
+			CanvasHandler.DragAndDropCanvas.SetActive (false);
         }
     }
 

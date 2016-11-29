@@ -33,7 +33,7 @@ public class CharacterControll : MonoBehaviour {
         }
         if (isCarryingItem)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 transformBeingCarried.SetParent(Parent.transform.parent.transform.parent);
                 Parent.transform.localRotation = Quaternion.identity;
@@ -41,8 +41,6 @@ public class CharacterControll : MonoBehaviour {
                 isCarryingItem = false;
                 transformBeingCarried.localScale = new Vector3(1, 1, 1);
             }
-            //Debug.Log("pressed mouse");
-            //Debug.Log(transformBeingCarried);
             Parent.transform.localRotation = Quaternion.AngleAxis(-CameraMousePan.mouseLook.y, Vector3.right);
         }
     }
@@ -233,14 +231,14 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
 				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
 			}
-			if (ManagerScript.ConstructionModulesCollected [1] && //collected the book construction module but not handed it in
-				!ManagerScript.ConstructionModulesHandedIn [1] ||
-				ManagerScript.ConstructionModulesCollected [2] && //collected the wires construction module but not handed it in
-				!ManagerScript.ConstructionModulesHandedIn [2] || 
-				ManagerScript.ConstructionModulesCollected [3] && //collected the book construction module but not handed it in
-				!ManagerScript.ConstructionModulesHandedIn [3] ||
-				ManagerScript.ConstructionModulesCollected [0] && //collected the wires construction module but not handed it in
-				!ManagerScript.ConstructionModulesHandedIn [0])
+            if (//handed in the gasoline construction module
+                ManagerScript.ConstructionModulesHandedIn [0] &&
+			    //handed in the book construction module 
+                ManagerScript.ConstructionModulesHandedIn [1] &&
+                //handed in the wires construction module
+                ManagerScript.ConstructionModulesHandedIn [2] &&
+                //handed in the plates construction module 
+                ManagerScript.ConstructionModulesCollected [3])
 			{
 				CanvasHandler.ControlRoomBlocker.SetActive (false);
 			}

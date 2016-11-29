@@ -23,23 +23,26 @@ public class room1loadAccessPanelAssignment : MonoBehaviour{
             if(Input.GetKeyDown("e") && CanvasHandler.DragAndDropCanvas.activeInHierarchy != true)
             {
                 PressEToInteract.currentToolTipText = "";
-				ManagerScript.SetActiveID(ID);
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
-                RunQueue.ResetQueue();
+                if (ManagerScript.GetActiveID() != ID)
+                {
+                    RunQueue.ResetQueue();
+                    CanvasHandler.ResetCanvas();
+                }
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                ConsoleUI.ResetText();
                 ManagerScript.CanMove = false;
+				ManagerScript.SetActiveID(ID);
                 this.load();
             }
         }
 		if (Input.GetKeyDown(KeyCode.Q) && ManagerScript.GetActiveID() == 1)
         {
-            ManagerScript.ResetID();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             CanvasHandler.DragAndDropCanvas.SetActive(false);
             ManagerScript.CanMove = true;
-            CanvasHandler.ResetCanvas();
         }
     }
 
