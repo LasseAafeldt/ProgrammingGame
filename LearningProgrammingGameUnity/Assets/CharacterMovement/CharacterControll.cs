@@ -155,6 +155,7 @@ public class CharacterControll : MonoBehaviour {
 				}
                 Debug.Log("found offices");
                 ManagerScript.CanMove = false;
+                ManagerScript.CameraPan = true;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.hallEdited);
 				AudioHandler.isHallEdited = !AudioHandler.isHallEdited;
                 contiuneMove(1);
@@ -166,6 +167,7 @@ public class CharacterControll : MonoBehaviour {
 					CanvasHandler.Player.GetComponent<AudioSource> ().Stop();
 				}
                 ManagerScript.CanMove = false;
+                ManagerScript.CameraPan = true;
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.books);
 				AudioHandler.isBooks = !AudioHandler.isBooks;
                 contiuneMove(0);      
@@ -282,5 +284,6 @@ public class CharacterControll : MonoBehaviour {
     {
         yield return new WaitForSeconds(sound.length);
         ManagerScript.CanMove = true;
+        ManagerScript.CameraPan = false;
     }
 }
