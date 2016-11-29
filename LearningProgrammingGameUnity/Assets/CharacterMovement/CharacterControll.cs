@@ -73,7 +73,6 @@ public class CharacterControll : MonoBehaviour {
                 //Debug.Log("metal plates picked up");
                 ManagerScript.ConstructionModulesCollected[3] = true;
                 CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.pickUpModule);
-                SaveTheBoxes.ActivateAssignment5 ();
             }
             if (other.gameObject.transform.GetChild(0).CompareTag("Computer"))
             {
@@ -115,16 +114,17 @@ public class CharacterControll : MonoBehaviour {
 			if(other.gameObject == GameObject.Find("awFredTrigger") &&
 				ManagerScript.ConstructionModulesCollected[3] &&
 				!AudioHandler.isAwFred){
-			GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
-			GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
+                SaveTheBoxes.ActivateAssignment5();
 
-			if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
+                GameObject.Find ("DoorAnimationFixerStorage1").GetComponent<DoorAnimation> ().Close ();
+		    	GameObject.Find ("DoorAnimationFixerStorage2").GetComponent<DoorAnimationRevers> ().Close ();
+
+			    if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
                 {
 				    CanvasHandler.Player.GetComponent<AudioSource> ().Stop ();
                 }
 			    CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.awFred);
                 AudioHandler.isAwFred = !AudioHandler.isAwFred;
-
             }
 		}
     }
