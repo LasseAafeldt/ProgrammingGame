@@ -43,7 +43,6 @@ public class RedButtonPushed : MonoBehaviour
             float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
             if (distanceToObj < 3f)
             {
-                Debug.Log("play");
 
                 //play push animation
                 GameObject.Find("red_button").GetComponent<Animator>().SetTrigger("PushedButton");
@@ -51,6 +50,7 @@ public class RedButtonPushed : MonoBehaviour
                 {
                     //All assignment solved
                     //end Scene started
+                    CanvasHandler.Player.SetActive(false);
                     startedEndScene = true;
                     CameraMousePanEnd.SetCameraToEndScene();
                     ManagerScript.CanMove = false;
@@ -83,7 +83,6 @@ public class RedButtonPushed : MonoBehaviour
                             CanvasHandler.Player.GetComponent<AudioSource>().Stop();
                         }
                         CanvasHandler.Player.GetComponent<AudioSource>().PlayOneShot(AudioHandler.stopPushing[playSoundIndex]);
-                        Debug.Log("playing sound " + playSoundIndex);
                     }
                     playSoundIndex++;
                 }

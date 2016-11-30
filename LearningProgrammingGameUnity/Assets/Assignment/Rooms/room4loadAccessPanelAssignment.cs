@@ -66,7 +66,6 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         }
 
         //i variable button
-        GameObject emptyGameobj = new GameObject();
         GameObject copyObject = Instantiate(
             CanvasHandler.VariableButton,
             CanvasHandler.DropPanel.transform.GetChild(0))
@@ -74,16 +73,13 @@ public class room4loadAccessPanelAssignment : MonoBehaviour {
         copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition = new Vector3(
             copyObject.transform.GetChild(3).GetComponent<RectTransform>().localPosition.x - 18, 0, 0);
         Destroy(copyObject.GetComponent<DragHandler>());
-        Destroy(copyObject.transform.GetChild(2).gameObject);
+        copyObject.transform.GetChild(2).gameObject.SetActive(false);
         copyObject.transform.GetChild(1).GetComponent<Text>().text = "temp = ";
         copyObject.transform.GetChild(0).GetComponent<Image>().sprite = Resources.Load<Sprite>("DragAndDropPanel/dragThingRight");
         copyObject.transform.GetChild(1).Translate(
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.x - 40,
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.y,
             copyObject.transform.GetChild(1).GetComponent<Text>().GetComponent<RectTransform>().localPosition.z);
-        emptyGameobj = new GameObject();
-        emptyGameobj.transform.SetParent(CanvasHandler.DropPanel.transform.GetChild(0).transform.GetChild(0));
-        emptyGameobj.transform.SetSiblingIndex(2);
         copyObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
         copyObject.transform.localScale = new Vector3(1f, 1f, 0);
 

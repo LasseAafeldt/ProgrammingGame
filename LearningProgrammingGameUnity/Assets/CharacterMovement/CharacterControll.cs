@@ -230,17 +230,6 @@ public class CharacterControll : MonoBehaviour {
 				CanvasHandler.Player.GetComponent<AudioSource> ().PlayOneShot (AudioHandler.goToStorage);
 				AudioHandler.isGoToStorage = !AudioHandler.isGoToStorage;
 			}
-            if (//handed in the gasoline construction module
-                ManagerScript.ConstructionModulesHandedIn [0] &&
-			    //handed in the book construction module 
-                ManagerScript.ConstructionModulesHandedIn [1] &&
-                //handed in the wires construction module
-                ManagerScript.ConstructionModulesHandedIn [2] &&
-                //handed in the plates construction module 
-                ManagerScript.ConstructionModulesCollected [3])
-			{
-				CanvasHandler.ControlRoomBlocker.SetActive (false);
-			}
 			//control room trigger - explanation of assignment... something
 			if (other.gameObject == GameObject.Find("controlRoomTrigger") &&
 				!AudioHandler.isFactoryControlRoom) {

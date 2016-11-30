@@ -72,7 +72,6 @@ public class RunQueue {
 		switch (ManagerScript.GetActiveID())
         {
             case 1: 
-                Debug.Log("Room one is active! Checking results...");
                 room1AccessPanelAssignement.IsEachResultCorrect();
                 //open door
                 if (room1AccessPanelAssignement.IsFinalResultTrue())

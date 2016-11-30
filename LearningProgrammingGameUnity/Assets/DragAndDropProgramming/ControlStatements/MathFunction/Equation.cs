@@ -10,7 +10,6 @@ public class Equation : MathFunctions {
     }
     public override void RunThis()
     {
-        Debug.Log(str);
         ConsoleUI.AddText(str);
     }
 

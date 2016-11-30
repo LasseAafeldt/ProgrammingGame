@@ -20,7 +20,6 @@ public class room5Trigger : MonoBehaviour {
             other.GetComponent<Rigidbody>().isKinematic == false)
         {
             TriggerList.Add(other);
-            Debug.Log("TriggerList size = " + TriggerList.Count + " Added " + other);
             if (TriggerList.Count >= 3)
             {
                 GameObject.Find("DoorAnimationFixerStorage1").GetComponent<DoorAnimation>().Open();

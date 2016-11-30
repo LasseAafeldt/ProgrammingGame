@@ -13,7 +13,7 @@ public class room4AccessPanelAssignement : Assignment {
         hints = new Hint("","You can see the In and Out temperatures on the Thermometer.", "Use '.' as digit sign.");
         ConsoleUI.AddText(hints.GetNextHint());
         temperature = 38.1f - 5.3f;
-
+        IsEachCorrect.Add(false);
     }
 
     public static void IsEachResultCorrect()

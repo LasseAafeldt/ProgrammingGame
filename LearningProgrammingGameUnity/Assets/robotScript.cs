@@ -14,7 +14,6 @@ public class robotScript : MonoBehaviour {
 	}
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("entered collider");
         RedButtonPushed.parts[3] = true;
         RedButtonPushed.parts[2] = false;
     }

@@ -59,12 +59,10 @@ public class Variables : ControlStatements
         {
             if (str != null)
             {
-                Debug.Log(VarName + " = " + str);
                 ConsoleUI.AddText(VarName + " = " + str);
             }
             else
             {
-                Debug.Log(VarName + " = " + rightSide);
                 ConsoleUI.AddText(VarName + " = " + rightSide);
             }
         }

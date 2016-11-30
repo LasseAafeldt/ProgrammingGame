@@ -13,7 +13,7 @@ public class ConveyorDropScript : MonoBehaviour {
         ConstructionModule[4] = (GameObject)Resources.Load<GameObject>("Gameobjects/Computer") as GameObject;
         dropPosition = GameObject.Find("ConveyorDrop").transform.position;
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         float distanceToObj = Vector3.Distance(CanvasHandler.Player.transform.position, gameObject.transform.position);
@@ -23,7 +23,6 @@ public class ConveyorDropScript : MonoBehaviour {
             if (distanceToObj < 3f)
             {
                 for(int i = 0; i < 5; i++) {
-                    Debug.Log(i + " " + ManagerScript.ConstructionModulesCollected[i]);
                     if (ManagerScript.ConstructionModulesCollected[i])
                     {
                         GameObject a = Instantiate(ConstructionModule[i], dropPosition, Quaternion.identity) as GameObject;
@@ -60,6 +59,17 @@ public class ConveyorDropScript : MonoBehaviour {
                         }
                         return;
                     }
+                }
+                if (//handed in the gasoline construction module
+                    ManagerScript.ConstructionModulesHandedIn[0] &&
+                    //handed in the book construction module 
+                    ManagerScript.ConstructionModulesHandedIn[1] &&
+                    //handed in the wires construction module
+                    ManagerScript.ConstructionModulesHandedIn[2] &&
+                    //handed in the plates construction module 
+                    ManagerScript.ConstructionModulesHandedIn[3])
+                {
+                    CanvasHandler.ControlRoomBlocker.SetActive(false);
                 }
             }
         }

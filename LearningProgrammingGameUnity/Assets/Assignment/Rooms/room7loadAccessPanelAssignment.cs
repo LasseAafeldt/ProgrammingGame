@@ -28,6 +28,8 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
                 Cursor.visible = true;
                 ManagerScript.CanMove = false;
                 ConsoleUI.ResetText();
+                RunQueue.ResetQueue();
+                CanvasHandler.ResetCanvas();
                 ManagerScript.SetActiveID(ID);
                 this.load();
             }
@@ -36,7 +38,6 @@ public class room7loadAccessPanelAssignment : MonoBehaviour{
         {
 			if (room7AccessPanelAssignement.IsFinalResultTrue ()) {
 				//play sound after player solves the assignment and presses Q
-				Debug.Log("IsFInalResult = " + room7AccessPanelAssignement.IsFinalResultTrue());
                 if (CanvasHandler.Player.GetComponent<AudioSource>().isPlaying)
                 {
                     CanvasHandler.Player.GetComponent<AudioSource>().Stop();

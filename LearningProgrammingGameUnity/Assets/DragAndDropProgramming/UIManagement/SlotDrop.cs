@@ -129,21 +129,18 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
 			InstantiateGameObject();
 			//Debug.Log ("Item being dragged == if statement");
             new IfStatement(left, condition, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added if statement to queue in index " + indexBeingDroppedOn);
         }
         //if else statement
         if (DragHandler.itemBeingDragged == GameObject.Find("IfElseStatementButton"))
         {
 			InstantiateGameObject();
             new IfElseStatement(left, condition, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added if else statement to queue in index " + indexBeingDroppedOn);
         }
         //While Loop
         if (DragHandler.itemBeingDragged == GameObject.Find("WhileLoopButton"))
         {
 			InstantiateGameObject();
             new WhileLoop().AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added while loop to queue in index " + indexBeingDroppedOn);
         }
     }
     //Adds 2D (left,right) GameComponent to the RunQueue
@@ -154,25 +151,21 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
 			InstantiateGameObject();
             //Debug.Log("trying to add addition");
             new Addition(left, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added addtion to queue in index " + indexBeingDroppedOn);
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("SubtractionButton"))
         {
 			InstantiateGameObject();
             new Subtraction(left, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added subtraction to queue in index " + indexBeingDroppedOn);
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("DivisionButton"))
         {
 			InstantiateGameObject();
             new Division(left, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added division to queue in index " + indexBeingDroppedOn);
         }
         if (DragHandler.itemBeingDragged == GameObject.Find("MultiplicationButton"))
         {
 			InstantiateGameObject();
             new Multiplication(left, right).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added multiplication to queue in index " + indexBeingDroppedOn);
         }
     }
     //Adds 1D component to queue
@@ -184,7 +177,6 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
 			InstantiateGameObject();
             Debug.Log("Trying to add for loop...");
             new ForLoop(left).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added for loop to queue in index " + indexBeingDroppedOn);
         }
     }
 
@@ -196,7 +188,6 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         {
             InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added string variable to queue in index " + indexBeingDroppedOn);
         }
     }
     //add component variable of type float
@@ -207,7 +198,6 @@ public class SlotDrop : MonoBehaviour, IDropHandler {
         {
 			InstantiateGameObject();
             new Variables(name, value).AddToQueue(indexBeingDroppedOn);
-            Debug.Log("added number varible to queue in index " + indexBeingDroppedOn);
         }
     }
 
