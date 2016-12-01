@@ -24,6 +24,8 @@ public class room5loadAccessPanelAssignment : MonoBehaviour {
                 CanvasHandler.DragAndDropCanvas.SetActive(true);
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
+                RunQueue.ResetQueue();
+                CanvasHandler.ResetCanvas();
                 ManagerScript.CanMove = false;
                 ConsoleUI.ResetText();
                 ManagerScript.SetActiveID(ID);

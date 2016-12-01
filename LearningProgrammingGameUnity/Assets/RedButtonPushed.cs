@@ -50,7 +50,7 @@ public class RedButtonPushed : MonoBehaviour
                 {
                     //All assignment solved
                     //end Scene started
-                    CanvasHandler.Player.SetActive(false);
+                    CanvasHandler.Player.transform.position = CharacterControll.StartPos;
                     startedEndScene = true;
                     CameraMousePanEnd.SetCameraToEndScene();
                     ManagerScript.CanMove = false;
@@ -162,7 +162,6 @@ public class RedButtonPushed : MonoBehaviour
             StartCoroutine(Wait());
         if(i == 1)
             StartCoroutine(Wait2());
-
         if (i == 2)
             StartCoroutine(WaitExplosion());
         if(i == 3)

@@ -26,6 +26,8 @@ public class room3loadAccessPanelAssignment : MonoBehaviour {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ManagerScript.CanMove = false;
+                RunQueue.ResetQueue();
+                CanvasHandler.ResetCanvas();
                 ConsoleUI.ResetText();
                 ManagerScript.SetActiveID(ID);
                 this.load();

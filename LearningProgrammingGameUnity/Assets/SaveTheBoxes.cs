@@ -27,8 +27,13 @@ public class SaveTheBoxes : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
         if (other.gameObject.CompareTag("room5"))
         {
-		    other.gameObject.transform.position = resetBox.position;
+            other.gameObject.transform.position = resetBox.position;
         }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.gameObject.transform.position = CharacterControll.StartPos;
+        }
+        Debug.Log("Save the boxes");
 	}
 
 	public static void ActivateAssignment5(){
